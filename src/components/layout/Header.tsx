@@ -54,10 +54,11 @@ export function Header() {
                 : "/metanova-assets/brand/logo-white-new.svg"
             }
             alt="MetaNova"
-            width={isCompact ? 150 : 180}
-            height={isCompact ? 40 : 73}
+            width={180}
+            height={73}
             priority
             className="transition-all duration-500"
+            style={{ width: isCompact ? 150 : 180, height: "auto" }}
           />
         </Link>
 
