@@ -11,6 +11,7 @@ interface ContactFormProps {
 
 export function ContactForm({ content }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [fileName, setFileName] = useState<string | null>(null);
   const t = useTranslations("contact");
   const tCta = useTranslations("cta");
@@ -103,9 +104,19 @@ export function ContactForm({ content }: ContactFormProps) {
                 </div>
               ) : (
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    setSubmitted(true);
+                    setSending(true);
+                    try {
+                      const formData = new FormData(e.currentTarget);
+                      formData.append("source", "contact");
+                      await fetch("/api/contact", { method: "POST", body: formData });
+                      setSubmitted(true);
+                    } catch {
+                      alert(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : "Failed to send. Please try again.");
+                    } finally {
+                      setSending(false);
+                    }
                   }}
                   className="space-y-6"
                 >
@@ -232,8 +243,8 @@ export function ContactForm({ content }: ContactFormProps) {
                       placeholder={isFr ? "Parlez-nous de votre projet..." : "Tell us about your project..."}
                     />
                   </div>
-                  <ShimmerButton type="submit" className="w-full">
-                    {tCta("sendMessage")}
+                  <ShimmerButton type="submit" className="w-full" disabled={sending}>
+                    {sending ? (isFr ? "Envoi en cours..." : "Sending...") : tCta("sendMessage")}
                   </ShimmerButton>
                 </form>
               )}
