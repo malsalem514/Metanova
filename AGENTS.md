@@ -1,8 +1,8 @@
-# MetaNova — Agent Configuration
+# Metanova — Agent Configuration
 
 ## Project
 
-Website for MetaNova — structural engineering, real estate development, and project management firm based in Brossard, Quebec.
+Website for Metanova — structural engineering, real estate development, and project management firm based in Brossard, Quebec.
 
 Built with Next.js (App Router), Tailwind CSS 4, shadcn/ui v4. Deployed to Vercel.
 
@@ -26,7 +26,7 @@ npm run curate:assets    # Re-curate asset library
 
 ## Content Layer
 
-All user-facing text lives in `content/*.mdx` files with YAML frontmatter.
+All user-facing text lives in `content/{en,fr}/pages/*.mdx` files with YAML frontmatter.
 Components import content via `src/lib/content/loader.ts`.
 Never hardcode strings in JSX components (except UI labels).
 

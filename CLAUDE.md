@@ -1,4 +1,4 @@
-# MetaNova — Claude Code Configuration
+# Metanova — Claude Code Configuration
 <!-- See also: AGENTS.md for universal agent instructions (non-Claude agents) -->
 
 @AGENTS.md
@@ -14,7 +14,7 @@
 
 ## Content Provenance Rule
 
-All text in components MUST come from `content/*.mdx` files or `site-brief.yaml`.
+All text in components MUST come from `content/{en,fr}/pages/*.mdx` files or `site-brief.yaml`.
 Never hardcode user-facing strings in JSX (except UI labels like "Menu", "Close", "Submit").
 If content is missing from site-brief.yaml, stop and ask the operator.
 
@@ -27,6 +27,6 @@ Run `npm run validate:artifacts` after creating or modifying:
 
 ## Generation Order (Phase 3)
 
-Foundation → Shell → Homepage → Internal → Portfolio → Polish.
+Foundation → Shell → Homepage → Internal → Polish.
 Never skip ahead. Each step must build successfully before proceeding.
 Max 5 build retries per step. Escalate to operator if stuck.

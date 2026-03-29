@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 *.mp4
+
+# QA artifacts
+qa/screenshots
+
+# Source material (not part of deployed site)
+MetaNovaStuff/
