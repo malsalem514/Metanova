@@ -32,41 +32,31 @@ export function HeroSection({
 
   return (
     <section className="relative flex min-h-[85vh] items-end overflow-hidden">
-      {videoSrc ? (
-        <>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-          {/* Fallback image behind video */}
-          <Image
-            src={backgroundImage}
-            alt=""
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-        </>
-      ) : (
-        <Image
-          src={backgroundImage}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+      {/* Background: static image (always renders as base layer) */}
+      <Image
+        src={backgroundImage}
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+      />
+      {/* Video overlays the image when provided */}
+      {videoSrc && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 z-[1] h-full w-full object-cover"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
       )}
       {overlay && (
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
       )}
-      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
+      <div className="relative z-[3] mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
         <h1
           className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
           style={{ fontFamily: "var(--font-dm-serif-display)" }}
