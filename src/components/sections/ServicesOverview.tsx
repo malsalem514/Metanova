@@ -40,7 +40,7 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+            <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
               {overline ?? "What We Do"}
             </p>
             <h2

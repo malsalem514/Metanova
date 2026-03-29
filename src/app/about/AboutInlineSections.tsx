@@ -43,7 +43,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
             {cards.map((card, i) => (
               <FadeIn key={card.label} delay={i * 0.1}>
                 <SpotlightCard className="h-full rounded-2xl">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+                  <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
                     {card.label}
                   </p>
                   <h3
@@ -85,7 +85,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+                <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
                   {content?.["beginnings_overline"] ?? "Our Beginnings"}
                 </p>
                 <h2

@@ -48,7 +48,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+            <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
               {overline ?? "Our Approach"}
             </p>
             <h2
@@ -63,7 +63,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
           {values.map((value, i) => (
             <FadeIn key={value.number} delay={i * 0.1}>
               <SpotlightCard className="h-full">
-                <span className="text-sm font-medium text-[#C36036]">
+                <span className="text-sm font-medium text-[#121212]/40">
                   {value.number}
                 </span>
                 <h3 className="mt-3 text-xl font-medium text-[#121212]">

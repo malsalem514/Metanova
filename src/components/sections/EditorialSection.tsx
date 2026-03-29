@@ -11,7 +11,7 @@ export function EditorialSection() {
           {/* Left column - large text */}
           <FadeIn>
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#C36036]">
+              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
                 Our Story
               </p>
               <p className="mt-6 text-[18px] leading-[1.6] text-[#121212]/80">

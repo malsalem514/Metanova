@@ -24,7 +24,7 @@ export function TeamSection() {
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+            <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
               Leadership
             </p>
             <h2
@@ -53,7 +53,7 @@ export function TeamSection() {
                   <h3 className="text-2xl font-medium text-[#121212]">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-[#C36036]">
+                  <p className="mt-1 text-sm font-medium text-[#121212]/60">
                     {member.role}
                   </p>
                   <p className="mt-6 text-sm leading-loose text-[#121212]/70">

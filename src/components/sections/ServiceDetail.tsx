@@ -41,7 +41,7 @@ export function ServiceDetail({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
-          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+          <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
             {subtitle}
           </p>
           <h1
@@ -73,7 +73,7 @@ export function ServiceDetail({
                 <FadeIn key={point.title} delay={i * 0.08}>
                   <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C36036]/20 hover:shadow-md hover:shadow-[#C36036]/5">
                     <div className="flex items-start gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C36036]/10 text-sm font-semibold text-[#C36036]">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#121212]/5 text-sm font-semibold text-[#121212]/60">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>

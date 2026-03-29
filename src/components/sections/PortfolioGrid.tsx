@@ -37,7 +37,7 @@ export function PortfolioGrid({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
-          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+          <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
             {subtitle}
           </p>
           <h1

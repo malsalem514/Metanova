@@ -18,7 +18,7 @@ export function ContactForm({ content }: ContactFormProps) {
           {/* Contact info */}
           <FadeIn>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
                 {content?.["overline"] ?? "Get in Touch"}
               </p>
               <h2
@@ -47,7 +47,7 @@ export function ContactForm({ content }: ContactFormProps) {
                   </h3>
                   <a
                     href={`mailto:${content?.["email"] ?? "info@metanova.ca"}`}
-                    className="mt-2 block text-sm text-[#C36036] transition-colors duration-300 hover:text-[#A04E2A]"
+                    className="mt-2 block text-sm text-[#121212] underline transition-colors duration-300 hover:text-[#121212]/60"
                   >
                     {content?.["email"] ?? "info@metanova.ca"}
                   </a>
@@ -58,7 +58,7 @@ export function ContactForm({ content }: ContactFormProps) {
                   </h3>
                   <a
                     href={`tel:${content?.["phone_raw"] ?? "+15142223444"}`}
-                    className="mt-2 block text-sm text-[#C36036] transition-colors duration-300 hover:text-[#A04E2A]"
+                    className="mt-2 block text-sm text-[#121212] underline transition-colors duration-300 hover:text-[#121212]/60"
                   >
                     {content?.["phone"] ?? "+1 (514) 222-3444"}
                   </a>
