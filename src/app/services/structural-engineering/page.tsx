@@ -27,34 +27,34 @@ const serviceJsonLd = {
 
 const points = [
   {
-    title: "New Construction Design",
+    title: "Structural Design and Analysis",
     description:
-      "Complete structural design packages for new buildings — from foundations to roof systems. We work across steel, concrete, and wood framing to find the optimal structural solution for your project's requirements and budget.",
+      "Creating safe and efficient structures using advanced engineering techniques.",
   },
   {
-    title: "Renovation & Retrofit",
+    title: "Building Assessments and Inspections",
     description:
-      "Structural engineering for building modifications, additions, and seismic upgrades. We assess existing conditions, design reinforcements, and provide construction-ready documentation for retrofit projects.",
+      "Evaluating existing buildings for safety, compliance, and structural integrity.",
   },
   {
-    title: "Structural Assessments",
+    title: "Renovation and Modernization",
     description:
-      "Condition assessments, load capacity evaluations, and structural investigations for existing buildings. We provide clear, actionable reports that help owners make informed decisions about their properties.",
+      "Strengthening and optimizing structures to meet modern standards.",
   },
   {
-    title: "Foundation Engineering",
+    title: "Value Engineering",
     description:
-      "Design of spread footings, mat foundations, pile systems, and specialized foundation solutions. We work closely with geotechnical engineers to ensure cost-effective, safe foundation designs.",
+      "Optimizing materials and design for cost-effective solutions without compromising safety.",
   },
   {
-    title: "Building Code Compliance",
+    title: "Construction Support and Advice",
     description:
-      "Expert navigation of Canadian building codes (NBC, CNBC) and Quebec-specific regulations. We ensure your designs meet all structural requirements and facilitate smooth permit approvals.",
+      "Providing engineering guidance throughout the building process.",
   },
   {
-    title: "Construction Support",
+    title: "Site Support and Construction Supervision",
     description:
-      "On-site inspections, shop drawing review, and construction-phase engineering support. We stay involved through construction to ensure the built structure matches the design intent.",
+      "On-site presence and supervision to ensure the built structure matches the design intent and quality standards.",
   },
 ];
 

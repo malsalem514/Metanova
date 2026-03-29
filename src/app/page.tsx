@@ -3,6 +3,7 @@ import { VisionMissionSection } from "@/components/sections/VisionMissionSection
 import { EditorialSection } from "@/components/sections/EditorialSection";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ApproachSection } from "@/components/sections/ApproachSection";
+import { ServiceAreas } from "@/components/sections/ServiceAreas";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { loadContent } from "@/lib/content/loader";
 
@@ -36,6 +37,7 @@ export default function Home() {
         overline={fm?.["approach_overline"]}
         heading={fm?.["approach_heading"]}
       />
+      <ServiceAreas />
       <CTABanner
         title={fm?.["cta_banner_heading"]}
         subtitle={fm?.["cta_banner_body"]}

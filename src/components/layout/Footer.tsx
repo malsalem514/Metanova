@@ -48,6 +48,13 @@ export function Footer() {
                   +1 (514) 222-3444
                 </a>
               </p>
+              <div className="mt-4 border-t border-white/10 pt-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
+                  Opening Hours
+                </p>
+                <p className="mt-2">Monday – Friday</p>
+                <p>9:00 AM – 5:00 PM</p>
+              </div>
             </div>
           </div>
 

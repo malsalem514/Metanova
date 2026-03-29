@@ -27,34 +27,54 @@ const serviceJsonLd = {
 
 const points = [
   {
-    title: "Pre-Construction Planning",
+    title: "Strategic Planning and Feasibility",
     description:
-      "Strategic planning that sets projects up for success. Scope definition, preliminary budgeting, scheduling, and procurement strategy — all before breaking ground.",
+      "Market studies, financial analyses, feasibility assessments, and regulatory navigation to ensure every project starts on a solid foundation.",
   },
   {
-    title: "Budget & Schedule Management",
+    title: "Project Management and Coordination",
     description:
-      "Rigorous cost control and timeline management throughout the project lifecycle. We track every dollar and every deadline, with regular reporting and proactive issue resolution.",
+      "End-to-end oversight from land acquisition to construction completion, with full stakeholder coordination to keep timelines and budgets on track.",
   },
   {
-    title: "Contractor Coordination",
+    title: "Sustainable and Innovative Development",
     description:
-      "Seamless coordination between architects, engineers, general contractors, and trades. We manage the interfaces so you don't have to, ensuring all parties are aligned and accountable.",
+      "Responsible land use practices, sustainability integration, and meaningful community engagement to deliver projects that stand the test of time.",
   },
   {
-    title: "Feasibility Studies",
+    title: "Site Selection and Land Acquisition",
     description:
-      "Comprehensive project feasibility analysis covering technical requirements, regulatory constraints, market conditions, and financial viability. Data-driven decisions from day one.",
+      "Identifying and securing the right sites for development through rigorous market analysis and due diligence.",
   },
   {
-    title: "Risk Assessment",
+    title: "Feasibility Studies and Market Analysis",
     description:
-      "Systematic identification and mitigation of project risks — from permitting delays to supply chain disruptions. We plan for the unexpected so you're never caught off guard.",
+      "Comprehensive financial and market assessments to validate project viability before commitment.",
   },
   {
-    title: "Development Consulting",
+    title: "Regulatory Compliance and Zoning Support",
     description:
-      "Strategic advisory for real estate developers covering site selection, highest-and-best-use analysis, project positioning, and stakeholder management. Development thinking applied to every decision.",
+      "Expert navigation of municipal regulations, zoning requirements, and permitting processes across Quebec.",
+  },
+  {
+    title: "Project Financing and Investment Strategies",
+    description:
+      "Structuring financing solutions and investment strategies that align with project goals and stakeholder expectations.",
+  },
+  {
+    title: "Master Planning and Urban Integration",
+    description:
+      "Holistic master planning that integrates seamlessly with urban fabric and community needs.",
+  },
+  {
+    title: "Development and Construction Oversight",
+    description:
+      "Active oversight throughout the development and construction phases to ensure quality, compliance, and delivery on commitments.",
+  },
+  {
+    title: "Stakeholder Engagement and Public Consultation",
+    description:
+      "Proactive engagement with communities, municipalities, and stakeholders to build consensus and support for development projects.",
   },
 ];
 
@@ -63,9 +83,9 @@ export default function ProjectManagementPage() {
     <>
       <JsonLd data={serviceJsonLd} />
       <ServiceDetail
-        title="Project Management & Consulting"
+        title="Real Estate Development"
         subtitle="Our Services"
-        description="MetaNova's development division brings over a decade of hands-on project management and real estate development experience. We manage the complexity so you can focus on the big picture — confident that timelines, budgets, and quality targets are being met."
+        description="MetaNova's development division brings strategic vision and hands-on expertise to every real estate project. From initial feasibility through construction completion, we navigate complexity so you can focus on results — confident that every decision is grounded in market insight, regulatory knowledge, and responsible development principles."
         heroImage="/metanova-assets/services/project-management/city-overlay-hardhat.png"
         points={points}
       />
