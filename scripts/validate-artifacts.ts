@@ -9,7 +9,7 @@ import {
   assetManifestSchema,
   siteBriefSchema,
   siteManifestSchema,
-} from "../src/lib/schemas/index.ts";
+} from "../src/lib/schemas/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
