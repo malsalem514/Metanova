@@ -29,10 +29,6 @@ export default async function Home({ params }: Props) {
         ctaHref={fm?.["cta_primary_href"] ?? "/contact"}
         secondaryCtaText={fm?.["cta_secondary"] ?? "OUR SERVICES"}
         secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/services"}
-        stats={[
-          { value: "20+", label: "Projects" },
-          { value: "5+", label: "Cities" },
-        ]}
       />
       <VisionMissionSection />
       <EditorialSection />
