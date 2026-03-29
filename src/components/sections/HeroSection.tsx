@@ -1,0 +1,75 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+interface HeroSectionProps {
+  title: string;
+  subtitle?: string;
+  backgroundImage: string;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  overlay?: boolean;
+}
+
+export function HeroSection({
+  title,
+  subtitle,
+  backgroundImage,
+  ctaText,
+  ctaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
+  overlay = true,
+}: HeroSectionProps) {
+  return (
+    <section className="relative flex min-h-[85vh] items-end overflow-hidden">
+      <Image
+        src={backgroundImage}
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+      />
+      {overlay && (
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0C0C] via-[#0C0C0C]/60 to-[#0C0C0C]/30" />
+      )}
+      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 pb-20 pt-32">
+        <h1
+          className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-[#F5F0EB]"
+          style={{ fontFamily: "var(--font-dm-serif-display)" }}
+        >
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#8A8278]">
+            {subtitle}
+          </p>
+        )}
+        {(ctaText || secondaryCtaText) && (
+          <div className="mt-8 flex flex-wrap gap-4">
+            {ctaText && ctaHref && (
+              <Link href={ctaHref}>
+                <Button className="h-12 rounded-lg bg-[#C36036] px-8 text-base text-[#F5F0EB] hover:bg-[#D4724A]">
+                  {ctaText}
+                </Button>
+              </Link>
+            )}
+            {secondaryCtaText && secondaryCtaHref && (
+              <Link href={secondaryCtaHref}>
+                <Button
+                  variant="outline"
+                  className="h-12 rounded-lg border-[#2A2520] px-8 text-base text-[#F5F0EB] hover:bg-[#1A1A1A]"
+                >
+                  {secondaryCtaText}
+                </Button>
+              </Link>
+            )}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
