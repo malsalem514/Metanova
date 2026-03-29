@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import type { routing } from "@/i18n/routing";
+
+type Pathname = keyof typeof routing.pathnames;
 import { motion } from "motion/react";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { Button } from "@/components/ui/button";
@@ -103,14 +106,14 @@ export function HeroSection({
                 className="mt-10 flex flex-wrap gap-4"
               >
                 {ctaText && ctaHref && (
-                  <Link href={ctaHref}>
+                  <Link href={ctaHref as Pathname}>
                     <Button className="h-auto rounded-none bg-white px-5 py-2.5 text-xs font-normal text-[#121212] transition-opacity duration-300 hover:opacity-80">
                       {ctaText}
                     </Button>
                   </Link>
                 )}
                 {secondaryCtaText && secondaryCtaHref && (
-                  <Link href={secondaryCtaHref}>
+                  <Link href={secondaryCtaHref as Pathname}>
                     <Button
                       variant="outline"
                       className="h-auto rounded-none border-transparent bg-[#0A5592] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80 hover:bg-[#0A5592]"

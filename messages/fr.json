@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "Notre firme",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "company": "Entreprise",
+    "services": "Services",
+    "tagline": "Concevoir l'avenir, un espace \u00e0 la fois",
+    "copyright": "Tous droits r\u00e9serv\u00e9s.",
+    "legalName": "Metanova Experts-Conseils",
+    "hours": "Heures d'ouverture",
+    "hoursValue": "Lundi \u2013 Vendredi, 9h00 \u2013 17h00",
+    "address1": "7005, boulevard Taschereau, bureau 305",
+    "address2": "Brossard, Qu\u00e9bec J4Z 1A7",
+    "structuralEngineering": "Ing\u00e9nierie en structure",
+    "realEstateDevelopment": "D\u00e9veloppement immobilier",
+    "projectManagement": "Gestion de projets",
+    "location": "Brossard, Qu\u00e9bec, Canada"
+  },
+  "cta": {
+    "bookCall": "PRENDRE RENDEZ-VOUS",
+    "ourServices": "NOS SERVICES",
+    "contactUs": "CONTACTEZ-NOUS",
+    "learnMore": "En savoir plus",
+    "buildWithUs": "D\u00c9MARRER VOTRE PROJET",
+    "submit": "ENVOYER",
+    "sendMessage": "Envoyer le message"
+  },
+  "contact": {
+    "firstName": "Pr\u00e9nom",
+    "lastName": "Nom",
+    "email": "Courriel",
+    "phone": "T\u00e9l\u00e9phone",
+    "message": "Message",
+    "location": "Notre emplacement",
+    "messageUs": "\u00c9crivez-nous",
+    "replyTime": "Nous r\u00e9pondons habituellement dans les 24 heures.",
+    "callUs": "Appelez-nous"
+  },
+  "lang": {
+    "switch": "EN"
+  }
+}

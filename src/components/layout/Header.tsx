@@ -1,19 +1,28 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+type NavHref = "/" | "/about" | "/services" | "/contact";
+
+const navLinks: { href: NavHref; labelKey: "home" | "about" | "services" | "contact" }[] = [
+  { href: "/", labelKey: "home" },
+  { href: "/about", labelKey: "about" },
+  { href: "/services", labelKey: "services" },
+  { href: "/contact", labelKey: "contact" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations("nav");
+  const tLang = useTranslations("lang");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const otherLocale = locale === "en" ? "fr" : "en";
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
@@ -42,7 +51,7 @@ export function Header() {
           maxWidth: "1440px",
         }}
       >
-        {/* Logo — color version on light bg, white on dark hero */}
+        {/* Logo -- color version on light bg, white on dark hero */}
         <Link href="/" className="flex items-center transition-all duration-500">
           <Image
             src={
@@ -71,9 +80,22 @@ export function Header() {
                   : "text-white/90 hover:text-white"
               }`}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
+
+          {/* Language switcher */}
+          <Link
+            href={pathname as NavHref}
+            locale={otherLocale}
+            className={`text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 border-l pl-4 ${
+              useDarkNav
+                ? "text-[#0A5592] hover:text-[#121212] border-[#121212]/20"
+                : "text-white hover:text-white/70 border-white/30"
+            }`}
+          >
+            {tLang("switch")}
+          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -106,9 +128,18 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="block py-3 text-xs font-medium uppercase tracking-[0.15em] text-[#121212] transition-colors duration-300 hover:text-[#0A5592]"
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
+          {/* Mobile language switcher */}
+          <Link
+            href={pathname as NavHref}
+            locale={otherLocale}
+            onClick={() => setMobileOpen(false)}
+            className="block py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#0A5592] transition-colors duration-300 hover:text-[#121212] border-t border-[#E8E0D0] mt-3 pt-6"
+          >
+            {tLang("switch")}
+          </Link>
         </nav>
       )}
     </header>

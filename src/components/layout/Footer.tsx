@@ -1,20 +1,25 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
 
-const footerLinks = {
-  company: [
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/contact", label: "Contact" },
-  ],
-  services: [
-    { href: "/services/structural-engineering", label: "Structural Engineering" },
-    { href: "/services/real-estate-development", label: "Real Estate Development" },
-    { href: "/services/project-management-consulting", label: "Project Management" },
-  ],
-};
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
+  const tNav = useTranslations("nav");
+  const tFooter = useTranslations("footer");
+
+  const companyLinks = [
+    { href: "/about" as const, labelKey: "about" as const },
+    { href: "/services" as const, labelKey: "services" as const },
+    { href: "/contact" as const, labelKey: "contact" as const },
+  ];
+
+  const serviceLinks = [
+    { href: "/services/structural-engineering" as const, label: tFooter("structuralEngineering") },
+    { href: "/services/real-estate-development" as const, label: tFooter("realEstateDevelopment") },
+    { href: "/services/project-management-consulting" as const, label: tFooter("projectManagement") },
+  ];
+
   return (
     <footer className="bg-[#1B2E37]">
       <div className="border-t border-[#2A3F47]" />
@@ -29,11 +34,11 @@ export function Footer() {
               height={28}
             />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Designing the Future, One Space at a Time
+              {tFooter("tagline")}
             </p>
             <div className="mt-6 space-y-2 text-sm text-white/60">
-              <p>7005, boulevard Taschereau, Suite 305</p>
-              <p>Brossard, Quebec J4Z 1A7</p>
+              <p>{tFooter("address1")}</p>
+              <p>{tFooter("address2")}</p>
               <p className="mt-3">
                 <a href="mailto:info@metanova.ca" className="transition-colors hover:text-white">
                   info@metanova.ca
@@ -46,10 +51,9 @@ export function Footer() {
               </p>
               <div className="mt-4 border-t border-white/10 pt-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
-                  Opening Hours
+                  {tFooter("hours")}
                 </p>
-                <p className="mt-2">Monday – Friday</p>
-                <p>9:00 AM – 5:00 PM</p>
+                <p className="mt-2">{tFooter("hoursValue")}</p>
               </div>
             </div>
           </div>
@@ -57,16 +61,16 @@ export function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
-              Company
+              {tFooter("company")}
             </h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.company.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-sm text-white/60 transition-colors hover:text-white"
                   >
-                    {link.label}
+                    {tNav(link.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -76,10 +80,10 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
-              Services
+              {tFooter("services")}
             </h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.services.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -96,10 +100,10 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Metanova Experts-Conseils. All rights reserved.
+            &copy; {new Date().getFullYear()} {tFooter("legalName")}. {tFooter("copyright")}
           </p>
           <p className="text-xs text-white/40">
-            Brossard, Quebec, Canada
+            {tFooter("location")}
           </p>
         </div>
       </div>

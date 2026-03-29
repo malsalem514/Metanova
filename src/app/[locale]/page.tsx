@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { VisionMissionSection } from "@/components/sections/VisionMissionSection";
 import { EditorialSection } from "@/components/sections/EditorialSection";
@@ -6,8 +7,15 @@ import { ApproachSection } from "@/components/sections/ApproachSection";
 import { ServiceAreas } from "@/components/sections/ServiceAreas";
 import { loadContent } from "@/lib/content/loader";
 
-export default function Home() {
-  const page = loadContent("pages/home");
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const page = loadContent("pages/home", locale);
   const fm = page?.frontmatter as Record<string, string> | undefined;
 
   return (

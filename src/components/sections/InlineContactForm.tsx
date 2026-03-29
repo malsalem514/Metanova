@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ShimmerButton } from "@/components/ui/ShimmerButton";
 
@@ -14,6 +15,10 @@ export function InlineContactForm({
   subtext = "We're here to help you bring your construction project to life! Whether you have questions, want to discuss your ideas.",
 }: InlineContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const t = useTranslations("contact");
+  const tCta = useTranslations("cta");
+  const locale = useLocale();
+  const isFr = locale === "fr";
 
   return (
     <section className="bg-white/60 py-24">
@@ -46,10 +51,12 @@ export function InlineContactForm({
                   </svg>
                 </div>
                 <h3 className="mt-6 text-xl font-semibold text-[#121212]">
-                  Message Sent
+                  {isFr ? "Message envoy\u00e9" : "Message Sent"}
                 </h3>
                 <p className="mt-2 text-sm text-[#121212]/80">
-                  Thank you for reaching out. We&apos;ll be in touch shortly.
+                  {isFr
+                    ? "Merci de nous avoir contact\u00e9s. Nous vous r\u00e9pondrons sous peu."
+                    : "Thank you for reaching out. We'll be in touch shortly."}
                 </p>
               </div>
             ) : (
@@ -66,7 +73,7 @@ export function InlineContactForm({
                       htmlFor="inline-first-name"
                       className="block text-sm font-medium text-[#121212]"
                     >
-                      First Name
+                      {t("firstName")}
                     </label>
                     <input
                       type="text"
@@ -76,7 +83,7 @@ export function InlineContactForm({
                       autoComplete="given-name"
                       aria-required="true"
                       className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                      placeholder="First name"
+                      placeholder={t("firstName")}
                     />
                   </div>
                   <div>
@@ -84,7 +91,7 @@ export function InlineContactForm({
                       htmlFor="inline-last-name"
                       className="block text-sm font-medium text-[#121212]"
                     >
-                      Last Name
+                      {t("lastName")}
                     </label>
                     <input
                       type="text"
@@ -94,7 +101,7 @@ export function InlineContactForm({
                       autoComplete="family-name"
                       aria-required="true"
                       className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                      placeholder="Last name"
+                      placeholder={t("lastName")}
                     />
                   </div>
                 </div>
@@ -103,7 +110,7 @@ export function InlineContactForm({
                     htmlFor="inline-email"
                     className="block text-sm font-medium text-[#121212]"
                   >
-                    Email
+                    {t("email")}
                   </label>
                   <input
                     type="email"
@@ -121,8 +128,8 @@ export function InlineContactForm({
                     htmlFor="inline-phone"
                     className="block text-sm font-medium text-[#121212]"
                   >
-                    Phone{" "}
-                    <span className="text-[#121212]/40">(optional)</span>
+                    {t("phone")}{" "}
+                    <span className="text-[#121212]/40">({isFr ? "optionnel" : "optional"})</span>
                   </label>
                   <input
                     type="tel"
@@ -138,7 +145,7 @@ export function InlineContactForm({
                     htmlFor="inline-message"
                     className="block text-sm font-medium text-[#121212]"
                   >
-                    Message
+                    {t("message")}
                   </label>
                   <textarea
                     id="inline-message"
@@ -147,11 +154,11 @@ export function InlineContactForm({
                     aria-required="true"
                     rows={5}
                     className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                    placeholder="Tell us about your project..."
+                    placeholder={isFr ? "Parlez-nous de votre projet..." : "Tell us about your project..."}
                   />
                 </div>
                 <ShimmerButton type="submit" className="w-full">
-                  Submit
+                  {tCta("submit")}
                 </ShimmerButton>
               </form>
             )}

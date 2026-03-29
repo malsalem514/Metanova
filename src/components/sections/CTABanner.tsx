@@ -1,6 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import type { routing } from "@/i18n/routing";
+
+type Pathname = keyof typeof routing.pathnames;
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ShimmerButton } from "@/components/ui/ShimmerButton";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
@@ -34,7 +37,7 @@ export function CTABanner({
               <p className="mt-8 text-lg leading-relaxed text-white/75">
                 {subtitle}
               </p>
-              <Link href={ctaHref} className="mt-8 inline-block">
+              <Link href={ctaHref as Pathname} className="mt-8 inline-block">
                 <ShimmerButton className="bg-white text-[#121212] font-normal">
                   {ctaText}
                 </ShimmerButton>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/FadeIn";
 
@@ -61,7 +61,7 @@ export function ServiceDetail({
                 <p className="text-lg leading-relaxed text-[#121212]/70">
                   {description}
                 </p>
-                <Link href="/contact" className="mt-8 inline-block">
+                <Link href={"/contact" as const} className="mt-8 inline-block">
                   <Button className="h-auto rounded-none bg-[#0A5592] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80">
                     {ctaText}
                   </Button>

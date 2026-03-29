@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "tagline": "Designing the Future, One Space at a Time",
+    "copyright": "All rights reserved.",
+    "legalName": "Metanova Experts-Conseils",
+    "hours": "Opening Hours",
+    "hoursValue": "Monday – Friday, 9:00 AM – 5:00 PM",
+    "address1": "7005, boulevard Taschereau, Suite 305",
+    "address2": "Brossard, Quebec J4Z 1A7",
+    "structuralEngineering": "Structural Engineering",
+    "realEstateDevelopment": "Real Estate Development",
+    "projectManagement": "Project Management",
+    "location": "Brossard, Quebec, Canada"
+  },
+  "cta": {
+    "bookCall": "BOOK A CALL",
+    "ourServices": "OUR SERVICES",
+    "contactUs": "CONTACT US",
+    "learnMore": "Learn more",
+    "buildWithUs": "BUILD PROJECT WITH US",
+    "submit": "SUBMIT",
+    "sendMessage": "Send Message"
+  },
+  "contact": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "location": "Our Location",
+    "messageUs": "Message with us",
+    "replyTime": "We're usually replying within 24 hours.",
+    "callUs": "Call us now"
+  },
+  "lang": {
+    "switch": "FR"
+  }
+}

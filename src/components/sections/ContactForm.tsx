@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ShimmerButton } from "@/components/ui/ShimmerButton";
 
@@ -10,6 +11,10 @@ interface ContactFormProps {
 
 export function ContactForm({ content }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const t = useTranslations("contact");
+  const tCta = useTranslations("cta");
+  const locale = useLocale();
+  const isFr = locale === "fr";
 
   return (
     <section className="py-24">
@@ -19,21 +24,23 @@ export function ContactForm({ content }: ContactFormProps) {
           <FadeIn>
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
-                {content?.["overline"] ?? "Get in Touch"}
+                {content?.["overline"] ?? (isFr ? "CONTACTEZ-NOUS" : "Get in Touch")}
               </p>
               <h2
                 className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
               >
-                {content?.["heading"] ?? "Let\u2019s discuss your next project"}
+                {content?.["heading"] ?? (isFr ? "Contactez-nous" : "Let\u2019s discuss your next project")}
               </h2>
               <p className="text-lg leading-relaxed text-[#121212]/80">
-                {content?.["intro"] ?? "Whether you need structural engineering expertise, project management support, or development consulting, we\u2019re here to help bring your vision to life."}
+                {content?.["intro"] ?? (isFr
+                  ? "Nous serions ravis de vous entendre! Que vous ayez un nouveau projet en t\u00eate, que vous ayez besoin d\u2019une consultation d\u2019expert ou que vous souhaitiez simplement en savoir plus sur notre travail, notre \u00e9quipe est pr\u00eate \u00e0 vous aider."
+                  : "Whether you need structural engineering expertise, project management support, or development consulting, we\u2019re here to help bring your vision to life.")}
               </p>
 
               <div className="mt-10 space-y-6">
                 <div>
                   <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
-                    Office
+                    {isFr ? "Bureau" : "Office"}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#121212]/80">
                     {content?.["office_address_line1"] ?? "7005, boulevard Taschereau, Suite 305"}
@@ -43,7 +50,7 @@ export function ContactForm({ content }: ContactFormProps) {
                 </div>
                 <div>
                   <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
-                    Email
+                    {t("email")}
                   </h3>
                   <a
                     href={`mailto:${content?.["email"] ?? "info@metanova.ca"}`}
@@ -54,7 +61,7 @@ export function ContactForm({ content }: ContactFormProps) {
                 </div>
                 <div>
                   <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
-                    Phone
+                    {t("phone")}
                   </h3>
                   <a
                     href={`tel:${content?.["phone_raw"] ?? "+15142223444"}`}
@@ -85,10 +92,12 @@ export function ContactForm({ content }: ContactFormProps) {
                     </svg>
                   </div>
                   <h3 className="mt-6 text-xl font-semibold text-[#121212]">
-                    Message Sent
+                    {isFr ? "Message envoy\u00e9" : "Message Sent"}
                   </h3>
                   <p className="mt-2 text-sm text-[#121212]/80">
-                    Thank you for reaching out. We&apos;ll be in touch shortly.
+                    {isFr
+                      ? "Merci de nous avoir contact\u00e9s. Nous vous r\u00e9pondrons sous peu."
+                      : "Thank you for reaching out. We'll be in touch shortly."}
                   </p>
                 </div>
               ) : (
@@ -105,7 +114,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         htmlFor="first-name"
                         className="block text-sm font-medium text-[#121212]"
                       >
-                        First Name
+                        {t("firstName")}
                       </label>
                       <input
                         type="text"
@@ -115,7 +124,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         autoComplete="given-name"
                         aria-required="true"
                         className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                        placeholder="First name"
+                        placeholder={t("firstName")}
                       />
                     </div>
                     <div>
@@ -123,7 +132,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         htmlFor="last-name"
                         className="block text-sm font-medium text-[#121212]"
                       >
-                        Last Name
+                        {t("lastName")}
                       </label>
                       <input
                         type="text"
@@ -133,7 +142,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         autoComplete="family-name"
                         aria-required="true"
                         className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                        placeholder="Last name"
+                        placeholder={t("lastName")}
                       />
                     </div>
                   </div>
@@ -142,7 +151,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       htmlFor="email"
                       className="block text-sm font-medium text-[#121212]"
                     >
-                      Email
+                      {t("email")}
                     </label>
                     <input
                       type="email"
@@ -160,8 +169,8 @@ export function ContactForm({ content }: ContactFormProps) {
                       htmlFor="phone"
                       className="block text-sm font-medium text-[#121212]"
                     >
-                      Phone{" "}
-                      <span className="text-[#121212]/40">(optional)</span>
+                      {t("phone")}{" "}
+                      <span className="text-[#121212]/40">({isFr ? "optionnel" : "optional"})</span>
                     </label>
                     <input
                       type="tel"
@@ -177,7 +186,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       htmlFor="message"
                       className="block text-sm font-medium text-[#121212]"
                     >
-                      Message
+                      {t("message")}
                     </label>
                     <textarea
                       id="message"
@@ -186,11 +195,11 @@ export function ContactForm({ content }: ContactFormProps) {
                       aria-required="true"
                       rows={5}
                       className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                      placeholder="Tell us about your project..."
+                      placeholder={isFr ? "Parlez-nous de votre projet..." : "Tell us about your project..."}
                     />
                   </div>
                   <ShimmerButton type="submit" className="w-full">
-                    Send Message
+                    {tCta("sendMessage")}
                   </ShimmerButton>
                 </form>
               )}
