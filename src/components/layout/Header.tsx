@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 
-type NavHref = "/" | "/about" | "/services" | "/contact";
+type NavHref = "/" | "/about" | "/services" | "/contact" | "/careers";
 
-const navLinks: { href: NavHref; labelKey: "home" | "about" | "services" | "contact" }[] = [
+const navLinks: { href: NavHref; labelKey: "home" | "about" | "services" | "contact" | "careers" }[] = [
   { href: "/", labelKey: "home" },
   { href: "/about", labelKey: "about" },
   { href: "/services", labelKey: "services" },
+  { href: "/careers", labelKey: "careers" },
   { href: "/contact", labelKey: "contact" },
 ];
 

@@ -11,6 +11,7 @@ export function Footer() {
   const companyLinks = [
     { href: "/about" as const, labelKey: "about" as const },
     { href: "/services" as const, labelKey: "services" as const },
+    { href: "/careers" as const, labelKey: "careers" as const },
     { href: "/contact" as const, labelKey: "contact" as const },
   ];
 

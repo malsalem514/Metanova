@@ -24,5 +24,9 @@ export const routing = defineRouting({
       fr: "/services/gestion-de-projet",
     },
     "/contact": "/contact",
+    "/careers": {
+      en: "/careers",
+      fr: "/carrieres",
+    },
   },
 });

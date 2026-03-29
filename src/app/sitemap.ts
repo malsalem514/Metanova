@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { en: "/en/services/real-estate-development", fr: "/fr/services/developpement-immobilier", priority: 0.7, changeFrequency: "monthly" as const },
     { en: "/en/services/project-management-consulting", fr: "/fr/services/gestion-de-projet", priority: 0.7, changeFrequency: "monthly" as const },
     { en: "/en/contact", fr: "/fr/contact", priority: 0.5, changeFrequency: "yearly" as const },
+    { en: "/en/careers", fr: "/fr/carrieres", priority: 0.6, changeFrequency: "monthly" as const },
   ];
 
   return pages.flatMap((page) => [
