@@ -1,0 +1,35 @@
+{
+  "source": "framer-export",
+  "extractedAt": "2026-03-29T18:00:00.000Z",
+
+  "pages": [
+    { "slug": "/", "title": "Home", "template": "home" },
+    { "slug": "/about", "title": "About", "template": "about" },
+    { "slug": "/services", "title": "Services", "template": "services" },
+    { "slug": "/services/structural-engineering", "title": "Structural Engineering", "template": "service-detail" },
+    { "slug": "/services/project-management-consulting", "title": "Project Management", "template": "service-detail" },
+    { "slug": "/residential", "title": "Residential", "template": "vertical" },
+    { "slug": "/hospitality", "title": "Hospitality", "template": "vertical" },
+    { "slug": "/commercial", "title": "Commercial", "template": "vertical" },
+    { "slug": "/contact", "title": "Contact", "template": "contact" }
+  ],
+
+  "typography": {
+    "primary": "Inter (Framer template default — Blueprint must replace, banned by frontend-design skill)",
+    "secondary": "Plus Jakarta Sans (current scaffold) / IBM Plex Mono (monospace)"
+  },
+
+  "colors": {
+    "primary": "#16120d",
+    "secondary": "#6e655d",
+    "accent": "#c36036",
+    "background": "#efe8d9",
+    "text": "#16120d"
+  },
+
+  "layout": {
+    "maxWidth": "1200px",
+    "headerStyle": "fixed with backdrop-blur, logo left, nav center, CTA right",
+    "footerStyle": "dark background with contact info, address, legal text"
+  }
+}

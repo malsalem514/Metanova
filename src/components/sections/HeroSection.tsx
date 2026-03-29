@@ -40,13 +40,15 @@ export function HeroSection({
         priority
         sizes="100vw"
       />
-      {/* Video overlays the image when provided */}
+      {/* Video overlays the image when provided — preload="none" so video doesn't block LCP */}
       {videoSrc && (
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="none"
+          poster={backgroundImage}
           className="absolute inset-0 z-[1] h-full w-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />

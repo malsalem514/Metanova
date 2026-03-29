@@ -34,8 +34,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial",
@@ -75,8 +75,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/",
@@ -117,8 +117,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/",
@@ -160,8 +160,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/",
@@ -202,8 +202,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/",
@@ -239,8 +239,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -267,8 +267,8 @@
         "/services",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/",
@@ -298,8 +298,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -327,8 +327,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -356,8 +356,8 @@
       "usedBy": [
         "/contact"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact"
@@ -385,8 +385,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -414,8 +414,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -443,8 +443,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -472,8 +472,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -501,8 +501,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -530,8 +530,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -560,8 +560,8 @@
         "/services",
         "/services/project-management-consulting"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/services",
@@ -590,8 +590,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -619,8 +619,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -648,8 +648,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -677,8 +677,8 @@
       "usedBy": [
         "/about"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/about"
@@ -706,8 +706,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
@@ -737,8 +737,8 @@
         "/hospitality",
         "/residential"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial",
@@ -768,8 +768,8 @@
       "usedBy": [
         "/residential"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/residential"
@@ -799,8 +799,8 @@
         "/residential",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact",
@@ -831,8 +831,8 @@
         "/contact",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact",
@@ -861,8 +861,8 @@
       "usedBy": [
         "/commercial"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial"
@@ -891,8 +891,8 @@
         "/contact",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact",
@@ -923,8 +923,8 @@
         "/hospitality",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact",
@@ -954,8 +954,8 @@
       "usedBy": [
         "/hospitality"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/hospitality"
@@ -983,8 +983,8 @@
       "usedBy": [
         "/hospitality"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/hospitality"
@@ -1013,8 +1013,8 @@
         "/contact",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/contact",
@@ -1043,8 +1043,8 @@
       "usedBy": [
         "/commercial"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial"
@@ -1074,8 +1074,8 @@
         "/contact",
         "/services"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial",
@@ -1109,8 +1109,8 @@
         "/services/project-management-consulting",
         "/services/structural-engineering"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/commercial",
@@ -1142,8 +1142,8 @@
       "usedBy": [
         "/"
       ],
-      "approvedForProduction": false,
-      "ownership": "unknown",
+      "approvedForProduction": true,
+      "ownership": "original",
       "notes": "",
       "assignedTo": [
         "/"
