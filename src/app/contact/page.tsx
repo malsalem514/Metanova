@@ -42,7 +42,7 @@ export default function ContactPage() {
       <HeroSection
         title={fm?.["heading"] ?? "Contact us"}
         subtitle={fm?.["intro"]}
-        backgroundImage="/metanova-assets/projects/commercial/glass-atrium.jpg"
+        backgroundImage="/metanova-assets/hero/office-montreal.png"
       />
       <ContactForm content={fm} />
     </>
