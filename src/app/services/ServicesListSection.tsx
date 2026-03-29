@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 const services = [
   {
@@ -48,32 +49,34 @@ export function ServicesListSection() {
                 className={`grid items-center gap-12 lg:grid-cols-2 ${index % 2 === 1 ? "lg:direction-rtl" : ""}`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <h2
-                    className="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#1B2E37]"
-                    style={{ fontFamily: "var(--font-dm-serif-display)" }}
-                  >
-                    {service.title}
-                  </h2>
-                  <p className="mt-6 text-base leading-relaxed text-[#30454C]/60">
-                    {service.description}
-                  </p>
-                  <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-                    {service.capabilities.map((cap) => (
-                      <li
-                        key={cap}
-                        className="flex items-start gap-2 text-sm text-[#30454C]/60"
-                      >
-                        <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
-                        {cap}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={service.href}
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#C36036] transition-colors duration-300 hover:text-[#A04E2A]"
-                  >
-                    Learn more &rarr;
-                  </Link>
+                  <SpotlightCard className="border-none bg-transparent p-0 hover:shadow-none hover:translate-y-0">
+                    <h2
+                      className="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#1B2E37]"
+                      style={{ fontFamily: "var(--font-dm-serif-display)" }}
+                    >
+                      {service.title}
+                    </h2>
+                    <p className="mt-6 text-base leading-relaxed text-[#30454C]/60">
+                      {service.description}
+                    </p>
+                    <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+                      {service.capabilities.map((cap) => (
+                        <li
+                          key={cap}
+                          className="flex items-start gap-2 text-sm text-[#30454C]/60"
+                        >
+                          <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
+                          {cap}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={service.href}
+                      className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#C36036] transition-colors duration-300 hover:text-[#A04E2A]"
+                    >
+                      Learn more &rarr;
+                    </Link>
+                  </SpotlightCard>
                 </div>
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm ${index % 2 === 1 ? "lg:order-1" : ""}`}

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { ShimmerButton } from "@/components/ui/ShimmerButton";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -110,7 +110,7 @@ export function ContactForm() {
                       id="name"
                       name="name"
                       required
-                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="Your full name"
                     />
                   </div>
@@ -126,7 +126,7 @@ export function ContactForm() {
                       id="email"
                       name="email"
                       required
-                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -142,7 +142,7 @@ export function ContactForm() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="+1 (514) 000-0000"
                     />
                   </div>
@@ -158,16 +158,13 @@ export function ContactForm() {
                       name="message"
                       required
                       rows={5}
-                      className="mt-2 w-full resize-none rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full resize-none rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="Tell us about your project..."
                     />
                   </div>
-                  <Button
-                    type="submit"
-                    className="h-12 w-full rounded-full bg-[#C36036] text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]"
-                  >
+                  <ShimmerButton type="submit" className="w-full">
                     Send Message
-                  </Button>
+                  </ShimmerButton>
                 </form>
               )}
             </div>

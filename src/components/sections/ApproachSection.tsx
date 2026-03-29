@@ -1,6 +1,8 @@
 "use client";
 
 import { FadeIn } from "@/components/ui/FadeIn";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const values = [
   {
@@ -29,6 +31,12 @@ const values = [
   },
 ];
 
+const stats = [
+  { target: 2022, suffix: "", label: "Founded", prefix: "" },
+  { target: 20, suffix: "+", label: "Years Combined Experience", prefix: "" },
+  { target: 50, suffix: "+", label: "Projects Delivered", prefix: "" },
+];
+
 export function ApproachSection() {
   return (
     <section className="bg-[#F3F6F7] py-24">
@@ -47,10 +55,10 @@ export function ApproachSection() {
           </div>
         </FadeIn>
 
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-[#DBE2E6] bg-[#DBE2E6] md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {values.map((value, i) => (
             <FadeIn key={value.number} delay={i * 0.1}>
-              <div className="h-full bg-white p-8 transition-all duration-300 hover:bg-[#F3F6F7] lg:p-10">
+              <SpotlightCard className="h-full">
                 <span className="text-sm font-medium text-[#C36036]">
                   {value.number}
                 </span>
@@ -60,10 +68,29 @@ export function ApproachSection() {
                 <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
                   {value.description}
                 </p>
-              </div>
+              </SpotlightCard>
             </FadeIn>
           ))}
         </div>
+
+        {/* Stats */}
+        <FadeIn>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#1B2E37]">
+                  <AnimatedCounter
+                    target={stat.target}
+                    suffix={stat.suffix}
+                    prefix={stat.prefix}
+                    duration={stat.target > 100 ? 2.5 : 2}
+                  />
+                </div>
+                <p className="mt-2 text-sm font-medium text-[#30454C]/60">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

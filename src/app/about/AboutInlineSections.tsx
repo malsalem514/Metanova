@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const cards = [
   {
@@ -21,6 +23,12 @@ const cards = [
   },
 ];
 
+const stats = [
+  { target: 2022, label: "Founded", suffix: "" },
+  { target: 20, label: "Years Combined Experience", suffix: "+" },
+  { target: 3, label: "Sectors Served", suffix: "" },
+];
+
 export function AboutInlineSections() {
   return (
     <>
@@ -30,7 +38,7 @@ export function AboutInlineSections() {
           <div className="grid gap-8 md:grid-cols-3">
             {cards.map((card, i) => (
               <FadeIn key={card.label} delay={i * 0.1}>
-                <div className="h-full rounded-2xl border border-[#DBE2E6] bg-[#F3F6F7] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-black/5">
+                <SpotlightCard className="h-full rounded-2xl">
                   <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
                     {card.label}
                   </p>
@@ -43,10 +51,28 @@ export function AboutInlineSections() {
                   <p className="text-sm leading-relaxed text-[#30454C]/60">
                     {card.text}
                   </p>
-                </div>
+                </SpotlightCard>
               </FadeIn>
             ))}
           </div>
+
+          {/* Stats row */}
+          <FadeIn>
+            <div className="mt-16 grid gap-8 md:grid-cols-3">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#1B2E37]">
+                    <AnimatedCounter
+                      target={stat.target}
+                      suffix={stat.suffix}
+                      duration={stat.target > 100 ? 2.5 : 2}
+                    />
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-[#30454C]/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 

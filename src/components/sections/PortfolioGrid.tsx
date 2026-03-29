@@ -58,15 +58,20 @@ export function PortfolioGrid({
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (
               <FadeIn key={item.src} delay={(i % 3) * 0.1}>
-                <div className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={600}
-                    height={i % 3 === 0 ? 800 : i % 3 === 1 ? 600 : 450}
-                    className="w-full object-cover transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                <div className="group mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={600}
+                      height={i % 3 === 0 ? 800 : i % 3 === 1 ? 600 : 450}
+                      className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#1B2E37]/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="p-4 text-sm font-medium text-white">{item.alt}</p>
+                    </div>
+                  </div>
                 </div>
               </FadeIn>
             ))}

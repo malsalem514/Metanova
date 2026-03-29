@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { TextReveal } from "@/components/ui/TextReveal";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -28,8 +29,6 @@ export function HeroSection({
   overlay = true,
   videoSrc,
 }: HeroSectionProps) {
-  const words = title.split(" ");
-
   return (
     <section className="relative flex min-h-[85vh] items-end overflow-hidden">
       {/* Background: static image (always renders as base layer) */}
@@ -57,26 +56,11 @@ export function HeroSection({
         <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
       )}
       <div className="relative z-[3] mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
-        <h1
+        <TextReveal
+          text={title}
+          as="h1"
           className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
-          style={{ fontFamily: "var(--font-dm-serif-display)" }}
-        >
-          {words.map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.2 + i * 0.08,
-                ease: "easeOut",
-              }}
-              className="mr-[0.3em] inline-block"
-            >
-              {word}
-            </motion.span>
-          ))}
-        </h1>
+        />
         {subtitle && (
           <motion.p
             initial={{ opacity: 0, y: 20 }}

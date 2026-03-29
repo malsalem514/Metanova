@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { ShimmerButton } from "@/components/ui/ShimmerButton";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import { TextReveal } from "@/components/ui/TextReveal";
 
 interface CTABannerProps {
   title?: string;
@@ -22,22 +24,20 @@ export function CTABanner({
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#C36036] to-[#8B3A1A] p-12 md:p-16">
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-black/10 blur-3xl" />
+            <BackgroundBeams />
             <div className="relative z-10 max-w-2xl">
-              <h2
+              <TextReveal
+                text={title}
+                as="h2"
                 className="text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight text-white"
-                style={{ fontFamily: "var(--font-dm-serif-display)" }}
-              >
-                {title}
-              </h2>
+              />
               <p className="mt-6 text-lg leading-relaxed text-white/75">
                 {subtitle}
               </p>
               <Link href={ctaHref} className="mt-8 inline-block">
-                <Button className="h-12 rounded-full bg-white px-8 text-base font-semibold text-[#1B2E37] transition-all duration-300 hover:bg-white/90 hover:shadow-lg hover:shadow-black/10 hover:scale-[1.02]">
+                <ShimmerButton className="bg-white text-[#1B2E37] font-semibold hover:bg-white/90 hover:shadow-black/10">
                   {ctaText}
-                </Button>
+                </ShimmerButton>
               </Link>
             </div>
           </div>

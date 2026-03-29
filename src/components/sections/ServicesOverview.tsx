@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 const services = [
   {
@@ -49,30 +50,29 @@ export function ServicesOverview() {
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
-              <Link
-                href={service.href}
-                className="group block overflow-hidden rounded-2xl border border-[#DBE2E6] bg-[#F3F6F7] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-semibold text-[#1B2E37]">
-                    {service.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
-                    {service.description}
-                  </p>
-                  <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors duration-300 group-hover:text-[#A04E2A]">
-                    Learn more &rarr;
-                  </p>
-                </div>
+              <Link href={service.href} className="group block">
+                <SpotlightCard className="h-full rounded-2xl p-0">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-t-xl">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-semibold text-[#1B2E37]">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
+                      {service.description}
+                    </p>
+                    <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors duration-300 group-hover:text-[#A04E2A]">
+                      Learn more &rarr;
+                    </p>
+                  </div>
+                </SpotlightCard>
               </Link>
             </FadeIn>
           ))}
