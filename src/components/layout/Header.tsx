@@ -17,14 +17,7 @@ const navLinks = [
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isLightPage, setIsLightPage] = useState(false);
-
   useEffect(() => {
-    // Only /contact has a light background with no hero
-    if (window.location.pathname === "/contact") {
-      setIsLightPage(true);
-    }
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
     };
@@ -32,8 +25,8 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Dark nav only on /contact or when scrolled past hero
-  const useDarkNav = scrolled || isLightPage;
+  // Always start transparent + white, switch to dark only on scroll
+  const useDarkNav = scrolled;
   // Size: compact only when scrolled (not on initial load of no-hero pages)
   const isCompact = scrolled;
 
