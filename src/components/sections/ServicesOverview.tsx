@@ -10,21 +10,21 @@ const services = [
     title: "Structural Engineering",
     description:
       "Expert structural design and analysis for residential, commercial, and hospitality projects. Steel, concrete, and wood structures engineered to the highest standards.",
-    image: "/metanova-assets/services/structural/field-team-sunset.png",
+    image: "/metanova-assets/hero/construction-leadership.png",
     href: "/services/structural-engineering",
   },
   {
     title: "Real Estate Development",
     description:
       "From feasibility studies to project delivery, we bring a developer's perspective to every stage. Strategic site analysis, financial modeling, and execution.",
-    image: "/metanova-assets/services/development/model-review.png",
+    image: "/metanova-assets/services/development/site-model-overview.png",
     href: "/services/real-estate-development",
   },
   {
     title: "Project Management",
     description:
       "End-to-end project oversight ensuring quality, timeline, and budget targets are met. Coordination across all disciplines from concept to completion.",
-    image: "/metanova-assets/services/project-management/city-overlay-hardhat.png",
+    image: "/metanova-assets/services/project-management/timeline-interface.webp",
     href: "/services/project-management-consulting",
   },
 ];
