@@ -27,54 +27,29 @@ const serviceJsonLd = {
 
 const points = [
   {
-    title: "Strategic Planning and Feasibility",
+    title: "Budgeting & Financial Forecasting",
     description:
-      "Market studies, financial analyses, feasibility assessments, and regulatory navigation to ensure every project starts on a solid foundation.",
+      "We develop detailed project budgets and financial forecasts to keep your investment on track from planning through delivery.",
   },
   {
-    title: "Project Management and Coordination",
+    title: "Scheduling & Milestone Control",
     description:
-      "End-to-end oversight from land acquisition to construction completion, with full stakeholder coordination to keep timelines and budgets on track.",
+      "We build rigorous project schedules and manage milestones to ensure timely delivery without compromising quality.",
   },
   {
-    title: "Sustainable and Innovative Development",
+    title: "Zoning Amendments & Municipal Coordination",
     description:
-      "Responsible land use practices, sustainability integration, and meaningful community engagement to deliver projects that stand the test of time.",
+      "We navigate zoning amendments, municipal processes, and regulatory requirements to move projects forward efficiently.",
   },
   {
-    title: "Site Selection and Land Acquisition",
+    title: "Infrastructure Planning & Contractor Oversight",
     description:
-      "Identifying and securing the right sites for development through rigorous market analysis and due diligence.",
+      "We plan infrastructure needs and provide active oversight of contractors throughout the construction phase.",
   },
   {
-    title: "Feasibility Studies and Market Analysis",
+    title: "Risk Management & Regulatory Strategy",
     description:
-      "Comprehensive financial and market assessments to validate project viability before commitment.",
-  },
-  {
-    title: "Regulatory Compliance and Zoning Support",
-    description:
-      "Expert navigation of municipal regulations, zoning requirements, and permitting processes across Quebec.",
-  },
-  {
-    title: "Project Financing and Investment Strategies",
-    description:
-      "Structuring financing solutions and investment strategies that align with project goals and stakeholder expectations.",
-  },
-  {
-    title: "Master Planning and Urban Integration",
-    description:
-      "Holistic master planning that integrates seamlessly with urban fabric and community needs.",
-  },
-  {
-    title: "Development and Construction Oversight",
-    description:
-      "Active oversight throughout the development and construction phases to ensure quality, compliance, and delivery on commitments.",
-  },
-  {
-    title: "Stakeholder Engagement and Public Consultation",
-    description:
-      "Proactive engagement with communities, municipalities, and stakeholders to build consensus and support for development projects.",
+      "We identify and mitigate project risks early, aligning regulatory strategy with project goals to reduce delays and exposure.",
   },
 ];
 
@@ -83,9 +58,9 @@ export default function ProjectManagementPage() {
     <>
       <JsonLd data={serviceJsonLd} />
       <ServiceDetail
-        title="Real Estate Development"
+        title="Project Management & Development Consulting"
         subtitle="Our Services"
-        description="MetaNova's development division brings strategic vision and hands-on expertise to every real estate project. From initial feasibility through construction completion, we navigate complexity so you can focus on results — confident that every decision is grounded in market insight, regulatory knowledge, and responsible development principles."
+        description="We provide end-to-end project management and development consulting for residential and mixed-use projects across Quebec. From strategic planning and zoning coordination to construction oversight, we guide projects from concept to completion with clarity, structure, and accountability."
         heroImage="/metanova-assets/services/project-management/city-overlay-hardhat.png"
         points={points}
       />

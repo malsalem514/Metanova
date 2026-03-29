@@ -118,6 +118,46 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
           </div>
         </div>
       </section>
+
+      {/* A Practical and Strategic Approach */}
+      <section className="py-24">
+        <div className="mx-auto max-w-[1240px] px-6">
+          <FadeIn>
+            <div className="mb-12 max-w-2xl">
+              <h2 className="font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]">
+                A Practical and Strategic Approach
+              </h2>
+            </div>
+          </FadeIn>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Development-Oriented",
+                text: "We approach each mandate with a focus on project viability, optimization and long-term value.",
+              },
+              {
+                title: "Value Engineering",
+                text: "We integrate cost optimization strategies from the earliest stages of design.",
+              },
+              {
+                title: "Integrated Execution",
+                text: "We ensure coordination between all stakeholders to support efficient and predictable delivery.",
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1}>
+                <SpotlightCard className="h-full rounded-2xl">
+                  <h3 className="text-xl font-medium text-[#121212]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-[#121212]/70">
+                    {item.text}
+                  </p>
+                </SpotlightCard>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

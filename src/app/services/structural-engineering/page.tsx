@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
-import { CTABanner } from "@/components/sections/CTABanner";
+import { InlineContactForm } from "@/components/sections/InlineContactForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -27,34 +27,34 @@ const serviceJsonLd = {
 
 const points = [
   {
-    title: "Structural Design and Analysis",
+    title: "Structural Feasibility & Assessment",
     description:
-      "Creating safe and efficient structures using advanced engineering techniques.",
+      "We evaluate site conditions, building requirements, and structural constraints to determine the most efficient and cost-effective structural approach for your project.",
   },
   {
-    title: "Building Assessments and Inspections",
+    title: "Structural Design & Load Calculations",
     description:
-      "Evaluating existing buildings for safety, compliance, and structural integrity.",
+      "Our team performs detailed structural analysis and load calculations to ensure safety, durability, and regulatory compliance.",
   },
   {
-    title: "Renovation and Modernization",
+    title: "Concrete, Steel & Wood Design",
     description:
-      "Strengthening and optimizing structures to meet modern standards.",
+      "We design structural systems tailored to each project's scope, whether reinforced concrete foundations, steel framing systems, or engineered wood structures.",
   },
   {
-    title: "Value Engineering",
+    title: "Technical Drawings & Engineering Documentation",
     description:
-      "Optimizing materials and design for cost-effective solutions without compromising safety.",
+      "We produce permit-ready drawings, structural plans, and detailed technical documentation to support seamless construction execution.",
   },
   {
-    title: "Construction Support and Advice",
+    title: "Code Compliance & Regulatory Coordination",
     description:
-      "Providing engineering guidance throughout the building process.",
+      "We ensure full compliance with Quebec building codes and municipal regulations, reducing delays during approval and inspection processes.",
   },
   {
-    title: "Site Support and Construction Supervision",
+    title: "Construction Phase Support",
     description:
-      "On-site presence and supervision to ensure the built structure matches the design intent and quality standards.",
+      "We collaborate with contractors during construction to review structural elements, address site challenges, and maintain engineering integrity throughout execution.",
   },
 ];
 
@@ -65,14 +65,13 @@ export default function StructuralEngineeringPage() {
       <ServiceDetail
         title="Structural Engineering"
         subtitle="Our Services"
-        description="MetaNova's engineering division provides comprehensive structural design and analysis services. Led by licensed engineers with deep expertise in steel, concrete, and wood structures, we deliver designs that are safe, efficient, and buildable — always with an eye toward value engineering."
+        description="At Metanova, structural engineering is about more than calculations — it is about delivering clarity, reducing risk, and ensuring every project is built on a solid foundation. We work closely with developers, contractors, and property owners to design safe, efficient, and code-compliant structures that align with real-world construction demands. Our approach combines technical rigor with practical coordination to keep projects moving forward confidently."
         heroImage="/metanova-assets/services/structural/site-inspection.jpg"
         points={points}
       />
-      <CTABanner
-        title="Need structural engineering for your project?"
-        subtitle="From initial concept to construction support, our engineering team is ready to help."
-        ctaText="Get a Quote"
+      <InlineContactForm
+        heading="Let's Work Together"
+        subtext="We're here to help you bring your construction project to life! Whether you have questions, want to discuss your ideas."
       />
     </>
   );

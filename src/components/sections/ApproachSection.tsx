@@ -9,25 +9,25 @@ const values = [
     number: "01",
     title: "Value Engineering",
     description:
-      "We optimize every project for cost-effectiveness without compromising structural integrity or design intent. Smart solutions that maximize your investment.",
+      "We integrate value engineering from the earliest stages to optimize design, reduce costs and improve overall project performance—without compromising quality or constructability.",
   },
   {
     number: "02",
-    title: "Development Thinking",
+    title: "Development-Driven Thinking",
     description:
-      "With deep roots in real estate development, we bring a business-minded approach to engineering. Every decision considers buildability, timeline, and ROI.",
+      "We approach each project with a development perspective, focusing on site optimization, project viability and alignment with market and investment objectives.",
   },
   {
     number: "03",
-    title: "Precision Execution",
+    title: "Efficient Execution",
     description:
-      "From initial concept to final inspection, we maintain rigorous quality control and clear communication. No surprises, no delays, no excuses.",
+      "We prioritize coordination and clarity to ensure smooth project delivery, maintaining control over timelines, costs and construction realities.",
   },
   {
     number: "04",
     title: "Adaptability",
     description:
-      "Construction is dynamic. We respond quickly to field conditions, design changes, and regulatory requirements while keeping your project on track.",
+      "Our solutions evolve with project constraints, regulatory requirements and market conditions—ensuring flexibility and long-term success.",
   },
 ];
 
@@ -54,7 +54,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
             <h2
               className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
-              {heading ?? "Building with purpose, engineering with precision"}
+              {heading ?? "A Strategic Approach to Engineering and Development"}
             </h2>
           </div>
         </FadeIn>
