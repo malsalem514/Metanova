@@ -26,7 +26,7 @@ export function PortfolioGrid({
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-end overflow-hidden">
+      <section data-hero className="relative flex min-h-[60vh] items-end overflow-hidden">
         <Image
           src={heroImage}
           alt={title}
