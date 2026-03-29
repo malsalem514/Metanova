@@ -57,7 +57,7 @@ export function PortfolioGrid({
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (
               <FadeIn key={item.src} delay={(i % 3) * 0.1}>
-                <div className="group mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#C36036]/5">
+                <div className="group mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0A5592]/5">
                   <div className="relative overflow-hidden">
                     <Image
                       src={item.src}

@@ -62,7 +62,7 @@ export function ServiceDetail({
                   {description}
                 </p>
                 <Link href="/contact" className="mt-8 inline-block">
-                  <Button className="h-auto rounded-none bg-[#C36036] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80">
+                  <Button className="h-auto rounded-none bg-[#0A5592] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80">
                     {ctaText}
                   </Button>
                 </Link>
@@ -71,7 +71,7 @@ export function ServiceDetail({
             <div className="space-y-6">
               {points.map((point, i) => (
                 <FadeIn key={point.title} delay={i * 0.08}>
-                  <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C36036]/20 hover:shadow-md hover:shadow-[#C36036]/5">
+                  <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0A5592]/20 hover:shadow-md hover:shadow-[#0A5592]/5">
                     <div className="flex items-start gap-4">
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#121212]/5 text-sm font-semibold text-[#121212]/60">
                         {String(i + 1).padStart(2, "0")}

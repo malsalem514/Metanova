@@ -23,7 +23,7 @@ export function CTABanner({
     <section className="py-24">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#C36036] to-[#8B3A1A] p-12 md:p-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A5592] to-[#8B3A1A] p-12 md:p-16">
             <BackgroundBeams />
             <div className="relative z-10 max-w-2xl">
               <TextReveal

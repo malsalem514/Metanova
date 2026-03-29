@@ -72,13 +72,13 @@ export function ContactForm({ content }: ContactFormProps) {
             <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm lg:p-10">
               {submitted ? (
                 <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#C36036]/10">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0A5592]/10">
                     <svg
                       width="32"
                       height="32"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#C36036"
+                      stroke="#0A5592"
                       strokeWidth="2"
                     >
                       <polyline points="20 6 9 17 4 12" />
@@ -114,7 +114,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="given-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                         placeholder="First name"
                       />
                     </div>
@@ -132,7 +132,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="family-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                         placeholder="Last name"
                       />
                     </div>
@@ -151,7 +151,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       autoComplete="email"
                       aria-required="true"
-                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -168,7 +168,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       id="phone"
                       name="phone"
                       autoComplete="tel"
-                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                       placeholder="+1 (514) 000-0000"
                     />
                   </div>
@@ -185,7 +185,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       aria-required="true"
                       rows={5}
-                      className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                       placeholder="Tell us about your project..."
                     />
                   </div>

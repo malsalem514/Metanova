@@ -20,7 +20,7 @@ export function SpotlightCard({ children, className }: { children: React.ReactNo
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:shadow-[#C36036]/5 hover:-translate-y-1",
+        "relative overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:shadow-[#0A5592]/5 hover:-translate-y-1",
         className
       )}
     >

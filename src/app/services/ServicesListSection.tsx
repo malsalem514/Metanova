@@ -64,7 +64,7 @@ export function ServicesListSection() {
                           key={cap}
                           className="flex items-start gap-2 text-sm text-[#121212]/70"
                         >
-                          <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
+                          <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#0A5592]" />
                           {cap}
                         </li>
                       ))}

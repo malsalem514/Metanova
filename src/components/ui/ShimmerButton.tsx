@@ -10,7 +10,7 @@ export function ShimmerButton({ children, className, ...props }: ShimmerButtonPr
   return (
     <button
       className={cn(
-        "group relative inline-flex items-center justify-center overflow-hidden rounded-none bg-[#C36036] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80",
+        "group relative inline-flex items-center justify-center overflow-hidden rounded-none bg-[#0A5592] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80",
         className
       )}
       {...props}
