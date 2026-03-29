@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     "construction",
     "Metanova",
   ],
+  icons: {
+    icon: "/icon.png",
+    apple: "/metanova-assets/brand/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "fr_CA",

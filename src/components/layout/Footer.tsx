@@ -103,9 +103,15 @@ export function Footer() {
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} {tFooter("legalName")}. {tFooter("copyright")}
           </p>
-          <p className="text-xs text-white/40">
-            {tFooter("location")}
-          </p>
+          <div className="flex items-center gap-4 text-xs text-white/40">
+            <p>{tFooter("location")}</p>
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white"
+            >
+              {tFooter("privacyPolicy")}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

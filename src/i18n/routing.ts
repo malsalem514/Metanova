@@ -29,5 +29,9 @@ export const routing = defineRouting({
       en: "/careers",
       fr: "/carrieres",
     },
+    "/privacy": {
+      en: "/privacy",
+      fr: "/confidentialite",
+    },
   },
 });
