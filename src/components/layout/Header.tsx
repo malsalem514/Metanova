@@ -18,11 +18,11 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#2A2520] bg-[#0C0C0C]/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#DBE2E6] bg-white/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/metanova-assets/brand/logo-wordmark-white.svg"
+            src="/metanova-assets/brand/logo-wordmark-color.svg"
             alt="MetaNova"
             width={160}
             height={32}
@@ -36,13 +36,13 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-lg px-3 py-2 text-sm text-[#8A8278] transition-colors hover:text-[#F5F0EB]"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-[#30454C] transition-colors hover:text-[#C36036]"
             >
               {link.label}
             </Link>
           ))}
           <Link href="/contact" className="ml-2">
-            <Button className="bg-[#C36036] text-[#F5F0EB] hover:bg-[#D4724A]">
+            <Button className="rounded-full bg-[#C36036] px-6 text-white hover:bg-[#A04E2A]">
               Get in Touch
             </Button>
           </Link>
@@ -51,7 +51,7 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#F5F0EB] md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#30454C] md:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? (
@@ -68,19 +68,19 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-[#2A2520] bg-[#0C0C0C] px-6 py-4 md:hidden">
+        <nav className="border-t border-[#DBE2E6] bg-white px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-base text-[#8A8278] transition-colors hover:text-[#F5F0EB]"
+              className="block py-3 text-base font-medium text-[#30454C] transition-colors hover:text-[#C36036]"
             >
               {link.label}
             </Link>
           ))}
           <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-2 block">
-            <Button className="w-full bg-[#C36036] text-[#F5F0EB] hover:bg-[#D4724A]">
+            <Button className="w-full rounded-full bg-[#C36036] text-white hover:bg-[#A04E2A]">
               Get in Touch
             </Button>
           </Link>

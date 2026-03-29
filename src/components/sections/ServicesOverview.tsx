@@ -27,14 +27,14 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="bg-[#0C0C0C] py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section className="bg-white py-28">
+      <div className="mx-auto max-w-[1240px] px-6">
         <div className="mb-16 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#C36036]">
+          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
             What We Do
           </p>
           <h2
-            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#F5F0EB]"
+            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
             style={{ fontFamily: "var(--font-dm-serif-display)" }}
           >
             Integrated expertise across engineering, development, and management
@@ -46,25 +46,25 @@ export function ServicesOverview() {
             <Link
               key={service.title}
               href={service.href}
-              className="group overflow-hidden rounded-2xl border border-[#2A2520] bg-[#1A1A1A] transition-all duration-300 hover:scale-[1.02] hover:border-[#C36036]/30 hover:shadow-xl hover:shadow-[#C36036]/5"
+              className="group overflow-hidden rounded-2xl border border-[#DBE2E6] bg-[#F3F6F7] transition-all duration-300 hover:shadow-lg hover:shadow-black/5"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-85"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#F5F0EB]">
+                <h3 className="text-xl font-semibold text-[#1B2E37]">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#8A8278]">
+                <p className="mt-3 text-sm leading-relaxed text-[#30454C]/70">
                   {service.description}
                 </p>
-                <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors group-hover:text-[#D4724A]">
+                <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors group-hover:text-[#A04E2A]">
                   Learn more &rarr;
                 </p>
               </div>

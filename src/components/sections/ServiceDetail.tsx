@@ -36,13 +36,13 @@ export function ServiceDetail({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0C0C] via-[#0C0C0C]/60 to-[#0C0C0C]/30" />
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 pb-16 pt-32">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#C36036]">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/90 via-[#1B2E37]/50 to-[#1B2E37]/20" />
+        <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
+          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
             {subtitle}
           </p>
           <h1
-            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-[#F5F0EB]"
+            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-white"
             style={{ fontFamily: "var(--font-dm-serif-display)" }}
           >
             {title}
@@ -51,15 +51,15 @@ export function ServiceDetail({
       </section>
 
       {/* Content */}
-      <section className="bg-[#0C0C0C] py-24">
-        <div className="mx-auto max-w-[1200px] px-6">
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <p className="text-lg leading-relaxed text-[#8A8278]">
+              <p className="text-lg leading-relaxed text-[#30454C]/70">
                 {description}
               </p>
               <Link href="/contact" className="mt-8 inline-block">
-                <Button className="h-12 rounded-lg bg-[#C36036] px-8 text-base text-[#F5F0EB] hover:bg-[#D4724A]">
+                <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white hover:bg-[#A04E2A]">
                   {ctaText}
                 </Button>
               </Link>
@@ -68,17 +68,17 @@ export function ServiceDetail({
               {points.map((point, i) => (
                 <div
                   key={point.title}
-                  className="rounded-xl border border-[#2A2520] bg-[#1A1A1A] p-6 transition-colors hover:border-[#C36036]/20"
+                  className="rounded-xl border border-[#DBE2E6] bg-[#F3F6F7] p-6 transition-colors hover:border-[#C36036]/20 hover:shadow-sm"
                 >
                   <div className="flex items-start gap-4">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C36036]/10 text-sm font-semibold text-[#C36036]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div>
-                      <h3 className="text-lg font-semibold text-[#F5F0EB]">
+                      <h3 className="text-lg font-semibold text-[#1B2E37]">
                         {point.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-[#8A8278]">
+                      <p className="mt-2 text-sm leading-relaxed text-[#30454C]/70">
                         {point.description}
                       </p>
                     </div>

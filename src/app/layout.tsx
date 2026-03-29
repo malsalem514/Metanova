@@ -51,7 +51,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "dark h-full antialiased",
+        "h-full antialiased",
         dmSerifDisplay.variable,
         plusJakartaSans.variable,
         ibmPlexMono.variable,

@@ -17,14 +17,14 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="bg-[#0C0C0C] py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-[1240px] px-6">
         <div className="mb-16 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#C36036]">
+          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
             Leadership
           </p>
           <h2
-            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#F5F0EB]"
+            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
             style={{ fontFamily: "var(--font-dm-serif-display)" }}
           >
             Meet the founders
@@ -42,16 +42,16 @@ export function TeamSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C0C0C]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/60 to-transparent" />
               </div>
               <div className="mt-6">
-                <h3 className="text-2xl font-semibold text-[#F5F0EB]">
+                <h3 className="text-2xl font-semibold text-[#1B2E37]">
                   {member.name}
                 </h3>
                 <p className="mt-1 text-sm font-medium text-[#C36036]">
                   {member.role}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-[#8A8278]">
+                <p className="mt-4 text-sm leading-relaxed text-[#30454C]/70">
                   {member.bio}
                 </p>
               </div>

@@ -15,11 +15,11 @@ export function CTABanner({
   ctaHref = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="bg-[#0C0C0C] py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-[1240px] px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#C36036] to-[#8B3A1A] p-12 md:p-16">
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-black/20 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-black/10 blur-3xl" />
           <div className="relative z-10 max-w-2xl">
             <h2
               className="text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight text-white"
@@ -31,7 +31,7 @@ export function CTABanner({
               {subtitle}
             </p>
             <Link href={ctaHref} className="mt-8 inline-block">
-              <Button className="h-12 rounded-lg bg-white px-8 text-base font-semibold text-[#0C0C0C] hover:bg-white/90">
+              <Button className="h-12 rounded-full bg-white px-8 text-base font-semibold text-[#1B2E37] hover:bg-white/90">
                 {ctaText}
               </Button>
             </Link>

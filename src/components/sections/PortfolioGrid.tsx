@@ -32,31 +32,31 @@ export function PortfolioGrid({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0C0C] via-[#0C0C0C]/60 to-[#0C0C0C]/30" />
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 pb-16 pt-32">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#C36036]">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/90 via-[#1B2E37]/50 to-[#1B2E37]/20" />
+        <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
+          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
             {subtitle}
           </p>
           <h1
-            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-[#F5F0EB]"
+            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-white"
             style={{ fontFamily: "var(--font-dm-serif-display)" }}
           >
             {title}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#8A8278]">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
             {description}
           </p>
         </div>
       </section>
 
       {/* Grid */}
-      <section className="bg-[#0C0C0C] py-24">
-        <div className="mx-auto max-w-[1200px] px-6">
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-[1240px] px-6">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (
               <div
                 key={item.src}
-                className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#2A2520] transition-all duration-300 hover:border-[#C36036]/30 hover:shadow-xl hover:shadow-[#C36036]/5"
+                className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] transition-all duration-300 hover:shadow-lg hover:shadow-black/5"
               >
                 <Image
                   src={item.src}

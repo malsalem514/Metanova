@@ -5,43 +5,44 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0C0C0C;
-  --foreground: #F5F0EB;
-  --surface: #1A1A1A;
-  --surface-strong: #222222;
+  --background: #FFFFFF;
+  --foreground: #30454C;
+  --surface: #F3F6F7;
+  --surface-strong: #E8EDEF;
   --accent: #C36036;
-  --accent-hover: #D4724A;
-  --text-primary: #F5F0EB;
-  --text-secondary: #8A8278;
-  --border: #2A2520;
-  --card: #1A1A1A;
-  --card-foreground: #F5F0EB;
-  --popover: #1A1A1A;
-  --popover-foreground: #F5F0EB;
+  --accent-hover: #A04E2A;
+  --accent-faded: #F5E6DE;
+  --text-primary: #30454C;
+  --text-secondary: #1B2E37;
+  --border: #DBE2E6;
+  --card: #F3F6F7;
+  --card-foreground: #30454C;
+  --popover: #FFFFFF;
+  --popover-foreground: #30454C;
   --primary: #C36036;
-  --primary-foreground: #F5F0EB;
-  --secondary: #2A2520;
-  --secondary-foreground: #F5F0EB;
-  --muted: #2A2520;
-  --muted-foreground: #8A8278;
-  --accent-foreground: #F5F0EB;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F6F7;
+  --secondary-foreground: #30454C;
+  --muted: #F3F6F7;
+  --muted-foreground: #5A7078;
+  --accent-foreground: #FFFFFF;
   --destructive: #ef4444;
-  --input: #2A2520;
+  --input: #DBE2E6;
   --ring: #C36036;
-  --radius: 0.625rem;
-  --sidebar: #1A1A1A;
-  --sidebar-foreground: #F5F0EB;
+  --radius: 0.5rem;
+  --sidebar: #F3F6F7;
+  --sidebar-foreground: #30454C;
   --sidebar-primary: #C36036;
-  --sidebar-primary-foreground: #F5F0EB;
-  --sidebar-accent: #2A2520;
-  --sidebar-accent-foreground: #F5F0EB;
-  --sidebar-border: #2A2520;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E8EDEF;
+  --sidebar-accent-foreground: #30454C;
+  --sidebar-border: #DBE2E6;
   --sidebar-ring: #C36036;
   --chart-1: #C36036;
-  --chart-2: #8A8278;
-  --chart-3: #D4724A;
-  --chart-4: #2A2520;
-  --chart-5: #F5F0EB;
+  --chart-2: #5A7078;
+  --chart-3: #A04E2A;
+  --chart-4: #DBE2E6;
+  --chart-5: #1B2E37;
 }
 
 @theme inline {
@@ -95,6 +96,7 @@
 html {
   background: var(--background);
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {

@@ -20,8 +20,8 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#2A2520] bg-[#0C0C0C]">
-      <div className="mx-auto max-w-[1200px] px-6 py-16">
+    <footer className="bg-[#1B2E37]">
+      <div className="mx-auto max-w-[1240px] px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -31,19 +31,19 @@ export function Footer() {
               width={140}
               height={28}
             />
-            <p className="mt-4 text-sm leading-relaxed text-[#8A8278]">
+            <p className="mt-4 text-sm leading-relaxed text-white/60">
               Designing the future, one structure at a time.
             </p>
-            <div className="mt-6 space-y-2 text-sm text-[#8A8278]">
+            <div className="mt-6 space-y-2 text-sm text-white/60">
               <p>7005, boulevard Taschereau, Suite 305</p>
               <p>Brossard, Quebec J4Z 1A7</p>
               <p className="mt-3">
-                <a href="mailto:info@metanova.ca" className="transition-colors hover:text-[#F5F0EB]">
+                <a href="mailto:info@metanova.ca" className="transition-colors hover:text-white">
                   info@metanova.ca
                 </a>
               </p>
               <p>
-                <a href="tel:+15142223444" className="transition-colors hover:text-[#F5F0EB]">
+                <a href="tel:+15142223444" className="transition-colors hover:text-white">
                   +1 (514) 222-3444
                 </a>
               </p>
@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#F5F0EB]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
               Company
             </h3>
             <ul className="mt-4 space-y-3">
@@ -60,7 +60,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#8A8278] transition-colors hover:text-[#F5F0EB]"
+                    className="text-sm text-white/60 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#F5F0EB]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
               Services
             </h3>
             <ul className="mt-4 space-y-3">
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#8A8278] transition-colors hover:text-[#F5F0EB]"
+                    className="text-sm text-white/60 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export function Footer() {
 
           {/* Portfolio */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#F5F0EB]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
               Portfolio
             </h3>
             <ul className="mt-4 space-y-3">
@@ -98,7 +98,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#8A8278] transition-colors hover:text-[#F5F0EB]"
+                    className="text-sm text-white/60 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -108,11 +108,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[#2A2520] pt-8 sm:flex-row">
-          <p className="text-xs text-[#8A8278]">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Metanova Experts-Conseils. All rights reserved.
           </p>
-          <p className="text-xs text-[#8A8278]">
+          <p className="text-xs text-white/40">
             Brossard, Quebec, Canada
           </p>
         </div>

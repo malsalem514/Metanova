@@ -52,8 +52,8 @@ export default function ServicesPage() {
         backgroundImage="/metanova-assets/services/structural/field-team-sunset.png"
       />
 
-      <section className="bg-[#0C0C0C] py-24">
-        <div className="mx-auto max-w-[1200px] px-6">
+      <section className="bg-white py-28">
+        <div className="mx-auto max-w-[1240px] px-6">
           <div className="space-y-24">
             {services.map((service, index) => (
               <div
@@ -62,19 +62,19 @@ export default function ServicesPage() {
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <h2
-                    className="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#F5F0EB]"
+                    className="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#1B2E37]"
                     style={{ fontFamily: "var(--font-dm-serif-display)" }}
                   >
                     {service.title}
                   </h2>
-                  <p className="mt-4 text-base leading-relaxed text-[#8A8278]">
+                  <p className="mt-4 text-base leading-relaxed text-[#30454C]/70">
                     {service.description}
                   </p>
                   <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                     {service.capabilities.map((cap) => (
                       <li
                         key={cap}
-                        className="flex items-start gap-2 text-sm text-[#8A8278]"
+                        className="flex items-start gap-2 text-sm text-[#30454C]/70"
                       >
                         <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
                         {cap}
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                   </ul>
                   <Link
                     href={service.href}
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#C36036] transition-colors hover:text-[#D4724A]"
+                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#C36036] transition-colors hover:text-[#A04E2A]"
                   >
                     Learn more &rarr;
                   </Link>
