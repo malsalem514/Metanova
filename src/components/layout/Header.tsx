@@ -8,9 +8,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/residential", label: "Residential" },
-  { href: "/hospitality", label: "Hospitality" },
-  { href: "/commercial", label: "Commercial" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -53,7 +50,7 @@ export function Header() {
                 ? "/metanova-assets/brand/logo-color-new.svg"
                 : "/metanova-assets/brand/logo-white-new.svg"
             }
-            alt="MetaNova"
+            alt="Metanova"
             width={180}
             height={73}
             priority

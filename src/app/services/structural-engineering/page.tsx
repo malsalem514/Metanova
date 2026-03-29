@@ -18,7 +18,7 @@ const serviceJsonLd = {
     "Comprehensive structural design and analysis services for residential, commercial, and hospitality projects.",
   provider: {
     "@type": "Organization",
-    name: "MetaNova",
+    name: "Metanova",
     url: "https://metanova.ca",
   },
   areaServed: { "@type": "State", name: "Quebec" },

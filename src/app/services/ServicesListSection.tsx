@@ -22,6 +22,21 @@ const services = [
     ],
   },
   {
+    title: "Real Estate Development",
+    description:
+      "We support the strategic development of sites by unlocking their full potential and structuring viable, high-performing projects. From site analysis and feasibility studies to zoning coordination and project positioning.",
+    image: "/metanova-assets/services/development/model-review.png",
+    href: "/services/real-estate-development",
+    capabilities: [
+      "Site analysis & development potential",
+      "Feasibility studies & project structuring",
+      "Land optimization & density strategies",
+      "Zoning changes & approvals support",
+      "Municipal & stakeholder coordination",
+      "Concept development & project positioning",
+    ],
+  },
+  {
     title: "Project Management & Development Consulting",
     description:
       "We provide end-to-end project management and development consulting for residential and mixed-use projects across Quebec. From strategic planning and zoning coordination to construction oversight, we guide projects from concept to completion with clarity, structure, and accountability.",

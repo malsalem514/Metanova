@@ -1,7 +1,6 @@
 "use client";
 
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const values = [
@@ -44,45 +43,54 @@ interface ApproachSectionProps {
 
 export function ApproachSection({ overline, heading }: ApproachSectionProps) {
   return (
-    <section className="bg-white/60 py-24">
+    <section className="bg-white/60 py-14">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
               {overline ?? "Our Approach"}
             </p>
             <h2
-              className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
+              className="mt-3 mb-4 text-2xl font-medium leading-tight text-[#121212]"
             >
               {heading ?? "Metanova combines engineering precision with development strategy to deliver projects that are not only buildable, but financially viable and optimized at every stage."}
             </h2>
           </div>
         </FadeIn>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-x-8 gap-y-6 md:grid-cols-2">
           {values.map((value, i) => (
-            <FadeIn key={value.number} delay={i * 0.1}>
-              <SpotlightCard className="h-full">
-                <span className="text-sm font-medium text-[#121212]/40">
+            <FadeIn key={value.number} delay={i * 0.08}>
+              <div className="flex gap-4 py-3">
+                <span className="text-xs font-medium text-[#121212]/30 pt-0.5">
                   {value.number}
                 </span>
-                <h3 className="mt-3 text-xl font-medium text-[#121212]">
-                  {value.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#121212]/70">
-                  {value.description}
-                </p>
-              </SpotlightCard>
+                <div>
+                  <h3 className="text-base font-medium text-[#121212]">
+                    {value.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-[#121212]/60">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
             </FadeIn>
           ))}
         </div>
 
+        {/* Commitment */}
+        <FadeIn>
+          <p className="mt-10 max-w-3xl text-sm italic leading-relaxed text-[#121212]/60">
+            Ensuring excellence, client satisfaction, and project success through rigorous quality control, transparent communication, and a commitment to delivering results that exceed expectations.
+          </p>
+        </FadeIn>
+
         {/* Stats */}
         <FadeIn>
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-medium text-[#121212]">
+                <div className="text-[clamp(2rem,4vw,3rem)] font-medium text-[#121212]">
                   <AnimatedCounter
                     target={stat.target}
                     suffix={stat.suffix}
@@ -90,7 +98,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
                     duration={stat.target > 100 ? 2.5 : 2}
                   />
                 </div>
-                <p className="mt-2 text-sm font-medium text-[#121212]/70">{stat.label}</p>
+                <p className="mt-1 text-sm font-medium text-[#121212]/70">{stat.label}</p>
               </div>
             ))}
           </div>

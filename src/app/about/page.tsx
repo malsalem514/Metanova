@@ -9,7 +9,7 @@ import { loadContent } from "@/lib/content/loader";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about MetaNova — our vision, mission, and the team behind our structural engineering and development expertise.",
+    "Learn about Metanova — our vision, mission, and the team behind our structural engineering and development expertise.",
   alternates: { canonical: "/about" },
 };
 

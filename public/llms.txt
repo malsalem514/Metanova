@@ -1,4 +1,4 @@
-# MetaNova
+# Metanova
 
 > Structural engineering, real estate development, and project management firm based in Brossard, Quebec.
 
@@ -6,6 +6,7 @@ Metanova Experts-Conseils brings together over 20 years of combined experience i
 
 ## Services
 - [Structural Engineering](/services/structural-engineering): Structural design (wood, steel, concrete), value engineering, construction drawings
+- [Real Estate Development](/services/real-estate-development): Site analysis, feasibility studies, land optimization, zoning changes, project positioning
 - [Project Management & Consulting](/services/project-management-consulting): Budgeting, scheduling, zoning coordination, contractor oversight
 
 ## Portfolio

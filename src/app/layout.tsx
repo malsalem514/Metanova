@@ -24,8 +24,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://metanova.ca"),
   title: {
-    default: "MetaNova \u2014 Structural Engineering & Development",
-    template: "%s | MetaNova",
+    default: "Metanova \u2014 Structural Engineering & Development",
+    template: "%s | Metanova",
   },
   description:
     "Structural engineering, real estate development and project management across Quebec.",
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
     "project management",
     "Quebec",
     "construction",
-    "MetaNova",
+    "Metanova",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "MetaNova",
+    siteName: "Metanova",
     images: [
       {
         url: "/metanova-assets/hero/construction-leadership.png",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "MetaNova",
+  name: "Metanova",
   legalName: "Metanova Experts-Conseils",
   url: "https://metanova.ca",
   logo: "https://metanova.ca/metanova-assets/brand/logo-wordmark-color.svg",
@@ -75,7 +75,7 @@ const organizationJsonLd = {
 const webSiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "MetaNova",
+  name: "Metanova",
   url: "https://metanova.ca",
 };
 

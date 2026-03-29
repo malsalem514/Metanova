@@ -8,13 +8,13 @@ const team = [
     name: "Suddam Al-Salem, ing.",
     role: "Managing Partner, Engineering Division",
     image: "/metanova-assets/people/suddam-al-salem.jpg",
-    bio: "A licensed structural engineer with extensive experience in building design across steel, wood, and concrete structures. Previously at NCK, Suddam brings deep technical expertise and a commitment to engineering excellence to every project MetaNova undertakes.",
+    bio: "A licensed structural engineer with extensive experience in building design across steel, wood, and concrete structures. Previously at NCK, Suddam brings deep technical expertise and a commitment to engineering excellence to every project Metanova undertakes.",
   },
   {
     name: "Muhannad Al-Salem",
     role: "Managing Partner, Real Estate Development Division",
     image: "/metanova-assets/people/muhannad-al-salem.jpg",
-    bio: "With over a decade of experience in real estate development and a background in architecture and construction management, Muhannad has been a licensed general contractor since 2011. He leads MetaNova's development division with a hands-on, results-driven approach.",
+    bio: "With over a decade of experience in real estate development and a background in architecture and construction management, Muhannad has been a licensed general contractor since 2011. He leads Metanova's development division with a hands-on, results-driven approach.",
   },
 ];
 

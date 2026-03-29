@@ -7,7 +7,7 @@ import { loadContent } from "@/lib/content/loader";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with MetaNova for structural engineering, project management, or development consulting inquiries.",
+    "Get in touch with Metanova for structural engineering, project management, or development consulting inquiries.",
   alternates: { canonical: "/contact" },
 };
 

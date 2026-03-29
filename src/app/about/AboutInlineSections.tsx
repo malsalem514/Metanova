@@ -96,10 +96,10 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                   {content?.["beginnings_heading"] ?? "Two brothers, one shared vision"}
                 </h2>
                 <p className="text-base leading-relaxed text-[#121212]/70">
-                  {content?.["beginnings_p1"] ?? "MetaNova was founded by Suddam and Muhannad Al-Salem — a structural engineer and a real estate developer — who saw an opportunity to create a firm that truly understands both sides of the construction equation."}
+                  {content?.["beginnings_p1"] ?? "Metanova was founded by Suddam and Muhannad Al-Salem — a structural engineer and a real estate developer — who saw an opportunity to create a firm that truly understands both sides of the construction equation."}
                 </p>
                 <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
-                  {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, MetaNova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
+                  {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, Metanova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
                 </p>
                 {(content?.["beginnings_p3"]) && (
                   <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
@@ -112,7 +112,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm">
                 <Image
                   src="/metanova-assets/people/founders-portrait-new.jpg"
-                  alt="MetaNova founders"
+                  alt="Metanova founders"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"

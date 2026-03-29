@@ -7,7 +7,7 @@ import { loadContent } from "@/lib/content/loader";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "MetaNova offers structural engineering, real estate development, and project management services across Quebec and beyond.",
+    "Metanova offers structural engineering, real estate development, and project management services across Quebec and beyond.",
   alternates: { canonical: "/services" },
 };
 

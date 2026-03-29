@@ -18,7 +18,7 @@ const services = [
     description:
       "From feasibility studies to project delivery, we bring a developer's perspective to every stage. Strategic site analysis, financial modeling, and execution.",
     image: "/metanova-assets/services/development/model-review.png",
-    href: "/services",
+    href: "/services/real-estate-development",
   },
   {
     title: "Project Management",

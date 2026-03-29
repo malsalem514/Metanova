@@ -9,6 +9,7 @@ const footerLinks = {
   ],
   services: [
     { href: "/services/structural-engineering", label: "Structural Engineering" },
+    { href: "/services/real-estate-development", label: "Real Estate Development" },
     { href: "/services/project-management-consulting", label: "Project Management" },
   ],
   portfolio: [
@@ -28,7 +29,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Image
               src="/metanova-assets/brand/logo-white-new.svg"
-              alt="MetaNova"
+              alt="Metanova"
               width={140}
               height={28}
             />

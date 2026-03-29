@@ -42,7 +42,7 @@ extracted:
 
 confirmed:
   company:
-    name: MetaNova
+    name: Metanova
     legal_name: Metanova Experts-Conseils
     tagline: "Designing the future, one structure at a time"
     founded: 2022
@@ -55,7 +55,7 @@ confirmed:
         A licensed structural engineer with extensive experience in building
         design across steel, wood, and concrete structures. Previously at NCK,
         Suddam brings deep technical expertise and a commitment to engineering
-        excellence to every project MetaNova undertakes.
+        excellence to every project Metanova undertakes.
       portrait: "/metanova-assets/people/suddam-al-salem.jpg"
     - name: Muhannad Al-Salem
       role: "Managing Partner"
@@ -63,7 +63,7 @@ confirmed:
       bio: >-
         With over a decade of experience in real estate development and a
         background in architecture and construction management, Muhannad has been
-        a licensed general contractor since 2011. He leads MetaNova's development
+        a licensed general contractor since 2011. He leads Metanova's development
         division with a hands-on, results-driven approach.
       portrait: "/metanova-assets/people/muhannad-al-salem.jpg"
   services:
@@ -82,6 +82,21 @@ confirmed:
         renovations, and assessments. Our team of licensed engineers works across
         steel, concrete, and wood structures to deliver safe, efficient, and
         code-compliant designs.
+    - id: real-estate-development
+      name: Real Estate Development
+      summary: >-
+        Strategic real estate development consulting — site analysis, feasibility
+        studies, land optimization, and project positioning.
+      key_points:
+        - "Site analysis & development potential"
+        - "Feasibility studies & project structuring"
+        - "Land optimization & density strategies"
+        - "Support in zoning changes & approvals"
+        - "Coordination with municipalities & stakeholders"
+        - "Concept development & project positioning"
+      detailed_description: >-
+        We support the strategic development of sites by unlocking their full
+        potential and structuring viable, high-performing projects across Quebec.
     - id: project-management-consulting
       name: Project Management & Development Consulting
       summary: >-
@@ -142,7 +157,7 @@ generated:
     "/":
       hero_headline: "Designing the future, one structure at a time"
       hero_subline: >-
-        MetaNova brings together structural engineering, real estate development,
+        Metanova brings together structural engineering, real estate development,
         and project management under one roof. From concept to completion, we
         deliver built environments that stand the test of time.
       sections:
@@ -160,13 +175,13 @@ generated:
         - id: cta-banner
           heading: "Ready to start your next project?"
           body: >-
-            Let's discuss how MetaNova can bring your vision to life with expert
+            Let's discuss how Metanova can bring your vision to life with expert
             engineering and development services.
           cta_text: "Contact Us"
       meta:
-        title: "MetaNova — Structural Engineering & Development"
+        title: "Metanova — Structural Engineering & Development"
         description: "Structural engineering, real estate development and project management across Quebec."
-        og_title: "MetaNova — Structural Engineering & Development"
+        og_title: "Metanova — Structural Engineering & Development"
         og_description: "Structural engineering, real estate development and project management across Quebec."
         og_image: "/metanova-assets/hero/construction-leadership.png"
     "/about":
@@ -186,10 +201,10 @@ generated:
         - id: team
           heading: "Meet the founders"
       meta:
-        title: "About | MetaNova"
-        description: "Learn about MetaNova — our vision, mission, and the team behind our structural engineering and development expertise."
-        og_title: "About MetaNova"
-        og_description: "Vision, mission, and the team behind MetaNova."
+        title: "About | Metanova"
+        description: "Learn about Metanova — our vision, mission, and the team behind our structural engineering and development expertise."
+        og_title: "About Metanova"
+        og_description: "Vision, mission, and the team behind Metanova."
         og_image: "/metanova-assets/hero/night-cranes-skyline.jpg"
     "/services":
       hero_headline: "What we do"
@@ -197,15 +212,15 @@ generated:
         Integrated services that cover every stage of the building lifecycle —
         from first sketch to final inspection.
       meta:
-        title: "Services | MetaNova"
-        description: "MetaNova offers structural engineering, real estate development, and project management services across Quebec."
+        title: "Services | Metanova"
+        description: "Metanova offers structural engineering, real estate development, and project management services across Quebec."
         og_title: "Our Services"
         og_description: "Structural engineering, development, and project management services."
         og_image: "/metanova-assets/services/structural/field-team-sunset.png"
     "/services/structural-engineering":
       cta_text: "Get a Quote"
       meta:
-        title: "Structural Engineering | MetaNova"
+        title: "Structural Engineering | Metanova"
         description: "Expert structural engineering services for residential, commercial, and hospitality projects."
         og_title: "Structural Engineering Services"
         og_description: "Steel, concrete, and wood structures engineered to the highest standards."
@@ -213,7 +228,7 @@ generated:
     "/services/project-management-consulting":
       cta_text: "Start a Conversation"
       meta:
-        title: "Project Management & Consulting | MetaNova"
+        title: "Project Management & Consulting | Metanova"
         description: "End-to-end project management and development consulting services."
         og_title: "Project Management & Consulting"
         og_description: "From feasibility studies to project closeout."
@@ -224,8 +239,8 @@ generated:
         From luxury single-family homes to large-scale condominium developments,
         our residential projects combine structural excellence with livability.
       meta:
-        title: "Residential Projects | MetaNova"
-        description: "Explore MetaNova's residential portfolio — condominiums, single-family homes, and multi-unit developments."
+        title: "Residential Projects | Metanova"
+        description: "Explore Metanova's residential portfolio — condominiums, single-family homes, and multi-unit developments."
         og_title: "Residential Portfolio"
         og_description: "Custom homes, condos, and multi-family developments."
         og_image: "/metanova-assets/projects/residential/condo-aerial.jpg"
@@ -235,8 +250,8 @@ generated:
         Hotels, resorts, and leisure facilities that balance guest experience
         with structural performance and operational efficiency.
       meta:
-        title: "Hospitality Projects | MetaNova"
-        description: "Explore MetaNova's hospitality portfolio — hotels, resorts, and leisure facilities."
+        title: "Hospitality Projects | Metanova"
+        description: "Explore Metanova's hospitality portfolio — hotels, resorts, and leisure facilities."
         og_title: "Hospitality Portfolio"
         og_description: "Hotels, resorts, and leisure facilities."
         og_image: "/metanova-assets/projects/hospitality/resort-pool-night.jpg"
@@ -246,8 +261,8 @@ generated:
         Office buildings, retail spaces, and mixed-use developments engineered
         for performance, flexibility, and long-term value.
       meta:
-        title: "Commercial Projects | MetaNova"
-        description: "Explore MetaNova's commercial portfolio — office buildings, retail spaces, and mixed-use developments."
+        title: "Commercial Projects | Metanova"
+        description: "Explore Metanova's commercial portfolio — office buildings, retail spaces, and mixed-use developments."
         og_title: "Commercial Portfolio"
         og_description: "Office buildings, retail, and mixed-use developments."
         og_image: "/metanova-assets/projects/commercial/glass-atrium.jpg"
@@ -257,8 +272,8 @@ generated:
       form_heading: "Let's discuss your next project"
       cta_text: "Send Message"
       meta:
-        title: "Contact | MetaNova"
-        description: "Get in touch with MetaNova for structural engineering, project management, or development consulting inquiries."
-        og_title: "Contact MetaNova"
+        title: "Contact | Metanova"
+        description: "Get in touch with Metanova for structural engineering, project management, or development consulting inquiries."
+        og_title: "Contact Metanova"
         og_description: "Reach out for structural engineering, project management, or development consulting."
         og_image: null

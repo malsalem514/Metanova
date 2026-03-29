@@ -18,7 +18,7 @@ const serviceJsonLd = {
     "End-to-end project management and development consulting for residential and mixed-use projects across Quebec.",
   provider: {
     "@type": "Organization",
-    name: "MetaNova",
+    name: "Metanova",
     url: "https://metanova.ca",
   },
   areaServed: { "@type": "State", name: "Quebec" },
