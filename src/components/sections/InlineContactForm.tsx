@@ -15,6 +15,7 @@ export function InlineContactForm({
   subtext = "We're here to help you bring your construction project to life! Whether you have questions, want to discuss your ideas.",
 }: InlineContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [fileName, setFileName] = useState<string | null>(null);
   const t = useTranslations("contact");
   const tCta = useTranslations("cta");
   const locale = useLocale();
@@ -139,6 +140,39 @@ export function InlineContactForm({
                     className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
                     placeholder="+1 (514) 000-0000"
                   />
+                </div>
+                <div>
+                  <label
+                    htmlFor="inline-resume"
+                    className="block text-sm font-medium text-[#121212]"
+                  >
+                    {isFr ? "CV / Résumé" : "Resume / CV"}{" "}
+                    <span className="text-[#121212]/40">({isFr ? "optionnel" : "optional"})</span>
+                  </label>
+                  <div className="mt-2">
+                    <label
+                      htmlFor="inline-resume"
+                      className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-dashed border-[#E8E0D0] bg-[#F5F0E6]/50 px-4 py-4 text-sm text-[#121212]/60 transition-all duration-300 hover:border-[#0A5592]/40 hover:bg-[#0A5592]/5"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                      </svg>
+                      {isFr ? "Téléverser un fichier (PDF, DOC)" : "Upload a file (PDF, DOC)"}
+                    </label>
+                    <input
+                      type="file"
+                      id="inline-resume"
+                      name="resume"
+                      accept=".pdf,.doc,.docx"
+                      className="sr-only"
+                      onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
+                    />
+                    {fileName && (
+                      <p className="mt-2 text-xs text-[#0A5592]">
+                        ✓ {fileName}
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <div>
                   <label
