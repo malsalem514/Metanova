@@ -12,11 +12,6 @@ const footerLinks = {
     { href: "/services/real-estate-development", label: "Real Estate Development" },
     { href: "/services/project-management-consulting", label: "Project Management" },
   ],
-  portfolio: [
-    { href: "/residential", label: "Residential" },
-    { href: "/hospitality", label: "Hospitality" },
-    { href: "/commercial", label: "Commercial" },
-  ],
 };
 
 export function Footer() {
@@ -97,24 +92,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Portfolio */}
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-white/40">
-              Portfolio
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.portfolio.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/60 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
