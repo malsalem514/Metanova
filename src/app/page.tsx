@@ -14,7 +14,7 @@ export default function Home() {
         title={fm?.["hero_headline"] ?? "Designing the future, one structure at a time"}
         subtitle={fm?.["hero_subline"] ?? ""}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/construction-leadership.png"}
-        videoSrc={fm?.["hero_video"] ?? "/metanova-assets/hero/home-hero-video.mp4"}
+        videoSrc={fm?.["hero_video"] ?? "/metanova-assets/hero/home-hero-web.mp4"}
         ctaText={fm?.["cta_primary"] ?? "Our Services"}
         ctaHref={fm?.["cta_primary_href"] ?? "/services"}
         secondaryCtaText={fm?.["cta_secondary"] ?? "Contact Us"}

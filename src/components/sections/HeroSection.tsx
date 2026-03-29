@@ -40,17 +40,19 @@ export function HeroSection({
         priority
         sizes="100vw"
       />
-      {/* Video overlays the image when provided — preload="none" so video doesn't block LCP */}
+      {/* Video: dual-source (WebM first for Chrome/Firefox, MP4 fallback), poster for LCP */}
       {videoSrc && (
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
-          poster={backgroundImage}
+          preload="metadata"
+          poster="/metanova-assets/hero/home-hero-poster.jpg"
           className="absolute inset-0 z-[1] h-full w-full object-cover"
+          aria-label="Construction site timelapse video"
         >
+          <source src={videoSrc.replace('.mp4', '.webm')} type="video/webm" />
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
