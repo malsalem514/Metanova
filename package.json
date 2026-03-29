@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "extract:framer": "node scripts/extract-framer-assets.mjs",
-    "curate:assets": "node scripts/curate-assets.mjs"
+    "curate:assets": "node scripts/curate-assets.mjs",
+    "validate:artifacts": "tsx scripts/validate-artifacts.ts",
+    "enhance:assets": "node scripts/enhance-asset-manifest.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
