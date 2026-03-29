@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/residential", label: "Residential" },
@@ -28,14 +28,17 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-[#E8E0D0] bg-[#F5F0E6]/95 shadow-sm shadow-[#54341F]/8 backdrop-blur-xl"
+          ? "bg-[#F5F0E6]/95 backdrop-blur-xl shadow-sm shadow-[#54341F]/5"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="mx-auto flex items-center justify-between px-8 max-w-[1240px] transition-all duration-500"
+        style={{ height: scrolled ? "64px" : "80px" }}
+      >
+        {/* Logo — larger over hero, smaller when scrolled */}
+        <Link href="/" className="flex items-center transition-all duration-500">
           <Image
             src={
               scrolled
@@ -43,19 +46,20 @@ export function Header() {
                 : "/metanova-assets/brand/logo-wordmark-white.svg"
             }
             alt="MetaNova"
-            width={160}
-            height={32}
+            width={scrolled ? 140 : 180}
+            height={scrolled ? 28 : 36}
             priority
+            className="transition-all duration-500"
           />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-2 md:flex">
+        {/* Desktop nav — uppercase, letter-spaced, editorial */}
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+              className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
                 scrolled
                   ? "text-[#30454C] hover:text-[#C36036]"
                   : "text-white/90 hover:text-white"
@@ -64,17 +68,12 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="ml-2">
-            <Button className="rounded-full bg-[#C36036] px-6 text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/20 hover:scale-[1.02]">
-              Get in Touch
-            </Button>
-          </Link>
         </nav>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`flex h-10 w-10 items-center justify-center rounded-lg md:hidden ${
+          className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-[#C36036] md:hidden ${
             scrolled ? "text-[#30454C]" : "text-white"
           }`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -93,22 +92,17 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-[#E8E0D0] bg-[#F5F0E6] px-6 py-4 md:hidden">
+        <nav className="border-t border-[#E8E0D0] bg-[#F5F0E6] px-8 py-6 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-base font-medium text-[#30454C] transition-colors duration-300 hover:text-[#C36036]"
+              className="block py-3 text-xs font-medium uppercase tracking-[0.15em] text-[#30454C] transition-colors duration-300 hover:text-[#C36036]"
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-2 block">
-            <Button className="w-full rounded-full bg-[#C36036] text-white hover:bg-[#A04E2A]">
-              Get in Touch
-            </Button>
-          </Link>
         </nav>
       )}
     </header>
