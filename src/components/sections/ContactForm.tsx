@@ -12,7 +12,7 @@ export function ContactForm({ content }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="py-32">
+    <section className="py-24">
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
           {/* Contact info */}

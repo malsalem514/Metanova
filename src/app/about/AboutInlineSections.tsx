@@ -37,7 +37,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
   return (
     <>
       {/* Vision / Mission / Core Value */}
-      <section className="py-32">
+      <section className="py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid gap-8 md:grid-cols-3">
             {cards.map((card, i) => (
@@ -80,7 +80,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
       </section>
 
       {/* Beginnings story */}
-      <section className="bg-white/60 py-32">
+      <section className="bg-white/60 py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>

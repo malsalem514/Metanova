@@ -106,9 +106,7 @@ body {
   min-height: 100vh;
 }
 
-a {
-  color: inherit;
-}
+/* Removed `a { color: inherit; }` — it overrides Tailwind text color utilities on nav links */
 
 ::selection {
   background: var(--accent);

@@ -36,7 +36,7 @@ interface ServicesOverviewProps {
 
 export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
   return (
-    <section className="py-32">
+    <section className="py-24">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">

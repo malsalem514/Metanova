@@ -52,7 +52,7 @@ export function PortfolioGrid({
       </section>
 
       {/* Grid */}
-      <section className="py-32">
+      <section className="py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (

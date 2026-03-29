@@ -44,7 +44,7 @@ interface ApproachSectionProps {
 
 export function ApproachSection({ overline, heading }: ApproachSectionProps) {
   return (
-    <section className="bg-white/60 py-32">
+    <section className="bg-white/60 py-24">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
