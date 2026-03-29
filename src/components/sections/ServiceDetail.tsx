@@ -62,7 +62,7 @@ export function ServiceDetail({
                   {description}
                 </p>
                 <Link href="/contact" className="mt-8 inline-block">
-                  <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
+                  <Button className="h-auto rounded-none bg-[#C36036] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80">
                     {ctaText}
                   </Button>
                 </Link>

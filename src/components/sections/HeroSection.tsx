@@ -104,7 +104,7 @@ export function HeroSection({
               >
                 {ctaText && ctaHref && (
                   <Link href={ctaHref}>
-                    <Button className="h-auto rounded-none bg-[#121212] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.02em] text-white transition-all duration-300 hover:bg-[#2a2a2a]">
+                    <Button className="h-auto rounded-none bg-white px-5 py-2.5 text-xs font-normal text-[#121212] transition-opacity duration-300 hover:opacity-80">
                       {ctaText}
                     </Button>
                   </Link>
@@ -113,9 +113,9 @@ export function HeroSection({
                   <Link href={secondaryCtaHref}>
                     <Button
                       variant="outline"
-                      className="h-auto rounded-none border-white/40 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.02em] text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
+                      className="h-auto rounded-none border-transparent bg-[#0A5592] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80 hover:bg-[#0A5592]"
                     >
-                      {secondaryCtaText} &rarr;
+                      {secondaryCtaText}
                     </Button>
                   </Link>
                 )}

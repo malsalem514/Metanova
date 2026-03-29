@@ -72,9 +72,9 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
                     <p className="mt-3 text-sm leading-relaxed text-[#121212]/70">
                       {service.description}
                     </p>
-                    <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors duration-300 group-hover:text-[#A04E2A]">
-                      Learn more &rarr;
-                    </p>
+                    <span className="mt-4 inline-block bg-[#121212] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 group-hover:opacity-80">
+                      Learn more
+                    </span>
                   </div>
                 </SpotlightCard>
               </Link>

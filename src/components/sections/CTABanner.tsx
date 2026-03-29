@@ -35,7 +35,7 @@ export function CTABanner({
                 {subtitle}
               </p>
               <Link href={ctaHref} className="mt-8 inline-block">
-                <ShimmerButton className="bg-white text-[#1B2E37] font-semibold hover:bg-white/90 hover:shadow-black/10">
+                <ShimmerButton className="bg-white text-[#121212] font-normal">
                   {ctaText}
                 </ShimmerButton>
               </Link>

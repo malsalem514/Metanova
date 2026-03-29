@@ -71,9 +71,9 @@ export function ServicesListSection() {
                     </ul>
                     <Link
                       href={service.href}
-                      className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#C36036] transition-colors duration-300 hover:text-[#A04E2A]"
+                      className="mt-8 inline-block bg-[#121212] px-5 py-2.5 text-xs font-normal text-white transition-opacity duration-300 hover:opacity-80"
                     >
-                      Learn more &rarr;
+                      Learn more
                     </Link>
                   </SpotlightCard>
                 </div>
