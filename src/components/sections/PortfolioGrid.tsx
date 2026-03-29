@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 interface PortfolioItem {
   src: string;
@@ -32,9 +35,9 @@ export function PortfolioGrid({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/90 via-[#1B2E37]/50 to-[#1B2E37]/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
             {subtitle}
           </p>
           <h1
@@ -50,23 +53,22 @@ export function PortfolioGrid({
       </section>
 
       {/* Grid */}
-      <section className="bg-white py-24">
+      <section className="bg-[#F3F6F7] py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (
-              <div
-                key={item.src}
-                className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] transition-all duration-300 hover:shadow-lg hover:shadow-black/5"
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={600}
-                  height={i % 3 === 0 ? 800 : i % 3 === 1 ? 600 : 450}
-                  className="w-full object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
+              <FadeIn key={item.src} delay={(i % 3) * 0.1}>
+                <div className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={600}
+                    height={i % 3 === 0 ? 800 : i % 3 === 1 ? 600 : 450}
+                    className="w-full object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>

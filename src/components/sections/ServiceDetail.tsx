@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 interface ServicePoint {
   title: string;
@@ -36,9 +39,9 @@ export function ServiceDetail({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/90 via-[#1B2E37]/50 to-[#1B2E37]/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
             {subtitle}
           </p>
           <h1
@@ -54,36 +57,37 @@ export function ServiceDetail({
       <section className="bg-white py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <p className="text-lg leading-relaxed text-[#30454C]/70">
-                {description}
-              </p>
-              <Link href="/contact" className="mt-8 inline-block">
-                <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white hover:bg-[#A04E2A]">
-                  {ctaText}
-                </Button>
-              </Link>
-            </div>
+            <FadeIn>
+              <div>
+                <p className="text-lg leading-relaxed text-[#30454C]/60">
+                  {description}
+                </p>
+                <Link href="/contact" className="mt-8 inline-block">
+                  <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
+                    {ctaText}
+                  </Button>
+                </Link>
+              </div>
+            </FadeIn>
             <div className="space-y-6">
               {points.map((point, i) => (
-                <div
-                  key={point.title}
-                  className="rounded-xl border border-[#DBE2E6] bg-[#F3F6F7] p-6 transition-colors hover:border-[#C36036]/20 hover:shadow-sm"
-                >
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C36036]/10 text-sm font-semibold text-[#C36036]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#1B2E37]">
-                        {point.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-[#30454C]/70">
-                        {point.description}
-                      </p>
+                <FadeIn key={point.title} delay={i * 0.08}>
+                  <div className="rounded-xl border border-[#DBE2E6] bg-[#F3F6F7] p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C36036]/20 hover:shadow-md hover:shadow-black/5">
+                    <div className="flex items-start gap-4">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C36036]/10 text-sm font-semibold text-[#C36036]">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="text-lg font-semibold text-[#1B2E37]">
+                          {point.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-[#30454C]/60">
+                          {point.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>

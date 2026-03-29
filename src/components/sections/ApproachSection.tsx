@@ -1,3 +1,7 @@
+"use client";
+
+import { FadeIn } from "@/components/ui/FadeIn";
+
 const values = [
   {
     number: "01",
@@ -29,34 +33,35 @@ export function ApproachSection() {
   return (
     <section className="bg-[#F3F6F7] py-24">
       <div className="mx-auto max-w-[1240px] px-6">
-        <div className="mb-16 max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#C36036]">
-            Our Approach
-          </p>
-          <h2
-            className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-            style={{ fontFamily: "var(--font-dm-serif-display)" }}
-          >
-            Building with purpose, engineering with precision
-          </h2>
-        </div>
+        <FadeIn>
+          <div className="mb-16 max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
+              Our Approach
+            </p>
+            <h2
+              className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
+              style={{ fontFamily: "var(--font-dm-serif-display)" }}
+            >
+              Building with purpose, engineering with precision
+            </h2>
+          </div>
+        </FadeIn>
 
         <div className="grid gap-px overflow-hidden rounded-2xl border border-[#DBE2E6] bg-[#DBE2E6] md:grid-cols-2">
-          {values.map((value) => (
-            <div
-              key={value.number}
-              className="bg-white p-8 transition-colors hover:bg-[#F3F6F7] lg:p-10"
-            >
-              <span className="text-sm font-medium text-[#C36036]">
-                {value.number}
-              </span>
-              <h3 className="mt-3 text-xl font-semibold text-[#1B2E37]">
-                {value.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#30454C]/70">
-                {value.description}
-              </p>
-            </div>
+          {values.map((value, i) => (
+            <FadeIn key={value.number} delay={i * 0.1}>
+              <div className="h-full bg-white p-8 transition-all duration-300 hover:bg-[#F3F6F7] lg:p-10">
+                <span className="text-sm font-medium text-[#C36036]">
+                  {value.number}
+                </span>
+                <h3 className="mt-3 text-xl font-semibold text-[#1B2E37]">
+                  {value.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
+                  {value.description}
+                </p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>

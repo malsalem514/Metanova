@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -11,6 +14,7 @@ interface HeroSectionProps {
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
   overlay?: boolean;
+  videoSrc?: string;
 }
 
 export function HeroSection({
@@ -22,37 +26,87 @@ export function HeroSection({
   secondaryCtaText,
   secondaryCtaHref,
   overlay = true,
+  videoSrc,
 }: HeroSectionProps) {
+  const words = title.split(" ");
+
   return (
     <section className="relative flex min-h-[85vh] items-end overflow-hidden">
-      <Image
-        src={backgroundImage}
-        alt=""
-        fill
-        className="object-cover"
-        priority
-        sizes="100vw"
-      />
+      {videoSrc ? (
+        <>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+          {/* Fallback image behind video */}
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        </>
+      ) : (
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+      )}
       {overlay && (
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/90 via-[#1B2E37]/50 to-[#1B2E37]/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
       )}
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
         <h1
           className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
           style={{ fontFamily: "var(--font-dm-serif-display)" }}
         >
-          {title}
+          {words.map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.2 + i * 0.08,
+                ease: "easeOut",
+              }}
+              className="mr-[0.3em] inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
         </h1>
         {subtitle && (
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
+          >
             {subtitle}
-          </p>
+          </motion.p>
         )}
         {(ctaText || secondaryCtaText) && (
-          <div className="mt-8 flex flex-wrap gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
             {ctaText && ctaHref && (
               <Link href={ctaHref}>
-                <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white hover:bg-[#A04E2A]">
+                <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
                   {ctaText}
                 </Button>
               </Link>
@@ -61,13 +115,13 @@ export function HeroSection({
               <Link href={secondaryCtaHref}>
                 <Button
                   variant="outline"
-                  className="h-12 rounded-full border-white/30 px-8 text-base text-white hover:bg-white/10"
+                  className="h-12 rounded-full border-white/30 px-8 text-base text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
                 >
                   {secondaryCtaText}
                 </Button>
               </Link>
             )}
-          </div>
+          </motion.div>
         )}
       </div>
     </section>

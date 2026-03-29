@@ -10,6 +10,7 @@ export default function Home() {
         title="Designing the future, one structure at a time"
         subtitle="MetaNova brings together structural engineering, real estate development, and project management under one roof. From concept to completion, we deliver built environments that stand the test of time."
         backgroundImage="/metanova-assets/hero/construction-leadership.png"
+        videoSrc="/metanova-assets/hero/home-hero-video.mp4"
         ctaText="Our Services"
         ctaHref="/services"
         secondaryCtaText="Contact Us"
