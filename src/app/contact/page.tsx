@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HeroSection } from "@/components/sections/HeroSection";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { loadContent } from "@/lib/content/loader";
@@ -36,9 +37,16 @@ export default function ContactPage() {
   const fm = page?.frontmatter as Record<string, string> | undefined;
 
   return (
-    <div className="pt-16">
+    <>
       <JsonLd data={localBusinessJsonLd} />
+      <HeroSection
+        title="Let's build something together"
+        subtitle="Whether you have a new project in mind, need expert consultation, or want to learn more about our work — we're here to help."
+        backgroundImage="/metanova-assets/projects/commercial/glass-atrium.jpg"
+        ctaText="Call us"
+        ctaHref="tel:+15142223444"
+      />
       <ContactForm content={fm} />
-    </div>
+    </>
   );
 }
