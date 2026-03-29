@@ -20,7 +20,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,10 +34,15 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex items-center justify-between px-8 max-w-[1240px] transition-all duration-500"
-        style={{ height: scrolled ? "64px" : "80px" }}
+      {/* Generous padding matching Framer: 24px vertical, 50px horizontal */}
+      <div
+        className="mx-auto flex items-center justify-between transition-all duration-500"
+        style={{
+          padding: scrolled ? "12px 50px" : "24px 50px",
+          maxWidth: "1440px",
+        }}
       >
-        {/* Logo — larger over hero, smaller when scrolled */}
+        {/* Logo — 180x73 over hero (matches Framer), smaller when scrolled */}
         <Link href="/" className="flex items-center transition-all duration-500">
           <Image
             src={
@@ -46,15 +51,15 @@ export function Header() {
                 : "/metanova-assets/brand/logo-wordmark-white.svg"
             }
             alt="MetaNova"
-            width={scrolled ? 140 : 180}
-            height={scrolled ? 28 : 36}
+            width={scrolled ? 150 : 180}
+            height={scrolled ? 40 : 73}
             priority
             className="transition-all duration-500"
           />
         </Link>
 
-        {/* Desktop nav — uppercase, letter-spaced, editorial */}
-        <nav className="hidden items-center gap-8 md:flex">
+        {/* Desktop nav — uppercase, letter-spaced, right-aligned */}
+        <nav className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -92,7 +97,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-[#E8E0D0] bg-[#F5F0E6] px-8 py-6 md:hidden">
+        <nav className="border-t border-[#E8E0D0] bg-[#F5F0E6] px-[50px] py-6 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}

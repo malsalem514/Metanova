@@ -47,7 +47,7 @@ export function HeroSection({
   const hasRightColumn = (stats && stats.length > 0) || testimonial;
 
   return (
-    <section className="relative flex min-h-[85dvh] items-end overflow-hidden">
+    <section className="relative flex h-dvh items-end overflow-hidden">
       {/* Background: static image (always renders as base layer) */}
       <Image
         src={backgroundImage}
