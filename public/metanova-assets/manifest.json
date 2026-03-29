@@ -33,7 +33,21 @@
         "/services",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial",
+        "/contact",
+        "/hospitality",
+        "/residential",
+        "/services",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": null,
+      "format": "svg"
     },
     {
       "category": "brand",
@@ -60,7 +74,23 @@
         "/services",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/",
+        "/about",
+        "/commercial",
+        "/contact",
+        "/hospitality",
+        "/residential",
+        "/services",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": null,
+      "format": "svg"
     },
     {
       "category": "brand",
@@ -86,7 +116,23 @@
         "/services",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/",
+        "/about",
+        "/commercial",
+        "/contact",
+        "/hospitality",
+        "/residential",
+        "/services",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": null,
+      "format": "svg"
     },
     {
       "category": "brand",
@@ -113,7 +159,23 @@
         "/services",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/",
+        "/about",
+        "/commercial",
+        "/contact",
+        "/hospitality",
+        "/residential",
+        "/services",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": null,
+      "format": "svg"
     },
     {
       "category": "brand",
@@ -139,7 +201,26 @@
         "/services",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/",
+        "/about",
+        "/commercial",
+        "/contact",
+        "/hospitality",
+        "/residential",
+        "/services",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": {
+        "w": 100,
+        "h": 100
+      },
+      "format": "png"
     },
     {
       "category": "hero",
@@ -157,7 +238,15 @@
       "bytes": 24102718,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": null,
+      "format": "mp4"
     },
     {
       "category": "hero",
@@ -177,7 +266,20 @@
         "/",
         "/services",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/",
+        "/services",
+        "/services/structural-engineering"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "hero",
@@ -195,7 +297,18 @@
       "bytes": 366948,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "jpeg"
     },
     {
       "category": "hero",
@@ -213,7 +326,18 @@
       "bytes": 553943,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 701
+      },
+      "format": "jpg"
     },
     {
       "category": "people",
@@ -231,7 +355,18 @@
       "bytes": 189265,
       "usedBy": [
         "/contact"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact"
+      ],
+      "dimensions": {
+        "w": 1600,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "people",
@@ -249,7 +384,18 @@
       "bytes": 79711,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 896,
+        "h": 1088
+      },
+      "format": "jpg"
     },
     {
       "category": "people",
@@ -267,7 +413,18 @@
       "bytes": 76289,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 896,
+        "h": 1088
+      },
+      "format": "jpg"
     },
     {
       "category": "people",
@@ -285,7 +442,18 @@
       "bytes": 451179,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 1024,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -303,7 +471,18 @@
       "bytes": 504337,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -321,7 +500,18 @@
       "bytes": 2657958,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 4000,
+        "h": 3000
+      },
+      "format": "jpg"
     },
     {
       "category": "services",
@@ -339,7 +529,18 @@
       "bytes": 465908,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -358,7 +559,19 @@
       "usedBy": [
         "/services",
         "/services/project-management-consulting"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/services",
+        "/services/project-management-consulting"
+      ],
+      "dimensions": {
+        "w": 1024,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -376,7 +589,18 @@
       "bytes": 530371,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -394,7 +618,18 @@
       "bytes": 647977,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "services",
@@ -412,7 +647,18 @@
       "bytes": 35674,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 1600,
+        "h": 1135
+      },
+      "format": "webp"
     },
     {
       "category": "services",
@@ -430,7 +676,18 @@
       "bytes": 454936,
       "usedBy": [
         "/about"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/about"
+      ],
+      "dimensions": {
+        "w": 1536,
+        "h": 1024
+      },
+      "format": "png"
     },
     {
       "category": "projects/residential",
@@ -448,7 +705,18 @@
       "bytes": 627254,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 2048,
+        "h": 2048
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/residential",
@@ -468,7 +736,20 @@
         "/commercial",
         "/hospitality",
         "/residential"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial",
+        "/hospitality",
+        "/residential"
+      ],
+      "dimensions": {
+        "w": 2944,
+        "h": 1440
+      },
+      "format": "png"
     },
     {
       "category": "projects/residential",
@@ -486,7 +767,18 @@
       "bytes": 1078625,
       "usedBy": [
         "/residential"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/residential"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/residential",
@@ -506,7 +798,20 @@
         "/contact",
         "/residential",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact",
+        "/residential",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1350
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/residential",
@@ -525,7 +830,19 @@
       "usedBy": [
         "/contact",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/residential",
@@ -543,7 +860,18 @@
       "bytes": 645840,
       "usedBy": [
         "/commercial"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial"
+      ],
+      "dimensions": {
+        "w": 2000,
+        "h": 2500
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/residential",
@@ -562,7 +890,19 @@
       "usedBy": [
         "/contact",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/hospitality",
@@ -582,7 +922,20 @@
         "/contact",
         "/hospitality",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact",
+        "/hospitality",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1800
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/hospitality",
@@ -600,7 +953,18 @@
       "bytes": 893365,
       "usedBy": [
         "/hospitality"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/hospitality"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/hospitality",
@@ -618,7 +982,18 @@
       "bytes": 830948,
       "usedBy": [
         "/hospitality"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/hospitality"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 2400
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/hospitality",
@@ -637,7 +1012,19 @@
       "usedBy": [
         "/contact",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/contact",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/commercial",
@@ -655,7 +1042,18 @@
       "bytes": 1013659,
       "usedBy": [
         "/commercial"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/commercial",
@@ -675,7 +1073,20 @@
         "/commercial",
         "/contact",
         "/services"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial",
+        "/contact",
+        "/services"
+      ],
+      "dimensions": {
+        "w": 2400,
+        "h": 1600
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/commercial",
@@ -697,7 +1108,22 @@
         "/residential",
         "/services/project-management-consulting",
         "/services/structural-engineering"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/commercial",
+        "/hospitality",
+        "/residential",
+        "/services/project-management-consulting",
+        "/services/structural-engineering"
+      ],
+      "dimensions": {
+        "w": 3648,
+        "h": 4958
+      },
+      "format": "jpg"
     },
     {
       "category": "projects/commercial",
@@ -715,7 +1141,18 @@
       "bytes": 1060638,
       "usedBy": [
         "/"
-      ]
+      ],
+      "approvedForProduction": false,
+      "ownership": "unknown",
+      "notes": "",
+      "assignedTo": [
+        "/"
+      ],
+      "dimensions": {
+        "w": 3600,
+        "h": 1770
+      },
+      "format": "png"
     }
   ]
 }
