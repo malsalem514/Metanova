@@ -47,12 +47,11 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                     {card.label}
                   </p>
                   <h3
-                    className="mt-4 mb-8 text-2xl leading-tight text-[#1B2E37]"
-                    style={{ fontFamily: "var(--font-dm-serif-display)" }}
+                    className="mt-4 mb-8 text-2xl font-medium leading-tight text-[#121212]"
                   >
                     {card.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#30454C]/80">
+                  <p className="text-sm leading-relaxed text-[#121212]/70">
                     {card.text}
                   </p>
                 </SpotlightCard>
@@ -65,14 +64,14 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#1B2E37]">
+                  <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-medium text-[#121212]">
                     <AnimatedCounter
                       target={stat.target}
                       suffix={stat.suffix}
                       duration={stat.target > 100 ? 2.5 : 2}
                     />
                   </div>
-                  <p className="mt-2 text-sm font-medium text-[#30454C]/80">{stat.label}</p>
+                  <p className="mt-2 text-sm font-medium text-[#121212]/70">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -90,18 +89,17 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                   {content?.["beginnings_overline"] ?? "Our Beginnings"}
                 </p>
                 <h2
-                  className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-                  style={{ fontFamily: "var(--font-dm-serif-display)" }}
+                  className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
                 >
                   {content?.["beginnings_heading"] ?? "Two brothers, one shared vision"}
                 </h2>
-                <p className="text-base leading-relaxed text-[#30454C]/80">
+                <p className="text-base leading-relaxed text-[#121212]/70">
                   {content?.["beginnings_p1"] ?? "MetaNova was founded by Suddam and Muhannad Al-Salem — a structural engineer and a real estate developer — who saw an opportunity to create a firm that truly understands both sides of the construction equation."}
                 </p>
-                <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
+                <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
                   {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, MetaNova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
                 </p>
-                <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
+                <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
                   {content?.["beginnings_p3"] ?? "Based in Brossard, Quebec, MetaNova serves clients across the Greater Montreal area and beyond, with a growing portfolio spanning residential, hospitality, and commercial sectors."}
                 </p>
               </div>

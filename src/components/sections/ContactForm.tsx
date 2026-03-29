@@ -22,28 +22,27 @@ export function ContactForm({ content }: ContactFormProps) {
                 {content?.["overline"] ?? "Get in Touch"}
               </p>
               <h2
-                className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-                style={{ fontFamily: "var(--font-dm-serif-display)" }}
+                className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
               >
                 {content?.["heading"] ?? "Let\u2019s discuss your next project"}
               </h2>
-              <p className="text-lg leading-relaxed text-[#30454C]/80">
+              <p className="text-lg leading-relaxed text-[#121212]/80">
                 {content?.["intro"] ?? "Whether you need structural engineering expertise, project management support, or development consulting, we\u2019re here to help bring your vision to life."}
               </p>
 
               <div className="mt-10 space-y-6">
                 <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#1B2E37]">
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
                     Office
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#30454C]/80">
+                  <p className="mt-2 text-sm leading-relaxed text-[#121212]/80">
                     {content?.["office_address_line1"] ?? "7005, boulevard Taschereau, Suite 305"}
                     <br />
                     {content?.["office_address_line2"] ?? "Brossard, Quebec J4Z 1A7"}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#1B2E37]">
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
                     Email
                   </h3>
                   <a
@@ -54,7 +53,7 @@ export function ContactForm({ content }: ContactFormProps) {
                   </a>
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#1B2E37]">
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-[#121212]">
                     Phone
                   </h3>
                   <a
@@ -85,10 +84,10 @@ export function ContactForm({ content }: ContactFormProps) {
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-[#1B2E37]">
+                  <h3 className="mt-6 text-xl font-semibold text-[#121212]">
                     Message Sent
                   </h3>
-                  <p className="mt-2 text-sm text-[#30454C]/80">
+                  <p className="mt-2 text-sm text-[#121212]/80">
                     Thank you for reaching out. We&apos;ll be in touch shortly.
                   </p>
                 </div>
@@ -104,7 +103,7 @@ export function ContactForm({ content }: ContactFormProps) {
                     <div>
                       <label
                         htmlFor="first-name"
-                        className="block text-sm font-medium text-[#1B2E37]"
+                        className="block text-sm font-medium text-[#121212]"
                       >
                         First Name
                       </label>
@@ -115,14 +114,14 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="given-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                         placeholder="First name"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="last-name"
-                        className="block text-sm font-medium text-[#1B2E37]"
+                        className="block text-sm font-medium text-[#121212]"
                       >
                         Last Name
                       </label>
@@ -133,7 +132,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="family-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                         placeholder="Last name"
                       />
                     </div>
@@ -141,7 +140,7 @@ export function ContactForm({ content }: ContactFormProps) {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-[#1B2E37]"
+                      className="block text-sm font-medium text-[#121212]"
                     >
                       Email
                     </label>
@@ -152,31 +151,31 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       autoComplete="email"
                       aria-required="true"
-                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="you@example.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-[#1B2E37]"
+                      className="block text-sm font-medium text-[#121212]"
                     >
                       Phone{" "}
-                      <span className="text-[#30454C]/40">(optional)</span>
+                      <span className="text-[#121212]/40">(optional)</span>
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       autoComplete="tel"
-                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="+1 (514) 000-0000"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-[#1B2E37]"
+                      className="block text-sm font-medium text-[#121212]"
                     >
                       Message
                     </label>
@@ -186,7 +185,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       aria-required="true"
                       rows={5}
-                      className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="Tell us about your project..."
                     />
                   </div>

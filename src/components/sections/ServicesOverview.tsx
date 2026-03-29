@@ -44,8 +44,7 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
               {overline ?? "What We Do"}
             </p>
             <h2
-              className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-              style={{ fontFamily: "var(--font-dm-serif-display)" }}
+              className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
               {heading ?? "Integrated expertise across engineering, development, and management"}
             </h2>
@@ -67,10 +66,10 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold text-[#1B2E37]">
+                    <h3 className="text-xl font-medium text-[#121212]">
                       {service.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#30454C]/80">
+                    <p className="mt-3 text-sm leading-relaxed text-[#121212]/70">
                       {service.description}
                     </p>
                     <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors duration-300 group-hover:text-[#A04E2A]">

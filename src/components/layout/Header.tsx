@@ -61,7 +61,7 @@ export function Header() {
               href={link.href}
               className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
                 scrolled
-                  ? "text-[#30454C] hover:text-[#C36036]"
+                  ? "text-[#121212] hover:text-[#C36036]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -74,7 +74,7 @@ export function Header() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-[#C36036] md:hidden ${
-            scrolled ? "text-[#30454C]" : "text-white"
+            scrolled ? "text-[#121212]" : "text-white"
           }`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -98,7 +98,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-xs font-medium uppercase tracking-[0.15em] text-[#30454C] transition-colors duration-300 hover:text-[#C36036]"
+              className="block py-3 text-xs font-medium uppercase tracking-[0.15em] text-[#121212] transition-colors duration-300 hover:text-[#C36036]"
             >
               {link.label}
             </Link>

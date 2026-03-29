@@ -45,8 +45,7 @@ export function ServiceDetail({
             {subtitle}
           </p>
           <h1
-            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-white"
-            style={{ fontFamily: "var(--font-dm-serif-display)" }}
+            className="mt-4 max-w-3xl font-medium text-[clamp(2.5rem,5vw,4rem)] leading-[1.2] text-white"
           >
             {title}
           </h1>
@@ -59,7 +58,7 @@ export function ServiceDetail({
           <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
             <FadeIn>
               <div>
-                <p className="text-lg leading-relaxed text-[#30454C]/80">
+                <p className="text-lg leading-relaxed text-[#121212]/70">
                   {description}
                 </p>
                 <Link href="/contact" className="mt-8 inline-block">
@@ -78,10 +77,10 @@ export function ServiceDetail({
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="text-lg font-semibold text-[#1B2E37]">
+                        <h3 className="text-lg font-medium text-[#121212]">
                           {point.title}
                         </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-[#30454C]/80">
+                        <p className="mt-2 text-sm leading-relaxed text-[#121212]/70">
                           {point.description}
                         </p>
                       </div>

@@ -52,8 +52,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
               {overline ?? "Our Approach"}
             </p>
             <h2
-              className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-              style={{ fontFamily: "var(--font-dm-serif-display)" }}
+              className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
               {heading ?? "Building with purpose, engineering with precision"}
             </h2>
@@ -67,10 +66,10 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
                 <span className="text-sm font-medium text-[#C36036]">
                   {value.number}
                 </span>
-                <h3 className="mt-3 text-xl font-semibold text-[#1B2E37]">
+                <h3 className="mt-3 text-xl font-medium text-[#121212]">
                   {value.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#30454C]/80">
+                <p className="mt-3 text-sm leading-relaxed text-[#121212]/70">
                   {value.description}
                 </p>
               </SpotlightCard>
@@ -83,7 +82,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#1B2E37]">
+                <div className="text-[clamp(2.5rem,5vw,3.5rem)] font-medium text-[#121212]">
                   <AnimatedCounter
                     target={stat.target}
                     suffix={stat.suffix}
@@ -91,7 +90,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
                     duration={stat.target > 100 ? 2.5 : 2}
                   />
                 </div>
-                <p className="mt-2 text-sm font-medium text-[#30454C]/80">{stat.label}</p>
+                <p className="mt-2 text-sm font-medium text-[#121212]/70">{stat.label}</p>
               </div>
             ))}
           </div>

@@ -1,4 +1,6 @@
 import { HeroSection } from "@/components/sections/HeroSection";
+import { VisionMissionSection } from "@/components/sections/VisionMissionSection";
+import { EditorialSection } from "@/components/sections/EditorialSection";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ApproachSection } from "@/components/sections/ApproachSection";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -15,10 +17,10 @@ export default function Home() {
         subtitle={fm?.["hero_subline"] ?? ""}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/construction-leadership.png"}
         videoSrc={fm?.["hero_video"] ?? "/metanova-assets/hero/home-hero-web.mp4"}
-        ctaText={fm?.["cta_primary"] ?? "Our Services"}
-        ctaHref={fm?.["cta_primary_href"] ?? "/services"}
-        secondaryCtaText={fm?.["cta_secondary"] ?? "Contact Us"}
-        secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/contact"}
+        ctaText={fm?.["cta_primary"] ?? "BOOK A CALL"}
+        ctaHref={fm?.["cta_primary_href"] ?? "/contact"}
+        secondaryCtaText={fm?.["cta_secondary"] ?? "OUR SERVICES"}
+        secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/services"}
         stats={[
           { value: "20+", label: "Projects" },
           { value: "5+", label: "Cities" },
@@ -29,6 +31,8 @@ export default function Home() {
           rating: 5,
         }}
       />
+      <VisionMissionSection />
+      <EditorialSection />
       <ServicesOverview
         overline={fm?.["services_overline"]}
         heading={fm?.["services_heading"]}

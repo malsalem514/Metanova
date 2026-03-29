@@ -28,8 +28,7 @@ export function TeamSection() {
               Leadership
             </p>
             <h2
-              className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
-              style={{ fontFamily: "var(--font-dm-serif-display)" }}
+              className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
               Meet the founders
             </h2>
@@ -51,13 +50,13 @@ export function TeamSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-40" />
                 </div>
                 <div className="mt-8">
-                  <h3 className="text-2xl font-semibold text-[#1B2E37]">
+                  <h3 className="text-2xl font-medium text-[#121212]">
                     {member.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-[#C36036]">
                     {member.role}
                   </p>
-                  <p className="mt-6 text-sm leading-loose text-[#30454C]/80">
+                  <p className="mt-6 text-sm leading-loose text-[#121212]/70">
                     {member.bio}
                   </p>
                 </div>

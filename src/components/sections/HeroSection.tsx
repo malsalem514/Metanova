@@ -74,7 +74,7 @@ export function HeroSection({
         </video>
       )}
       {overlay && (
-        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#0a1520]/40 via-[#0a1520]/20 to-[#0a1520]/60" />
       )}
       <div className="relative z-[3] mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
         <div className={hasRightColumn ? "grid items-end gap-12 md:grid-cols-[1fr_auto]" : ""}>
@@ -83,7 +83,7 @@ export function HeroSection({
             <TextReveal
               text={title}
               as="h1"
-              className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
+              className="max-w-3xl font-medium text-[clamp(2.5rem,6vw,4rem)] leading-[1.2] text-white"
             />
             {subtitle && (
               <motion.p
@@ -104,7 +104,7 @@ export function HeroSection({
               >
                 {ctaText && ctaHref && (
                   <Link href={ctaHref}>
-                    <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
+                    <Button className="h-auto rounded-none bg-[#121212] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.02em] text-white transition-all duration-300 hover:bg-[#2a2a2a]">
                       {ctaText}
                     </Button>
                   </Link>
@@ -113,9 +113,9 @@ export function HeroSection({
                   <Link href={secondaryCtaHref}>
                     <Button
                       variant="outline"
-                      className="h-12 rounded-full border-white/30 px-8 text-base text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
+                      className="h-auto rounded-none border-white/40 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.02em] text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
                     >
-                      {secondaryCtaText}
+                      {secondaryCtaText} &rarr;
                     </Button>
                   </Link>
                 )}

@@ -51,19 +51,18 @@ export function ServicesListSection() {
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <SpotlightCard className="border-none bg-transparent p-0 hover:shadow-none hover:translate-y-0">
                     <h2
-                      className="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#1B2E37]"
-                      style={{ fontFamily: "var(--font-dm-serif-display)" }}
+                      className="font-medium text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight text-[#121212]"
                     >
                       {service.title}
                     </h2>
-                    <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
+                    <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
                       {service.description}
                     </p>
                     <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                       {service.capabilities.map((cap) => (
                         <li
                           key={cap}
-                          className="flex items-start gap-2 text-sm text-[#30454C]/80"
+                          className="flex items-start gap-2 text-sm text-[#121212]/70"
                         >
                           <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
                           {cap}

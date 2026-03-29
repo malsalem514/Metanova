@@ -41,8 +41,7 @@ export function PortfolioGrid({
             {subtitle}
           </p>
           <h1
-            className="mt-4 max-w-3xl text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-white"
-            style={{ fontFamily: "var(--font-dm-serif-display)" }}
+            className="mt-4 max-w-3xl font-medium text-[clamp(2.5rem,5vw,4rem)] leading-[1.2] text-white"
           >
             {title}
           </h1>
