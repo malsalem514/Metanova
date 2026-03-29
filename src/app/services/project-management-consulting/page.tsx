@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Project Management & Consulting",
   description:
     "End-to-end project management and development consulting services. From feasibility studies to project closeout.",
+  alternates: { canonical: "/services/project-management-consulting" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Project Management & Development Consulting",
+  description:
+    "End-to-end project management and development consulting for residential and mixed-use projects across Quebec.",
+  provider: {
+    "@type": "Organization",
+    name: "MetaNova",
+    url: "https://metanova.ca",
+  },
+  areaServed: { "@type": "State", name: "Quebec" },
+  serviceType: "Project Management",
 };
 
 const points = [
@@ -44,6 +61,7 @@ const points = [
 export default function ProjectManagementPage() {
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
       <ServiceDetail
         title="Project Management & Consulting"
         subtitle="Our Services"

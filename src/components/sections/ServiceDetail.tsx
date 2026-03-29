@@ -59,7 +59,7 @@ export function ServiceDetail({
           <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
             <FadeIn>
               <div>
-                <p className="text-lg leading-relaxed text-[#30454C]/60">
+                <p className="text-lg leading-relaxed text-[#30454C]/80">
                   {description}
                 </p>
                 <Link href="/contact" className="mt-8 inline-block">
@@ -81,7 +81,7 @@ export function ServiceDetail({
                         <h3 className="text-lg font-semibold text-[#1B2E37]">
                           {point.title}
                         </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-[#30454C]/60">
+                        <p className="mt-2 text-sm leading-relaxed text-[#30454C]/80">
                           {point.description}
                         </p>
                       </div>

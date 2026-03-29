@@ -4,6 +4,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const dmSerifDisplay = DM_Serif_Display({
   variable: "--font-dm-serif-display",
@@ -26,12 +29,13 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://metanova.ca"),
   title: {
-    default: "MetaNova | Designing the future, one structure at a time",
+    default: "MetaNova \u2014 Structural Engineering & Development",
     template: "%s | MetaNova",
   },
   description:
-    "MetaNova offers structural engineering, real estate development, and project management services. Based in Brossard, Quebec.",
+    "Structural engineering, real estate development and project management across Quebec.",
   keywords: [
     "structural engineering",
     "real estate development",
@@ -40,6 +44,46 @@ export const metadata: Metadata = {
     "construction",
     "MetaNova",
   ],
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    siteName: "MetaNova",
+    images: [
+      {
+        url: "/metanova-assets/hero/construction-leadership.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: { card: "summary_large_image" },
+  alternates: { canonical: "/" },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MetaNova",
+  legalName: "Metanova Experts-Conseils",
+  url: "https://metanova.ca",
+  logo: "https://metanova.ca/metanova-assets/brand/logo-wordmark-color.svg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "7005 Taschereau Blvd #305",
+    addressLocality: "Brossard",
+    addressRegion: "QC",
+    postalCode: "J4Z 1A7",
+    addressCountry: "CA",
+  },
+  telephone: "+15142223444",
+  email: "info@metanova.ca",
+};
+
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MetaNova",
+  url: "https://metanova.ca",
 };
 
 export default function RootLayout({
@@ -58,9 +102,19 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-[#1B2E37] focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={webSiteJsonLd} />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

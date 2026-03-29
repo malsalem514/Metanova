@@ -1,0 +1,18 @@
+# MetaNova
+
+> Structural engineering, real estate development, and project management firm based in Brossard, Quebec.
+
+Metanova Experts-Conseils brings together over 20 years of combined experience in structural engineering, real estate development and construction. Founded in 2022, the firm works alongside investors, developers and industry professionals across Quebec.
+
+## Services
+- [Structural Engineering](/services/structural-engineering): Structural design (wood, steel, concrete), value engineering, construction drawings
+- [Project Management & Consulting](/services/project-management-consulting): Budgeting, scheduling, zoning coordination, contractor oversight
+
+## Portfolio
+- [Residential](/residential): Custom homes, condos, multi-family developments
+- [Hospitality](/hospitality): Hotels, lodges, resorts, wellness facilities
+- [Commercial](/commercial): Office buildings, retail, mixed-use developments
+
+## Company
+- [About](/about): Team, vision, mission, and approach
+- [Contact](/contact): 7005 Taschereau Blvd #305, Brossard QC — info@metanova.ca — +1 (514) 222-3444

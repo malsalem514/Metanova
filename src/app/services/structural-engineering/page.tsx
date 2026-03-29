@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Structural Engineering",
   description:
     "Expert structural engineering services for residential, commercial, and hospitality projects. Steel, concrete, and wood structures.",
+  alternates: { canonical: "/services/structural-engineering" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Structural Engineering",
+  description:
+    "Comprehensive structural design and analysis services for residential, commercial, and hospitality projects.",
+  provider: {
+    "@type": "Organization",
+    name: "MetaNova",
+    url: "https://metanova.ca",
+  },
+  areaServed: { "@type": "State", name: "Quebec" },
+  serviceType: "Structural Engineering",
 };
 
 const points = [
@@ -44,6 +61,7 @@ const points = [
 export default function StructuralEngineeringPage() {
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
       <ServiceDetail
         title="Structural Engineering"
         subtitle="Our Services"

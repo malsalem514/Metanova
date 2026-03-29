@@ -29,20 +29,25 @@ const services = [
   },
 ];
 
-export function ServicesOverview() {
+interface ServicesOverviewProps {
+  overline?: string;
+  heading?: string;
+}
+
+export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
   return (
     <section className="bg-white py-28">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
-              What We Do
+              {overline ?? "What We Do"}
             </p>
             <h2
               className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
               style={{ fontFamily: "var(--font-dm-serif-display)" }}
             >
-              Integrated expertise across engineering, development, and management
+              {heading ?? "Integrated expertise across engineering, development, and management"}
             </h2>
           </div>
         </FadeIn>
@@ -65,7 +70,7 @@ export function ServicesOverview() {
                     <h3 className="text-xl font-semibold text-[#1B2E37]">
                       {service.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
+                    <p className="mt-3 text-sm leading-relaxed text-[#30454C]/80">
                       {service.description}
                     </p>
                     <p className="mt-4 text-sm font-medium text-[#C36036] transition-colors duration-300 group-hover:text-[#A04E2A]">

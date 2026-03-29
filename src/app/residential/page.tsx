@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { loadContent } from "@/lib/content/loader";
 
 export const metadata: Metadata = {
   title: "Residential Projects",
   description:
     "Explore MetaNova's residential portfolio — condominiums, single-family homes, and multi-unit developments.",
+  alternates: { canonical: "/residential" },
 };
 
 const items = [
@@ -19,18 +21,21 @@ const items = [
 ];
 
 export default function ResidentialPage() {
+  const page = loadContent("pages/residential");
+  const fm = page?.frontmatter as Record<string, string> | undefined;
+
   return (
     <>
       <PortfolioGrid
-        title="Residential"
-        subtitle="Portfolio"
-        description="From luxury single-family homes to large-scale condominium developments, our residential projects combine structural excellence with livability."
-        heroImage="/metanova-assets/projects/residential/condo-aerial.jpg"
+        title={fm?.["title"] ?? "Residential"}
+        subtitle={fm?.["subtitle"] ?? "Portfolio"}
+        description={fm?.["description"] ?? "From luxury single-family homes to large-scale condominium developments, our residential projects combine structural excellence with livability."}
+        heroImage={fm?.["hero_image"] ?? "/metanova-assets/projects/residential/condo-aerial.jpg"}
         items={items}
       />
       <CTABanner
-        title="Planning a residential project?"
-        subtitle="Whether it's a custom home or a multi-unit development, we bring the structural and development expertise to make it happen."
+        title={fm?.["cta_banner_heading"] ?? "Planning a residential project?"}
+        subtitle={fm?.["cta_banner_body"]}
       />
     </>
   );

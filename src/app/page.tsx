@@ -2,23 +2,37 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ApproachSection } from "@/components/sections/ApproachSection";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { loadContent } from "@/lib/content/loader";
 
 export default function Home() {
+  const page = loadContent("pages/home");
+  const fm = page?.frontmatter as Record<string, string> | undefined;
+
   return (
     <>
       <HeroSection
-        title="Designing the future, one structure at a time"
-        subtitle="MetaNova brings together structural engineering, real estate development, and project management under one roof. From concept to completion, we deliver built environments that stand the test of time."
-        backgroundImage="/metanova-assets/hero/construction-leadership.png"
-        videoSrc="/metanova-assets/hero/home-hero-video.mp4"
-        ctaText="Our Services"
-        ctaHref="/services"
-        secondaryCtaText="Contact Us"
-        secondaryCtaHref="/contact"
+        title={fm?.["hero_headline"] ?? "Designing the future, one structure at a time"}
+        subtitle={fm?.["hero_subline"] ?? ""}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/construction-leadership.png"}
+        videoSrc={fm?.["hero_video"] ?? "/metanova-assets/hero/home-hero-video.mp4"}
+        ctaText={fm?.["cta_primary"] ?? "Our Services"}
+        ctaHref={fm?.["cta_primary_href"] ?? "/services"}
+        secondaryCtaText={fm?.["cta_secondary"] ?? "Contact Us"}
+        secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/contact"}
       />
-      <ServicesOverview />
-      <ApproachSection />
-      <CTABanner />
+      <ServicesOverview
+        overline={fm?.["services_overline"]}
+        heading={fm?.["services_heading"]}
+      />
+      <ApproachSection
+        overline={fm?.["approach_overline"]}
+        heading={fm?.["approach_heading"]}
+      />
+      <CTABanner
+        title={fm?.["cta_banner_heading"]}
+        subtitle={fm?.["cta_banner_body"]}
+        ctaText={fm?.["cta_banner_button"]}
+      />
     </>
   );
 }

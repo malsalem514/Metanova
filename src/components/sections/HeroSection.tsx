@@ -30,7 +30,7 @@ export function HeroSection({
   videoSrc,
 }: HeroSectionProps) {
   return (
-    <section className="relative flex min-h-[85vh] items-end overflow-hidden">
+    <section className="relative flex min-h-[85dvh] items-end overflow-hidden">
       {/* Background: static image (always renders as base layer) */}
       <Image
         src={backgroundImage}

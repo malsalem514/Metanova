@@ -4,27 +4,32 @@ import { ApproachSection } from "@/components/sections/ApproachSection";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { AboutInlineSections } from "./AboutInlineSections";
+import { loadContent } from "@/lib/content/loader";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "Learn about MetaNova — our vision, mission, and the team behind our structural engineering and development expertise.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
+  const page = loadContent("pages/about");
+  const fm = page?.frontmatter as Record<string, string> | undefined;
+
   return (
     <>
       <HeroSection
-        title="Built on expertise, driven by vision"
-        subtitle="Founded in 2022, MetaNova was created to bridge the gap between engineering precision and development pragmatism."
-        backgroundImage="/metanova-assets/hero/night-cranes-skyline.jpg"
+        title={fm?.["hero_headline"] ?? "Built on expertise, driven by vision"}
+        subtitle={fm?.["hero_subline"]}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/night-cranes-skyline.jpg"}
       />
-      <AboutInlineSections />
+      <AboutInlineSections content={fm} />
       <ApproachSection />
       <TeamSection />
       <CTABanner
-        title="Want to work with us?"
-        subtitle="We're always looking for challenging projects and great partners. Let's talk."
+        title={fm?.["cta_banner_heading"] ?? "Want to work with us?"}
+        subtitle={fm?.["cta_banner_body"] ?? "We're always looking for challenging projects and great partners. Let's talk."}
       />
     </>
   );

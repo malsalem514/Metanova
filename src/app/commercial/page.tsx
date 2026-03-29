@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { loadContent } from "@/lib/content/loader";
 
 export const metadata: Metadata = {
   title: "Commercial Projects",
   description:
     "Explore MetaNova's commercial portfolio — office buildings, retail spaces, and mixed-use developments.",
+  alternates: { canonical: "/commercial" },
 };
 
 const items = [
@@ -16,18 +18,21 @@ const items = [
 ];
 
 export default function CommercialPage() {
+  const page = loadContent("pages/commercial");
+  const fm = page?.frontmatter as Record<string, string> | undefined;
+
   return (
     <>
       <PortfolioGrid
-        title="Commercial"
-        subtitle="Portfolio"
-        description="Office buildings, retail spaces, and mixed-use developments engineered for performance, flexibility, and long-term value."
-        heroImage="/metanova-assets/projects/commercial/glass-atrium.jpg"
+        title={fm?.["title"] ?? "Commercial"}
+        subtitle={fm?.["subtitle"] ?? "Portfolio"}
+        description={fm?.["description"] ?? "Office buildings, retail spaces, and mixed-use developments engineered for performance, flexibility, and long-term value."}
+        heroImage={fm?.["hero_image"] ?? "/metanova-assets/projects/commercial/glass-atrium.jpg"}
         items={items}
       />
       <CTABanner
-        title="Planning a commercial development?"
-        subtitle="From office towers to retail complexes, we deliver structural solutions that support your business objectives."
+        title={fm?.["cta_banner_heading"] ?? "Planning a commercial development?"}
+        subtitle={fm?.["cta_banner_body"]}
       />
     </>
   );

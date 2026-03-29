@@ -1,0 +1,264 @@
+extracted:
+  raw_text_by_page:
+    home: >-
+      Designing the future, one structure at a time. Structural engineering, real
+      estate development and project management across Quebec. From site analysis
+      to execution, we deliver optimized, value-engineered projects with precision.
+      Our Service Comprehensive Engineering, Development and Project management,
+      from planning to completion. Ready to create something extraordinary? Whether
+      you're designing a dream home, a cutting-edge workplace, or a sustainable
+      urban space, we're here to turn your ideas into reality. Contact us.
+    about: >-
+      Our Vision To be a leading partner in structural engineering and real estate
+      development, supporting the creation of large-scale, high-impact projects
+      across Quebec. Our Mission To deliver optimized, value-engineered solutions
+      that enhance project viability, reduce costs, and support efficient execution,
+      from early-stage planning to construction. Core Value We prioritize clarity,
+      efficiency and results-driven thinking. Founded in 2022, Metanova
+      Experts-Conseils brings together over 20 years of combined experience.
+      Suddam Al-Salem, ing. Managing Partner Engineering Division. Muhannad
+      Al-Salem Managing Partner Real Estate Development Division.
+    services: >-
+      Structural Engineering At Metanova, we provide expert structural engineering
+      consulting tailored to ensure the safety, durability, and efficiency of your
+      building projects. Project Management & Development Consulting We provide
+      end-to-end project management and development consulting for residential and
+      mixed-use projects across Quebec.
+    contact: >-
+      Get In Touch. Contact us. We'd love to hear from you! Our Location 7005
+      Taschereau Blvd #305 Brossard, QC J4Z 1A7. Mail us info@metanova.ca. Call
+      us +1 (514) 222-3444.
+    residential: >-
+      Residential portfolio. From luxury single-family homes to large-scale
+      condominium developments.
+    hospitality: >-
+      Hospitality portfolio. Hotels, resorts, and leisure facilities that balance
+      guest experience with structural performance.
+    commercial: >-
+      Commercial portfolio. Office buildings, retail spaces, and mixed-use
+      developments engineered for performance.
+  extraction_date: "2026-03-29"
+  source_url: "https://titen-site.framer.website"
+
+confirmed:
+  company:
+    name: MetaNova
+    legal_name: Metanova Experts-Conseils
+    tagline: "Designing the future, one structure at a time"
+    founded: 2022
+    location: "Brossard, Quebec, Canada"
+  people:
+    - name: "Suddam Al-Salem, ing."
+      role: "Managing Partner"
+      title: "Engineering Division"
+      bio: >-
+        A licensed structural engineer with extensive experience in building
+        design across steel, wood, and concrete structures. Previously at NCK,
+        Suddam brings deep technical expertise and a commitment to engineering
+        excellence to every project MetaNova undertakes.
+      portrait: "/metanova-assets/people/suddam-al-salem.jpg"
+    - name: Muhannad Al-Salem
+      role: "Managing Partner"
+      title: "Real Estate Development Division"
+      bio: >-
+        With over a decade of experience in real estate development and a
+        background in architecture and construction management, Muhannad has been
+        a licensed general contractor since 2011. He leads MetaNova's development
+        division with a hands-on, results-driven approach.
+      portrait: "/metanova-assets/people/muhannad-al-salem.jpg"
+  services:
+    - id: structural-engineering
+      name: Structural Engineering
+      summary: >-
+        Expert structural engineering consulting tailored to ensure the safety,
+        durability, and efficiency of building projects.
+      key_points:
+        - "Structural design (wood, steel, concrete)"
+        - "Value engineering & cost optimization"
+        - "Structural analysis and feasibility"
+        - "Construction drawings and technical documentation"
+      detailed_description: >-
+        Complete structural design and analysis services for new construction,
+        renovations, and assessments. Our team of licensed engineers works across
+        steel, concrete, and wood structures to deliver safe, efficient, and
+        code-compliant designs.
+    - id: project-management-consulting
+      name: Project Management & Development Consulting
+      summary: >-
+        End-to-end project management and development consulting for residential
+        and mixed-use projects across Quebec.
+      key_points:
+        - "Budgeting & financial forecasting"
+        - "Scheduling & milestone control"
+        - "Zoning amendments & municipal coordination"
+        - "Infrastructure planning & contractor oversight"
+        - "Risk management & regulatory strategy"
+      detailed_description: >-
+        From pre-construction planning through project closeout, we provide
+        hands-on project management and development consulting that keeps your
+        project on time, on budget, and on target.
+  contact:
+    address: "7005 Taschereau Blvd #305, Brossard, QC J4Z 1A7"
+    email: info@metanova.ca
+    phone: "+1 (514) 222-3444"
+  project_types:
+    - id: residential
+      name: Residential
+      summary: >-
+        Custom homes, condos, multi-family developments combining structural
+        excellence with livability.
+    - id: hospitality
+      name: Hospitality
+      summary: >-
+        Hotels, resorts, and leisure facilities balancing guest experience with
+        structural performance.
+    - id: commercial
+      name: Commercial
+      summary: >-
+        Office buildings, retail spaces, and mixed-use developments engineered
+        for performance and long-term value.
+  nav_labels:
+    - slug: about
+      label: About
+    - slug: services
+      label: Services
+    - slug: residential
+      label: Residential
+    - slug: hospitality
+      label: Hospitality
+    - slug: commercial
+      label: Commercial
+    - slug: contact
+      label: Contact
+  footer:
+    tagline: "Designing the future, one structure at a time."
+    legal_text: "Metanova Experts-Conseils. All rights reserved."
+
+generated:
+  tone: >-
+    Professional, confident, and approachable. Bechtel-inspired clean design
+    language. Engineering precision meets development strategy.
+  pages:
+    "/":
+      hero_headline: "Designing the future, one structure at a time"
+      hero_subline: >-
+        MetaNova brings together structural engineering, real estate development,
+        and project management under one roof. From concept to completion, we
+        deliver built environments that stand the test of time.
+      sections:
+        - id: services-overview
+          heading: "Integrated expertise across engineering, development, and management"
+          body: >-
+            Structural Engineering, Real Estate Development, and Project Management
+            services that cover every stage of the building lifecycle.
+          cta_text: "Learn more"
+        - id: approach
+          heading: "Building with purpose, engineering with precision"
+          body: >-
+            Value Engineering, Development Thinking, Precision Execution, and
+            Adaptability guide every project we undertake.
+        - id: cta-banner
+          heading: "Ready to start your next project?"
+          body: >-
+            Let's discuss how MetaNova can bring your vision to life with expert
+            engineering and development services.
+          cta_text: "Contact Us"
+      meta:
+        title: "MetaNova — Structural Engineering & Development"
+        description: "Structural engineering, real estate development and project management across Quebec."
+        og_title: "MetaNova — Structural Engineering & Development"
+        og_description: "Structural engineering, real estate development and project management across Quebec."
+        og_image: "/metanova-assets/hero/construction-leadership.png"
+    "/about":
+      hero_headline: "Built on expertise, driven by vision"
+      sections:
+        - id: vision-mission
+          vision_heading: "Redefining how structures are designed and delivered"
+          vision_body: >-
+            We envision a construction industry where engineering excellence and
+            development acumen work in concert, producing buildings that are
+            structurally superior, economically optimized, and built to last.
+          mission_heading: "Engineering that serves the bottom line"
+          mission_body: >-
+            To deliver structural engineering and project management services that
+            combine technical rigor with real-world development thinking, ensuring
+            every project maximizes value for its stakeholders.
+        - id: team
+          heading: "Meet the founders"
+      meta:
+        title: "About | MetaNova"
+        description: "Learn about MetaNova — our vision, mission, and the team behind our structural engineering and development expertise."
+        og_title: "About MetaNova"
+        og_description: "Vision, mission, and the team behind MetaNova."
+        og_image: "/metanova-assets/hero/night-cranes-skyline.jpg"
+    "/services":
+      hero_headline: "What we do"
+      hero_subline: >-
+        Integrated services that cover every stage of the building lifecycle —
+        from first sketch to final inspection.
+      meta:
+        title: "Services | MetaNova"
+        description: "MetaNova offers structural engineering, real estate development, and project management services across Quebec."
+        og_title: "Our Services"
+        og_description: "Structural engineering, development, and project management services."
+        og_image: "/metanova-assets/services/structural/field-team-sunset.png"
+    "/services/structural-engineering":
+      cta_text: "Get a Quote"
+      meta:
+        title: "Structural Engineering | MetaNova"
+        description: "Expert structural engineering services for residential, commercial, and hospitality projects."
+        og_title: "Structural Engineering Services"
+        og_description: "Steel, concrete, and wood structures engineered to the highest standards."
+        og_image: "/metanova-assets/services/structural/site-inspection.jpg"
+    "/services/project-management-consulting":
+      cta_text: "Start a Conversation"
+      meta:
+        title: "Project Management & Consulting | MetaNova"
+        description: "End-to-end project management and development consulting services."
+        og_title: "Project Management & Consulting"
+        og_description: "From feasibility studies to project closeout."
+        og_image: "/metanova-assets/services/project-management/city-overlay-hardhat.png"
+    "/residential":
+      hero_headline: "Residential"
+      intro: >-
+        From luxury single-family homes to large-scale condominium developments,
+        our residential projects combine structural excellence with livability.
+      meta:
+        title: "Residential Projects | MetaNova"
+        description: "Explore MetaNova's residential portfolio — condominiums, single-family homes, and multi-unit developments."
+        og_title: "Residential Portfolio"
+        og_description: "Custom homes, condos, and multi-family developments."
+        og_image: "/metanova-assets/projects/residential/condo-aerial.jpg"
+    "/hospitality":
+      hero_headline: "Hospitality"
+      intro: >-
+        Hotels, resorts, and leisure facilities that balance guest experience
+        with structural performance and operational efficiency.
+      meta:
+        title: "Hospitality Projects | MetaNova"
+        description: "Explore MetaNova's hospitality portfolio — hotels, resorts, and leisure facilities."
+        og_title: "Hospitality Portfolio"
+        og_description: "Hotels, resorts, and leisure facilities."
+        og_image: "/metanova-assets/projects/hospitality/resort-pool-night.jpg"
+    "/commercial":
+      hero_headline: "Commercial"
+      intro: >-
+        Office buildings, retail spaces, and mixed-use developments engineered
+        for performance, flexibility, and long-term value.
+      meta:
+        title: "Commercial Projects | MetaNova"
+        description: "Explore MetaNova's commercial portfolio — office buildings, retail spaces, and mixed-use developments."
+        og_title: "Commercial Portfolio"
+        og_description: "Office buildings, retail, and mixed-use developments."
+        og_image: "/metanova-assets/projects/commercial/glass-atrium.jpg"
+    "/contact":
+      hero_headline: "Get in Touch"
+      hero_subline: "We'd love to hear from you."
+      form_heading: "Let's discuss your next project"
+      cta_text: "Send Message"
+      meta:
+        title: "Contact | MetaNova"
+        description: "Get in touch with MetaNova for structural engineering, project management, or development consulting inquiries."
+        og_title: "Contact MetaNova"
+        og_description: "Reach out for structural engineering, project management, or development consulting."
+        og_image: null

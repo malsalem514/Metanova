@@ -57,7 +57,7 @@ export function TeamSection() {
                   <p className="mt-1 text-sm font-medium text-[#C36036]">
                     {member.role}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-[#30454C]/60">
+                  <p className="mt-4 text-sm leading-relaxed text-[#30454C]/80">
                     {member.bio}
                   </p>
                 </div>

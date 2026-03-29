@@ -56,14 +56,14 @@ export function ServicesListSection() {
                     >
                       {service.title}
                     </h2>
-                    <p className="mt-6 text-base leading-relaxed text-[#30454C]/60">
+                    <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
                       {service.description}
                     </p>
                     <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                       {service.capabilities.map((cap) => (
                         <li
                           key={cap}
-                          className="flex items-start gap-2 text-sm text-[#30454C]/60"
+                          className="flex items-start gap-2 text-sm text-[#30454C]/80"
                         >
                           <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C36036]" />
                           {cap}

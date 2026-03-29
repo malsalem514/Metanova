@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { loadContent } from "@/lib/content/loader";
 
 export const metadata: Metadata = {
   title: "Hospitality Projects",
   description:
     "Explore MetaNova's hospitality portfolio — hotels, resorts, and leisure facilities.",
+  alternates: { canonical: "/hospitality" },
 };
 
 const items = [
@@ -16,18 +18,21 @@ const items = [
 ];
 
 export default function HospitalityPage() {
+  const page = loadContent("pages/hospitality");
+  const fm = page?.frontmatter as Record<string, string> | undefined;
+
   return (
     <>
       <PortfolioGrid
-        title="Hospitality"
-        subtitle="Portfolio"
-        description="Hotels, resorts, and leisure facilities that balance guest experience with structural performance and operational efficiency."
-        heroImage="/metanova-assets/projects/hospitality/resort-pool-night.jpg"
+        title={fm?.["title"] ?? "Hospitality"}
+        subtitle={fm?.["subtitle"] ?? "Portfolio"}
+        description={fm?.["description"] ?? "Hotels, resorts, and leisure facilities that balance guest experience with structural performance and operational efficiency."}
+        heroImage={fm?.["hero_image"] ?? "/metanova-assets/projects/hospitality/resort-pool-night.jpg"}
         items={items}
       />
       <CTABanner
-        title="Building a hospitality venue?"
-        subtitle="Our team understands the unique structural and operational demands of hotels, resorts, and leisure facilities."
+        title={fm?.["cta_banner_heading"] ?? "Building a hospitality venue?"}
+        subtitle={fm?.["cta_banner_body"]}
       />
     </>
   );

@@ -37,20 +37,25 @@ const stats = [
   { target: 50, suffix: "+", label: "Projects Delivered", prefix: "" },
 ];
 
-export function ApproachSection() {
+interface ApproachSectionProps {
+  overline?: string;
+  heading?: string;
+}
+
+export function ApproachSection({ overline, heading }: ApproachSectionProps) {
   return (
     <section className="bg-[#F3F6F7] py-24">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
-              Our Approach
+              {overline ?? "Our Approach"}
             </p>
             <h2
               className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
               style={{ fontFamily: "var(--font-dm-serif-display)" }}
             >
-              Building with purpose, engineering with precision
+              {heading ?? "Building with purpose, engineering with precision"}
             </h2>
           </div>
         </FadeIn>
@@ -65,7 +70,7 @@ export function ApproachSection() {
                 <h3 className="mt-3 text-xl font-semibold text-[#1B2E37]">
                   {value.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#30454C]/60">
+                <p className="mt-3 text-sm leading-relaxed text-[#30454C]/80">
                   {value.description}
                 </p>
               </SpotlightCard>
@@ -86,7 +91,7 @@ export function ApproachSection() {
                     duration={stat.target > 100 ? 2.5 : 2}
                   />
                 </div>
-                <p className="mt-2 text-sm font-medium text-[#30454C]/60">{stat.label}</p>
+                <p className="mt-2 text-sm font-medium text-[#30454C]/80">{stat.label}</p>
               </div>
             ))}
           </div>
