@@ -50,8 +50,8 @@ export function Header() {
           <Image
             src={
               useDarkNav
-                ? "/metanova-assets/brand/logo-wordmark-color.svg"
-                : "/metanova-assets/brand/logo-wordmark-white.svg"
+                ? "/metanova-assets/brand/logo-color-new.svg"
+                : "/metanova-assets/brand/logo-white-new.svg"
             }
             alt="MetaNova"
             width={isCompact ? 150 : 180}

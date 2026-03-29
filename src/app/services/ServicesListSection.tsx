@@ -22,6 +22,21 @@ const services = [
     ],
   },
   {
+    title: "Real Estate Development",
+    description:
+      "From site identification to project delivery, we bring a developer's perspective to every decision. We analyze opportunities, structure projects for success, and see them through to completion.",
+    image: "/metanova-assets/services/development/model-review.png",
+    href: "/services",
+    capabilities: [
+      "Concept development and project positioning",
+      "Site analysis and acquisition support",
+      "Feasibility and financial modeling",
+      "Permit strategy and municipal relations",
+      "Construction coordination and delivery",
+      "Asset optimization and value creation",
+    ],
+  },
+  {
     title: "Project Management & Development Consulting",
     description:
       "From pre-construction planning through project closeout, we provide hands-on project management and development consulting that keeps your project on time, on budget, and on target.",

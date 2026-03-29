@@ -107,7 +107,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
             <FadeIn delay={0.15} direction="right">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm">
                 <Image
-                  src="/metanova-assets/people/founders-portrait.jpg"
+                  src="/metanova-assets/people/founders-portrait-new.jpg"
                   alt="MetaNova founders"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"

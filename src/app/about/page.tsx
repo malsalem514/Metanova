@@ -22,7 +22,7 @@ export default function AboutPage() {
       <HeroSection
         title={fm?.["hero_headline"] ?? "Built on expertise, driven by vision"}
         subtitle={fm?.["hero_subline"]}
-        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/night-cranes-skyline.jpg"}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/montreal-cranes-sunset.jpeg"}
       />
       <AboutInlineSections content={fm} />
       <ApproachSection />

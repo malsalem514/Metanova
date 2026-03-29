@@ -37,7 +37,7 @@ export function EditorialSection() {
             <div className="space-y-6">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/metanova-assets/people/founders-portrait.jpg"
+                  src="/metanova-assets/people/founders-portrait-new.jpg"
                   alt="MetaNova founders"
                   fill
                   className="object-cover"
@@ -46,8 +46,8 @@ export function EditorialSection() {
               </div>
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
-                  src="/metanova-assets/hero/construction-leadership.png"
-                  alt="Montreal aerial city view"
+                  src="/metanova-assets/hero/office-interior.jpg"
+                  alt="MetaNova office interior"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 45vw"

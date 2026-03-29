@@ -27,7 +27,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/metanova-assets/brand/logo-wordmark-white.svg"
+              src="/metanova-assets/brand/logo-white-new.svg"
               alt="MetaNova"
               width={140}
               height={28}
