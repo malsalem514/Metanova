@@ -25,11 +25,6 @@ export default function Home() {
           { value: "20+", label: "Projects" },
           { value: "5+", label: "Cities" },
         ]}
-        testimonial={{
-          quote: "MetaNova brought real engineering depth to our development. They understood both the structure and the business.",
-          author: "Client, Montreal",
-          rating: 5,
-        }}
       />
       <VisionMissionSection />
       <EditorialSection />
