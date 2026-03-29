@@ -19,16 +19,16 @@ const team: TeamMember[] = [
     roleEn: "Managing Partner, Engineering Division",
     roleFr: "Associ\u00e9 directeur, Division ing\u00e9nierie",
     image: "/metanova-assets/people/suddam-al-salem.jpg",
-    bioEn: "A licensed structural engineer with extensive experience in building design across steel, wood, and concrete structures. Previously at NCK, Suddam brings deep technical expertise and a commitment to engineering excellence to every project Metanova undertakes.",
-    bioFr: "Ing\u00e9nieur en structure agr\u00e9\u00e9 avec une vaste exp\u00e9rience en conception de b\u00e2timents en acier, bois et b\u00e9ton. Anciennement chez NCK, Suddam apporte une expertise technique approfondie et un engagement envers l\u2019excellence en ing\u00e9nierie \u00e0 chaque projet entrepris par Metanova.",
+    bioEn: "Suddam Al-Salem is a structural engineer specializing in buildings, steel, wood and concrete. With several years' experience acquired with one of the most renowned companies in the field of structural engineering, NCK, Suddam Al-Salem has worked on projects of varying scope and complexity. As a project manager, he has developed comprehensive expertise in design, project management and site inspection, enabling him to master all the technical and organizational aspects of a project.",
+    bioFr: "Suddam Al-Salem est un ing\u00e9nieur en structure sp\u00e9cialis\u00e9 dans les b\u00e2timents en acier, bois et b\u00e9ton. Fort de plusieurs ann\u00e9es d\u2019exp\u00e9rience acquises aupr\u00e8s de l\u2019une des firmes les plus renomm\u00e9es en ing\u00e9nierie structurale, NCK, il a travaill\u00e9 sur des projets de port\u00e9es et complexit\u00e9s vari\u00e9es. En tant que charg\u00e9 de projets, il a d\u00e9velopp\u00e9 une expertise compl\u00e8te en conception, gestion de projets et inspection de chantier.",
   },
   {
     name: "Muhannad Al-Salem",
     roleEn: "Managing Partner, Real Estate Development Division",
     roleFr: "Associ\u00e9 directeur, Division d\u00e9veloppement immobilier",
     image: "/metanova-assets/people/muhannad-al-salem.jpg",
-    bioEn: "With over a decade of experience in real estate development and a background in architecture and construction management, Muhannad has been a licensed general contractor since 2011. He leads Metanova\u2019s development division with a hands-on, results-driven approach.",
-    bioFr: "Fort de plus d\u2019une d\u00e9cennie d\u2019exp\u00e9rience en d\u00e9veloppement immobilier et d\u2019une formation en architecture et gestion de la construction, Muhannad est entrepreneur g\u00e9n\u00e9ral licenci\u00e9 depuis 2011. Il dirige la division d\u00e9veloppement de Metanova avec une approche concr\u00e8te et orient\u00e9e r\u00e9sultats.",
+    bioEn: "With over a decade of experience in real estate development, Muhannad has played a key role in the planning, structuring and execution of major projects across Quebec. His background in architecture and construction management, combined with eight years of experience as a general contractor, provides him with a comprehensive understanding of the entire development lifecycle. Since 2011, he has worked closely with municipalities, leading zoning change processes and securing project approvals, while collaborating with investors to structure financially viable, high-impact developments.",
+    bioFr: "Fort de plus de dix ans d\u2019exp\u00e9rience en d\u00e9veloppement immobilier, Muhannad joue un r\u00f4le cl\u00e9 dans la planification, la structuration et la r\u00e9alisation de projets d\u2019envergure \u00e0 travers le Qu\u00e9bec. Son parcours en architecture et en gestion de la construction, combin\u00e9 \u00e0 huit ann\u00e9es d\u2019exp\u00e9rience comme entrepreneur g\u00e9n\u00e9ral, lui conf\u00e8re une compr\u00e9hension compl\u00e8te de l\u2019ensemble du cycle de d\u00e9veloppement. Depuis 2011, il collabore \u00e9troitement avec les municipalit\u00e9s, pilotant les d\u00e9marches de changement de zonage et l\u2019obtention des autorisations.",
   },
 ];
 
@@ -47,7 +47,7 @@ export function TeamSection() {
             <h2
               className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
-              {isFr ? "Rencontrez les fondateurs" : "Meet the founders"}
+              {isFr ? "L'équipe de direction" : "Executive team"}
             </h2>
           </div>
         </FadeIn>

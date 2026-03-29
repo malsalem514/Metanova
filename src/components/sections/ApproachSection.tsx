@@ -75,7 +75,7 @@ interface StatItem {
 const stats: StatItem[] = [
   { target: 2022, suffix: "", labelEn: "Founded", labelFr: "Fond\u00e9e", prefix: "" },
   { target: 20, suffix: "+", labelEn: "Years Combined Experience", labelFr: "Ann\u00e9es d\u2019exp\u00e9rience combin\u00e9e", prefix: "" },
-  { target: 50, suffix: "+", labelEn: "Projects Delivered", labelFr: "Projets livr\u00e9s", prefix: "" },
+  { target: 250, suffix: "+", labelEn: "Projects Delivered", labelFr: "Projets livr\u00e9s", prefix: "" },
 ];
 
 interface ApproachSectionProps {
