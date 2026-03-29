@@ -30,7 +30,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-[#DBE2E6] bg-white/95 shadow-sm shadow-black/5 backdrop-blur-xl"
+          ? "border-b border-[#E8E0D0] bg-[#F5F0E6]/95 shadow-sm shadow-[#54341F]/8 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
@@ -50,7 +50,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -93,7 +93,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-[#DBE2E6] bg-white px-6 py-4 md:hidden">
+        <nav className="border-t border-[#E8E0D0] bg-[#F5F0E6] px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}

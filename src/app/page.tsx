@@ -19,6 +19,15 @@ export default function Home() {
         ctaHref={fm?.["cta_primary_href"] ?? "/services"}
         secondaryCtaText={fm?.["cta_secondary"] ?? "Contact Us"}
         secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/contact"}
+        stats={[
+          { value: "20+", label: "Projects" },
+          { value: "5+", label: "Cities" },
+        ]}
+        testimonial={{
+          quote: "MetaNova brought real engineering depth to our development. They understood both the structure and the business.",
+          author: "Client, Montreal",
+          rating: 5,
+        }}
       />
       <ServicesOverview
         overline={fm?.["services_overline"]}

@@ -39,7 +39,7 @@ export function ServiceDetail({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
             {subtitle}
@@ -54,7 +54,7 @@ export function ServiceDetail({
       </section>
 
       {/* Content */}
-      <section className="bg-white py-24">
+      <section className="py-32">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
             <FadeIn>
@@ -72,7 +72,7 @@ export function ServiceDetail({
             <div className="space-y-6">
               {points.map((point, i) => (
                 <FadeIn key={point.title} delay={i * 0.08}>
-                  <div className="rounded-xl border border-[#DBE2E6] bg-[#F3F6F7] p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C36036]/20 hover:shadow-md hover:shadow-black/5">
+                  <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C36036]/20 hover:shadow-md hover:shadow-[#C36036]/5">
                     <div className="flex items-start gap-4">
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#C36036]/10 text-sm font-semibold text-[#C36036]">
                         {String(i + 1).padStart(2, "0")}

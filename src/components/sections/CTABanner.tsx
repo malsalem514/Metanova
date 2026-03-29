@@ -20,7 +20,7 @@ export function CTABanner({
   ctaHref = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="bg-white py-24">
+    <section className="py-32">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#C36036] to-[#8B3A1A] p-12 md:p-16">
@@ -31,7 +31,7 @@ export function CTABanner({
                 as="h2"
                 className="text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight text-white"
               />
-              <p className="mt-6 text-lg leading-relaxed text-white/75">
+              <p className="mt-8 text-lg leading-relaxed text-white/75">
                 {subtitle}
               </p>
               <Link href={ctaHref} className="mt-8 inline-block">

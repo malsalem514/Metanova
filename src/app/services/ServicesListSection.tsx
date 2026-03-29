@@ -40,7 +40,7 @@ const services = [
 
 export function ServicesListSection() {
   return (
-    <section className="bg-white py-28">
+    <section className="py-32">
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="space-y-24">
           {services.map((service, index) => (

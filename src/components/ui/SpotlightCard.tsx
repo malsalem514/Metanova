@@ -20,7 +20,7 @@ export function SpotlightCard({ children, className }: { children: React.ReactNo
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
       className={cn(
-        "relative overflow-hidden rounded-xl border border-[#DBE2E6] bg-[#F3F6F7] p-8 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1",
+        "relative overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:shadow-[#C36036]/5 hover:-translate-y-1",
         className
       )}
     >
@@ -28,7 +28,7 @@ export function SpotlightCard({ children, className }: { children: React.ReactNo
         className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(195,96,54,0.08), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(195,96,54,0.06), transparent 40%)`,
         }}
       />
       <div className="relative z-10">{children}</div>

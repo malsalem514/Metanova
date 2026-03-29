@@ -35,7 +35,7 @@ export function PortfolioGrid({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#C36036]">
             {subtitle}
@@ -53,12 +53,12 @@ export function PortfolioGrid({
       </section>
 
       {/* Grid */}
-      <section className="bg-[#F3F6F7] py-24">
+      <section className="py-32">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
             {items.map((item, i) => (
               <FadeIn key={item.src} delay={(i % 3) * 0.1}>
-                <div className="group mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#DBE2E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
+                <div className="group mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-[#E8E0D0] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#C36036]/5">
                   <div className="relative overflow-hidden">
                     <Image
                       src={item.src}

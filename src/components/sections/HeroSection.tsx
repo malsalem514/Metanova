@@ -6,6 +6,17 @@ import { motion } from "motion/react";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { Button } from "@/components/ui/button";
 
+interface HeroStat {
+  value: string;
+  label: string;
+}
+
+interface HeroTestimonial {
+  quote: string;
+  author: string;
+  rating?: number;
+}
+
 interface HeroSectionProps {
   title: string;
   subtitle?: string;
@@ -16,6 +27,8 @@ interface HeroSectionProps {
   secondaryCtaHref?: string;
   overlay?: boolean;
   videoSrc?: string;
+  stats?: HeroStat[];
+  testimonial?: HeroTestimonial;
 }
 
 export function HeroSection({
@@ -28,7 +41,11 @@ export function HeroSection({
   secondaryCtaHref,
   overlay = true,
   videoSrc,
+  stats,
+  testimonial,
 }: HeroSectionProps) {
+  const hasRightColumn = (stats && stats.length > 0) || testimonial;
+
   return (
     <section className="relative flex min-h-[85dvh] items-end overflow-hidden">
       {/* Background: static image (always renders as base layer) */}
@@ -57,50 +74,101 @@ export function HeroSection({
         </video>
       )}
       {overlay && (
-        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/70 via-[#1B2E37]/50 to-[#1B2E37]/80" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
       )}
       <div className="relative z-[3] mx-auto w-full max-w-[1240px] px-6 pb-20 pt-32">
-        <TextReveal
-          text={title}
-          as="h1"
-          className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
-        />
-        {subtitle && (
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
-          >
-            {subtitle}
-          </motion.p>
-        )}
-        {(ctaText || secondaryCtaText) && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-            className="mt-8 flex flex-wrap gap-4"
-          >
-            {ctaText && ctaHref && (
-              <Link href={ctaHref}>
-                <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
-                  {ctaText}
-                </Button>
-              </Link>
+        <div className={hasRightColumn ? "grid items-end gap-12 md:grid-cols-[1fr_auto]" : ""}>
+          {/* Left column — headline, subtitle, CTAs */}
+          <div>
+            <TextReveal
+              text={title}
+              as="h1"
+              className="max-w-3xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white"
+            />
+            {subtitle && (
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                className="mt-8 max-w-xl text-lg leading-relaxed text-white/70"
+              >
+                {subtitle}
+              </motion.p>
             )}
-            {secondaryCtaText && secondaryCtaHref && (
-              <Link href={secondaryCtaHref}>
-                <Button
-                  variant="outline"
-                  className="h-12 rounded-full border-white/30 px-8 text-base text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
-                >
-                  {secondaryCtaText}
-                </Button>
-              </Link>
+            {(ctaText || secondaryCtaText) && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+                className="mt-10 flex flex-wrap gap-4"
+              >
+                {ctaText && ctaHref && (
+                  <Link href={ctaHref}>
+                    <Button className="h-12 rounded-full bg-[#C36036] px-8 text-base text-white transition-all duration-300 hover:bg-[#A04E2A] hover:shadow-lg hover:shadow-[#C36036]/25 hover:scale-[1.02]">
+                      {ctaText}
+                    </Button>
+                  </Link>
+                )}
+                {secondaryCtaText && secondaryCtaHref && (
+                  <Link href={secondaryCtaHref}>
+                    <Button
+                      variant="outline"
+                      className="h-12 rounded-full border-white/30 px-8 text-base text-white transition-all duration-300 hover:border-white/60 hover:bg-white/10"
+                    >
+                      {secondaryCtaText}
+                    </Button>
+                  </Link>
+                )}
+              </motion.div>
             )}
-          </motion.div>
-        )}
+          </div>
+
+          {/* Right column — stats + testimonial */}
+          {hasRightColumn && (
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
+              className="hidden md:block"
+            >
+              <div className="w-64 space-y-8">
+                {stats && stats.length > 0 && (
+                  <div className="flex gap-8">
+                    {stats.map((stat) => (
+                      <div key={stat.label}>
+                        <p className="text-5xl font-bold leading-none text-white">
+                          {stat.value}
+                        </p>
+                        <p className="mt-2 text-xs font-medium uppercase tracking-wider text-white/60">
+                          {stat.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {testimonial && (
+                  <div className="border-l-2 border-white/20 pl-5">
+                    <p className="text-sm italic leading-relaxed text-white/70">
+                      &ldquo;{testimonial.quote}&rdquo;
+                    </p>
+                    <p className="mt-3 text-xs font-semibold tracking-wide text-white/50">
+                      {testimonial.author}
+                    </p>
+                    {testimonial.rating && (
+                      <div className="mt-2 flex gap-0.5">
+                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                          <svg key={i} className="h-3.5 w-3.5 text-[#C36036]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </div>
       </div>
     </section>
   );

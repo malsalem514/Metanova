@@ -12,7 +12,7 @@ export function ContactForm({ content }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="bg-white py-24">
+    <section className="py-32">
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr]">
           {/* Contact info */}
@@ -22,7 +22,7 @@ export function ContactForm({ content }: ContactFormProps) {
                 {content?.["overline"] ?? "Get in Touch"}
               </p>
               <h2
-                className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
+                className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
                 style={{ fontFamily: "var(--font-dm-serif-display)" }}
               >
                 {content?.["heading"] ?? "Let\u2019s discuss your next project"}
@@ -70,7 +70,7 @@ export function ContactForm({ content }: ContactFormProps) {
 
           {/* Form */}
           <FadeIn delay={0.15}>
-            <div className="rounded-2xl border border-[#DBE2E6] bg-[#F3F6F7] p-8 shadow-sm lg:p-10">
+            <div className="rounded-2xl border border-[#E8E0D0] bg-white p-8 shadow-sm lg:p-10">
               {submitted ? (
                 <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#C36036]/10">
@@ -115,7 +115,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="given-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                         placeholder="First name"
                       />
                     </div>
@@ -133,7 +133,7 @@ export function ContactForm({ content }: ContactFormProps) {
                         required
                         autoComplete="family-name"
                         aria-required="true"
-                        className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                        className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                         placeholder="Last name"
                       />
                     </div>
@@ -152,7 +152,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       autoComplete="email"
                       aria-required="true"
-                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -169,7 +169,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       id="phone"
                       name="phone"
                       autoComplete="tel"
-                      className="mt-2 w-full rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="+1 (514) 000-0000"
                     />
                   </div>
@@ -186,7 +186,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       required
                       aria-required="true"
                       rows={5}
-                      className="mt-2 w-full resize-none rounded-lg border border-[#DBE2E6] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
+                      className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#30454C] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#C36036] focus:ring-2 focus:ring-[#C36036]/20 focus:shadow-sm focus:shadow-[#C36036]/10"
                       placeholder="Tell us about your project..."
                     />
                   </div>

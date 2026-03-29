@@ -20,7 +20,7 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="bg-[#F3F6F7] py-24">
+    <section className="bg-white/60 py-32">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
@@ -28,7 +28,7 @@ export function TeamSection() {
               Leadership
             </p>
             <h2
-              className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
+              className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
               style={{ fontFamily: "var(--font-dm-serif-display)" }}
             >
               Meet the founders
@@ -50,14 +50,14 @@ export function TeamSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B2E37]/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-40" />
                 </div>
-                <div className="mt-6">
+                <div className="mt-8">
                   <h3 className="text-2xl font-semibold text-[#1B2E37]">
                     {member.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-[#C36036]">
                     {member.role}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-[#30454C]/80">
+                  <p className="mt-6 text-sm leading-loose text-[#30454C]/80">
                     {member.bio}
                   </p>
                 </div>

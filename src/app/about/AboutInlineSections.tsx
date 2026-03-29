@@ -37,7 +37,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
   return (
     <>
       {/* Vision / Mission / Core Value */}
-      <section className="bg-white py-28">
+      <section className="py-32">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid gap-8 md:grid-cols-3">
             {cards.map((card, i) => (
@@ -47,7 +47,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                     {card.label}
                   </p>
                   <h3
-                    className="mt-4 mb-6 text-2xl leading-tight text-[#1B2E37]"
+                    className="mt-4 mb-8 text-2xl leading-tight text-[#1B2E37]"
                     style={{ fontFamily: "var(--font-dm-serif-display)" }}
                   >
                     {card.title}
@@ -81,7 +81,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
       </section>
 
       {/* Beginnings story */}
-      <section className="bg-[#F3F6F7] py-28">
+      <section className="bg-white/60 py-32">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>
@@ -90,7 +90,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                   {content?.["beginnings_overline"] ?? "Our Beginnings"}
                 </p>
                 <h2
-                  className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
+                  className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
                   style={{ fontFamily: "var(--font-dm-serif-display)" }}
                 >
                   {content?.["beginnings_heading"] ?? "Two brothers, one shared vision"}
@@ -98,10 +98,10 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                 <p className="text-base leading-relaxed text-[#30454C]/80">
                   {content?.["beginnings_p1"] ?? "MetaNova was founded by Suddam and Muhannad Al-Salem — a structural engineer and a real estate developer — who saw an opportunity to create a firm that truly understands both sides of the construction equation."}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-[#30454C]/80">
+                <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
                   {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, MetaNova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-[#30454C]/80">
+                <p className="mt-6 text-base leading-relaxed text-[#30454C]/80">
                   {content?.["beginnings_p3"] ?? "Based in Brossard, Quebec, MetaNova serves clients across the Greater Montreal area and beyond, with a growing portfolio spanning residential, hospitality, and commercial sectors."}
                 </p>
               </div>

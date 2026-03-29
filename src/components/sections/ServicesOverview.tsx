@@ -36,7 +36,7 @@ interface ServicesOverviewProps {
 
 export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
   return (
-    <section className="bg-white py-28">
+    <section className="py-32">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">
@@ -44,7 +44,7 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
               {overline ?? "What We Do"}
             </p>
             <h2
-              className="mt-4 mb-6 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
+              className="mt-4 mb-8 text-[clamp(2rem,4vw,3rem)] leading-tight text-[#1B2E37]"
               style={{ fontFamily: "var(--font-dm-serif-display)" }}
             >
               {heading ?? "Integrated expertise across engineering, development, and management"}
