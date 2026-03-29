@@ -54,7 +54,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
             <h2
               className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
-              {heading ?? "A Strategic Approach to Engineering and Development"}
+              {heading ?? "Metanova combines engineering precision with development strategy to deliver projects that are not only buildable, but financially viable and optimized at every stage."}
             </h2>
           </div>
         </FadeIn>

@@ -41,12 +41,12 @@ export function ServicesOverview({ overline, heading }: ServicesOverviewProps) {
         <FadeIn>
           <div className="mb-16 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
-              {overline ?? "What We Do"}
+              {overline ?? "OUR SERVICE"}
             </p>
             <h2
               className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
             >
-              {heading ?? "Integrated expertise across engineering, development, and management"}
+              {heading ?? "Comprehensive Engineering, Development and Project management, from planning to completion"}
             </h2>
           </div>
         </FadeIn>

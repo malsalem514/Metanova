@@ -18,7 +18,7 @@ export default function ServicesPage() {
   return (
     <>
       <HeroSection
-        title={fm?.["hero_headline"] ?? "What we do"}
+        title={fm?.["hero_headline"] ?? "Our Services"}
         subtitle={fm?.["hero_subline"]}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.png"}
       />

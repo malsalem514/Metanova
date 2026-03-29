@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       <HeroSection
-        title={fm?.["hero_headline"] ?? "Built on expertise, driven by vision"}
+        title={fm?.["hero_headline"] ?? "About us"}
         subtitle={fm?.["hero_subline"]}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/montreal-cranes-sunset.jpeg"}
       />
@@ -28,8 +28,9 @@ export default function AboutPage() {
       <ApproachSection />
       <TeamSection />
       <CTABanner
-        title={fm?.["cta_banner_heading"] ?? "Want to work with us?"}
-        subtitle={fm?.["cta_banner_body"] ?? "We're always looking for challenging projects and great partners. Let's talk."}
+        title={fm?.["cta_banner_heading"] ?? "Let's Talk!"}
+        subtitle={fm?.["cta_banner_body"] ?? "Ready to take the first step toward realizing your dream project? Contact us today for a consultation and let's turn your vision into a reality."}
+        ctaText={fm?.["cta_banner_button"] ?? "BUILD PROJECT WITH US"}
       />
     </>
   );

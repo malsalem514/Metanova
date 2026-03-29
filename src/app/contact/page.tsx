@@ -40,11 +40,9 @@ export default function ContactPage() {
     <>
       <JsonLd data={localBusinessJsonLd} />
       <HeroSection
-        title="Let's build something together"
-        subtitle="Whether you have a new project in mind, need expert consultation, or want to learn more about our work — we're here to help."
+        title={fm?.["heading"] ?? "Contact us"}
+        subtitle={fm?.["intro"]}
         backgroundImage="/metanova-assets/projects/commercial/glass-atrium.jpg"
-        ctaText="Call us"
-        ctaHref="tel:+15142223444"
       />
       <ContactForm content={fm} />
     </>

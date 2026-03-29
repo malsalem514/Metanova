@@ -33,7 +33,7 @@ export function Footer() {
               height={28}
             />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Designing the future, one structure at a time.
+              Designing the Future, One Space at a Time
             </p>
             <div className="mt-6 space-y-2 text-sm text-white/60">
               <p>7005, boulevard Taschereau, Suite 305</p>

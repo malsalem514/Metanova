@@ -18,19 +18,19 @@ const stats = [
 export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
   const cards = [
     {
-      label: content?.["vision_label"] ?? "Vision",
-      title: content?.["vision_title"] ?? "Redefining how structures are designed and delivered",
-      text: content?.["vision_text"] ?? "We envision a construction industry where engineering excellence and development acumen work in concert, producing buildings that are structurally superior, economically optimized, and built to last.",
+      label: content?.["vision_heading"] ?? "Our Vision",
+      title: "",
+      text: content?.["vision_text"] ?? "To be a leading partner in structural engineering and real estate development, supporting the creation of large-scale, high-impact projects across Quebec.",
     },
     {
-      label: content?.["mission_label"] ?? "Mission",
-      title: content?.["mission_title"] ?? "Engineering that serves the bottom line",
-      text: content?.["mission_text"] ?? "To deliver structural engineering and project management services that combine technical rigor with real-world development thinking, ensuring every project maximizes value for its stakeholders.",
+      label: content?.["mission_heading"] ?? "Our Mission",
+      title: "",
+      text: content?.["mission_text"] ?? "To deliver optimized, value-engineered solutions that enhance project viability, reduce costs, and support efficient execution—from early-stage planning to construction.",
     },
     {
-      label: content?.["core_value_label"] ?? "Core Value",
-      title: content?.["core_value_title"] ?? "Integrity in every detail",
-      text: content?.["core_value_text"] ?? "From the calculations behind our designs to the relationships we build with clients, integrity is the foundation of everything we do. We say what we mean, deliver what we promise, and stand behind our work.",
+      label: content?.["core_value_heading"] ?? "Core Value",
+      title: "",
+      text: content?.["core_value_text"] ?? "We prioritize clarity, efficiency and results-driven thinking—delivering solutions that align engineering performance with financial objectives and real-world construction constraints.",
     },
   ];
 
@@ -46,12 +46,14 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                   <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
                     {card.label}
                   </p>
-                  <h3
-                    className="mt-4 mb-8 text-2xl font-medium leading-tight text-[#121212]"
-                  >
-                    {card.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-[#121212]/70">
+                  {card.title && (
+                    <h3
+                      className="mt-4 mb-8 text-2xl font-medium leading-tight text-[#121212]"
+                    >
+                      {card.title}
+                    </h3>
+                  )}
+                  <p className="mt-4 text-sm leading-relaxed text-[#121212]/70">
                     {card.text}
                   </p>
                 </SpotlightCard>
@@ -99,9 +101,11 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
                 <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
                   {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, MetaNova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
                 </p>
-                <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
-                  {content?.["beginnings_p3"] ?? "Based in Brossard, Quebec, MetaNova serves clients across the Greater Montreal area and beyond, with a growing portfolio spanning residential, hospitality, and commercial sectors."}
-                </p>
+                {(content?.["beginnings_p3"]) && (
+                  <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
+                    {content["beginnings_p3"]}
+                  </p>
+                )}
               </div>
             </FadeIn>
             <FadeIn delay={0.15} direction="right">
@@ -125,23 +129,23 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
           <FadeIn>
             <div className="mb-12 max-w-2xl">
               <h2 className="font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]">
-                A Practical and Strategic Approach
+                {content?.["strategic_heading"] ?? "A Practical and Strategic Approach"}
               </h2>
             </div>
           </FadeIn>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                title: "Development-Oriented",
-                text: "We approach each mandate with a focus on project viability, optimization and long-term value.",
+                title: content?.["strategic_point1_title"] ?? "Development-Oriented",
+                text: content?.["strategic_point1_text"] ?? "We approach each mandate with a focus on project viability, optimization and long-term value.",
               },
               {
-                title: "Value Engineering",
-                text: "We integrate cost optimization strategies from the earliest stages of design.",
+                title: content?.["strategic_point2_title"] ?? "Value Engineering",
+                text: content?.["strategic_point2_text"] ?? "We integrate cost optimization strategies from the earliest stages of design.",
               },
               {
-                title: "Integrated Execution",
-                text: "We ensure coordination between all stakeholders to support efficient and predictable delivery.",
+                title: content?.["strategic_point3_title"] ?? "Integrated Execution",
+                text: content?.["strategic_point3_text"] ?? "We ensure coordination between all stakeholders to support efficient and predictable delivery.",
               },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>

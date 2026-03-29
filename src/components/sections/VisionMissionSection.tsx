@@ -5,15 +5,15 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const pillars = [
   {
     label: "Our Vision",
-    text: "To be the trusted engineering partner for developers across Greater Montreal.",
+    text: "To be a leading partner in structural engineering and real estate development, supporting the creation of large-scale, high-impact projects across Quebec.",
   },
   {
     label: "Our Mission",
-    text: "To deliver structurally sound, code-compliant solutions that protect timelines, control costs, and support successful project execution.",
+    text: "To deliver optimized, value-engineered solutions that enhance project viability, reduce costs, and support efficient execution—from early-stage planning to construction.",
   },
   {
     label: "Core Value",
-    text: "We value transparency, efficiency, and practical problem-solving \u2014 delivering engineering solutions that align with both construction realities and business objectives.",
+    text: "We prioritize clarity, efficiency and results-driven thinking—delivering solutions that align engineering performance with financial objectives and real-world construction constraints.",
   },
 ];
 

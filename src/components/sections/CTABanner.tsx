@@ -14,9 +14,9 @@ interface CTABannerProps {
 }
 
 export function CTABanner({
-  title = "Ready to start your next project?",
-  subtitle = "Let's discuss how MetaNova can bring your vision to life with expert engineering and development services.",
-  ctaText = "Contact Us",
+  title = "Let's Talk!",
+  subtitle = "Ready to take the first step toward realizing your dream project? Contact us today for a consultation and let's turn your vision into a reality.",
+  ctaText = "BUILD PROJECT WITH US",
   ctaHref = "/contact",
 }: CTABannerProps) {
   return (
