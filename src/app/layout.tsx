@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     icon: "/icon.png",
     apple: "/metanova-assets/brand/apple-touch-icon.png",
   },
+  verification: {
+    google: "jot-fYY2JvuIwlAKimmaWYFbHB99hDM4TtTXOz7Ckgw",
+  },
   openGraph: {
     type: "website",
     locale: "fr_CA",
