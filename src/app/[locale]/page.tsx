@@ -16,13 +16,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isFr = locale === "fr";
   return {
-    title: isFr
-      ? "Metanova — Ingénierie en structure & Développement"
-      : "Metanova — Structural Engineering & Development",
+    title: {
+      absolute: isFr
+        ? "Metanova — Ingénierie en structure & Développement"
+        : "Metanova — Structural Engineering & Development",
+    },
     description: isFr
       ? "Metanova offre des services en ingénierie en structure, développement immobilier et gestion de projets à travers le Québec."
       : "Structural engineering, real estate development and project management across Quebec.",
     alternates: {
+      canonical: isFr ? "/fr" : "/en",
       languages: { en: "/en", fr: "/fr" },
     },
   };

@@ -26,9 +26,13 @@ export const metadata: Metadata = {
     "Structural engineering, real estate development and project management across Quebec.",
   keywords: [
     "structural engineering",
+    "ingénierie en structure",
     "real estate development",
+    "développement immobilier",
     "project management",
+    "gestion de projets",
     "Quebec",
+    "Québec",
     "construction",
     "Metanova",
   ],
