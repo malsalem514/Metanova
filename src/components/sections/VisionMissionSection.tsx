@@ -25,7 +25,7 @@ const pillarsFr = [
   },
   {
     label: "Notre mission",
-    text: "Offrir des solutions optimis\u00e9es, fond\u00e9es sur l\u2019ing\u00e9nierie de valeur, afin d\u2019am\u00e9liorer la viabilit\u00e9 des projets, r\u00e9duire les co\u00fbts et soutenir une ex\u00e9cution efficace \u2014 de la planification initiale jusqu\u2019\u00e0 la construction.",
+    text: "Offrir des solutions optimis\u00e9es, fond\u00e9es sur l\u2019analyse d\u2019optimisation des co\u00fbts, afin d\u2019am\u00e9liorer la viabilit\u00e9 des projets, r\u00e9duire les co\u00fbts et soutenir une ex\u00e9cution efficace \u2014 de la planification initiale jusqu\u2019\u00e0 la construction.",
   },
   {
     label: "Nos valeurs",

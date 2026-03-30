@@ -40,9 +40,9 @@ const valuesEn: ValueItem[] = [
 const valuesFr: ValueItem[] = [
   {
     number: "01",
-    title: "Ing\u00e9nierie de valeur",
+    title: "Optimisation des co\u00fbts",
     description:
-      "Nous int\u00e9grons l\u2019ing\u00e9nierie de valeur d\u00e8s les premi\u00e8res \u00e9tapes afin d\u2019optimiser la conception, r\u00e9duire les co\u00fbts et am\u00e9liorer la performance globale du projet \u2014 sans compromettre la qualit\u00e9 ni la constructibilit\u00e9.",
+      "Nous int\u00e9grons l\u2019optimisation des co\u00fbts d\u00e8s les premi\u00e8res \u00e9tapes afin d\u2019am\u00e9liorer la conception, r\u00e9duire les d\u00e9penses et maximiser la performance globale du projet \u2014 sans compromettre la qualit\u00e9 ni la constructibilit\u00e9.",
   },
   {
     number: "02",
