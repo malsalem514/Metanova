@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { Link } from "@/i18n/navigation";
 import type { routing } from "@/i18n/routing";
 
@@ -48,6 +49,36 @@ export function HeroSection({
   testimonial,
 }: HeroSectionProps) {
   const hasRightColumn = (stats && stats.length > 0) || testimonial;
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Force play — some browsers (Safari iOS, Low Power Mode) block autoplay silently
+    const attemptPlay = () => {
+      video.play().catch(() => {
+        // Autoplay blocked — show poster image (already visible as fallback)
+      });
+    };
+
+    // Try immediately
+    attemptPlay();
+
+    // Also try on user interaction (iOS may need a touch event first)
+    const handleInteraction = () => {
+      attemptPlay();
+      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("click", handleInteraction);
+    };
+    document.addEventListener("touchstart", handleInteraction, { once: true });
+    document.addEventListener("click", handleInteraction, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("click", handleInteraction);
+    };
+  }, []);
 
   return (
     <section data-hero className="relative flex h-dvh items-end overflow-hidden">
@@ -63,11 +94,12 @@ export function HeroSection({
       {/* Video: dual-source (WebM first for Chrome/Firefox, MP4 fallback), poster for LCP */}
       {videoSrc && (
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster="/metanova-assets/hero/home-hero-poster.jpg"
           className="absolute inset-0 z-[1] h-full w-full object-cover"
           aria-label="Construction site timelapse video"
