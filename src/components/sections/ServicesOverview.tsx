@@ -24,7 +24,7 @@ const services: ServiceCardData[] = [
     descriptionEn:
       "Expert structural design and analysis for residential, commercial, and hospitality projects. Steel, concrete, and wood structures engineered to the highest standards.",
     descriptionFr:
-      "Conception et analyse structurale experte pour projets résidentiels, commerciaux et d'accueil. Structures en acier, béton et bois conçues selon les normes les plus élevées.",
+      "Conception et analyse structurale experte pour projets résidentiels, commerciaux et hôteliers. Structures en acier, béton et bois conçues selon les normes les plus élevées.",
     image: "/metanova-assets/hero/construction-leadership.png",
     href: "/services/structural-engineering",
   },

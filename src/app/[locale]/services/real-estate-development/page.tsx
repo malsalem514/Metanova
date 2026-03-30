@@ -83,12 +83,12 @@ const pointsFr = [
   {
     title: "Études de faisabilité et structuration de projets",
     description:
-      "Nous réalisons des analyses de faisabilité détaillées couvrant la viabilité financière, les exigences réglementaires et les conditions du marché pour structurer les projets vers le succès.",
+      "Nous réalisons des analyses de faisabilité détaillées couvrant la viabilité financière, les exigences réglementaires et les conditions du marché pour structurer les projets de façon optimale.",
   },
   {
     title: "Optimisation foncière et stratégies de densité",
     description:
-      "Nous développons des stratégies pour maximiser l'utilisation du terrain et la densité, en équilibrant les contraintes réglementaires avec les objectifs financiers pour débloquer la plus grande valeur du projet.",
+      "Nous élaborons des stratégies pour maximiser l'utilisation du terrain et la densité, en équilibrant les contraintes réglementaires avec les objectifs financiers pour maximiser la valeur du projet.",
   },
   {
     title: "Soutien aux changements de zonage et approbations",

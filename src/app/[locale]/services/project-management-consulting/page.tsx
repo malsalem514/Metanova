@@ -73,17 +73,17 @@ const pointsFr = [
   {
     title: "Budget et prévisions financières",
     description:
-      "Nous développons des budgets de projet détaillés et des prévisions financières pour maintenir votre investissement sur la bonne voie, de la planification à la livraison.",
+      "Nous élaborons des budgets de projet détaillés et des prévisions financières pour assurer le bon déroulement de votre investissement, de la planification à la livraison.",
   },
   {
     title: "Planification et contrôle des jalons",
     description:
-      "Nous élaborons des calendriers de projet rigoureux et gérons les jalons pour assurer une livraison en temps voulu sans compromettre la qualité.",
+      "Nous élaborons des échéanciers de projet rigoureux et gérons les jalons pour assurer une livraison dans les délais prévus sans compromettre la qualité.",
   },
   {
     title: "Modifications de zonage et coordination municipale",
     description:
-      "Nous naviguons les modifications de zonage, les processus municipaux et les exigences réglementaires pour faire avancer les projets efficacement.",
+      "Nous accompagnons les projets à travers les modifications de zonage, les processus municipaux et les exigences réglementaires pour les faire avancer efficacement.",
   },
   {
     title: "Planification des infrastructures et supervision des entrepreneurs",
@@ -93,7 +93,7 @@ const pointsFr = [
   {
     title: "Gestion des risques et stratégie réglementaire",
     description:
-      "Nous identifions et atténuons les risques de projet tôt, en alignant la stratégie réglementaire avec les objectifs du projet pour réduire les délais et l'exposition.",
+      "Nous identifions et atténuons les risques de projet tôt, en alignant la stratégie réglementaire avec les objectifs du projet pour réduire les délais et les risques.",
   },
 ];
 

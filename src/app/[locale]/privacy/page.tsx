@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale === "fr" ? "Politique de confidentialité" : "Privacy Policy",
     description:
       locale === "fr"
-        ? "Politique de confidentialité de Metanova — comment nous collectons, utilisons et protégeons vos informations."
+        ? "Politique de confidentialité de Metanova — comment nous collectons, utilisons et protégeons vos renseignements."
         : "Metanova's Privacy Policy — how we collect, use, and protect your information.",
     alternates: {
       canonical:
@@ -158,7 +158,7 @@ function FrenchContent() {
           Metanova Experts-Conseils (&laquo;&nbsp;Metanova&nbsp;&raquo;,
           &laquo;&nbsp;nous&nbsp;&raquo;) s&apos;engage à protéger votre vie
           privée. Cette politique explique comment nous traitons les
-          informations sur <strong>metanova.ca</strong>.
+          renseignements sur <strong>metanova.ca</strong>.
         </p>
       </section>
 
@@ -216,7 +216,7 @@ function FrenchContent() {
         </h2>
         <p className="mt-3">
           Nous ne vendons pas, ne louons pas et ne partageons pas vos
-          informations personnelles avec des tiers à des fins commerciales ou
+          renseignements personnels avec des tiers à des fins commerciales ou
           de marketing.
         </p>
       </section>

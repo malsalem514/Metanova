@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: locale === "fr" ? "Ingénierie en structure" : "Structural Engineering",
     description:
       locale === "fr"
-        ? "Services d'ingénierie en structure pour projets résidentiels, commerciaux et d'accueil. Structures en acier, béton et bois."
+        ? "Services d'ingénierie en structure pour projets résidentiels, commerciaux et hôteliers. Structures en acier, béton et bois."
         : "Expert structural engineering services for residential, commercial, and hospitality projects. Steel, concrete, and wood structures.",
     alternates: {
       canonical: locale === "fr" ? "/fr/services/ingenierie-structurale" : "/en/services/structural-engineering",
@@ -88,7 +88,7 @@ const pointsFr = [
   {
     title: "Conception en béton, acier et bois",
     description:
-      "Nous concevons des systèmes structuraux adaptés à la portée de chaque projet, qu'il s'agisse de fondations en béton armé, de structures en acier ou de structures en bois d'ingénierie.",
+      "Nous concevons des systèmes structuraux adaptés à la portée de chaque projet, qu'il s'agisse de fondations en béton armé, de structures en acier ou de structures en bois d'œuvre.",
   },
   {
     title: "Dessins techniques et documentation d'ingénierie",
@@ -121,7 +121,7 @@ export default async function StructuralEngineeringPage({ params }: Props) {
         subtitle={isFr ? "Nos services" : "Our Services"}
         description={
           isFr
-            ? "Chez Metanova, l'ingénierie en structure va au-delà des calculs — il s'agit de livrer de la clarté, de réduire les risques et de s'assurer que chaque projet repose sur des fondations solides. Nous travaillons étroitement avec les promoteurs, les entrepreneurs et les propriétaires pour concevoir des structures sécuritaires, efficaces et conformes aux codes, alignées avec les réalités de la construction."
+            ? "Chez Metanova, l'ingénierie en structure va au-delà des calculs — il s'agit de livrer de la clarté, de réduire les risques et de s'assurer que chaque projet repose sur des fondations solides. Nous travaillons étroitement avec les promoteurs, les entrepreneurs et les propriétaires pour concevoir des structures sécuritaires, efficaces et conformes aux codes, alignées avec les réalités de la construction. Notre approche combine rigueur technique et coordination pratique pour faire avancer les projets avec confiance."
             : "At Metanova, structural engineering is about more than calculations — it is about delivering clarity, reducing risk, and ensuring every project is built on a solid foundation. We work closely with developers, contractors, and property owners to design safe, efficient, and code-compliant structures that align with real-world construction demands. Our approach combines technical rigor with practical coordination to keep projects moving forward confidently."
         }
         heroImage="/metanova-assets/services/structural/site-inspection.jpg"

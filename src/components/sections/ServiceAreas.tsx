@@ -39,7 +39,7 @@ export function ServiceAreas() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#121212]/70">
               {isFr
-                ? "Chez Metanova, nous comprenons l\u2019importance d\u2019un environnement propice au d\u00e9veloppement. Nous desservons fi\u00e8rement le Grand Montr\u00e9al."
+                ? "Chez Metanova, nous comprenons l\u2019importance d\u2019un environnement propice au d\u00e9veloppement. Nous desservons fi\u00e8rement le Grand Montr\u00e9al et l\u2019ensemble du Qu\u00e9bec."
                 : "At Metanova, we understand the importance of an environment conducive to development. We proudly serve the Greater Montreal Area."}
             </p>
           </div>
