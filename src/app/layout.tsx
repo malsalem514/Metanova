@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -65,11 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={cn(
-        "h-full antialiased",
-        plusJakartaSans.variable,
-        ibmPlexMono.variable,
-      )}
+      className={`h-full antialiased ${plusJakartaSans.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col font-sans">
