@@ -11,7 +11,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "fr" }];
+  return [{ locale: "en" }, { locale: "fr" }, { locale: "zh" }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

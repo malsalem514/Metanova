@@ -5,12 +5,12 @@ import { motion } from "motion/react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const regions = [
-  { id: "monteregie", en: "Montérégie", fr: "Montérégie" },
-  { id: "montreal", en: "Montréal", fr: "Montréal" },
-  { id: "laval", en: "Laval", fr: "Laval" },
-  { id: "south-shore", en: "South Shore", fr: "Rive-Sud" },
-  { id: "greater-mtl", en: "Greater Montreal", fr: "Grand Montréal" },
-  { id: "quebec", en: "All of Quebec", fr: "Tout le Québec" },
+  { id: "monteregie", en: "Montérégie", fr: "Montérégie", zh: "蒙特雷吉" },
+  { id: "montreal", en: "Montréal", fr: "Montréal", zh: "蒙特利尔" },
+  { id: "laval", en: "Laval", fr: "Laval", zh: "拉瓦尔" },
+  { id: "south-shore", en: "South Shore", fr: "Rive-Sud", zh: "南岸" },
+  { id: "greater-mtl", en: "Greater Montreal", fr: "Grand Montréal", zh: "大蒙特利尔" },
+  { id: "quebec", en: "All of Quebec", fr: "Tout le Québec", zh: "全魁北克" },
 ];
 
 // Quebec province outline from Wikimedia Commons (CC-BY-SA, by TUBS)
@@ -170,6 +170,7 @@ function QuebecMap() {
 export function ServiceAreas() {
   const locale = useLocale();
   const isFr = locale === "fr";
+  const isZh = locale === "zh";
 
   return (
     <section className="bg-[#1B2E37] py-24 overflow-hidden">
@@ -179,16 +180,20 @@ export function ServiceAreas() {
           <FadeIn>
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#F5F0E6]/40">
-                {isFr ? "Où nous intervenons" : "Where We Work"}
+                {isFr ? "Où nous intervenons" : isZh ? "我们的服务范围" : "Where We Work"}
               </p>
               <h2 className="mt-4 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#F5F0E6]">
                 {isFr
                   ? "Grand Montréal et tout le Québec"
+                  : isZh
+                  ? "大蒙特利尔及全魁北克"
                   : "Greater Montreal and All of Quebec"}
               </h2>
               <p className="mt-6 text-base leading-relaxed text-[#F5F0E6]/60">
                 {isFr
                   ? "Basée à Brossard, Metanova dessert l'ensemble du Québec — du Grand Montréal et de la Montérégie jusqu'à Québec et au-delà. Nous accompagnons les projets là où ils se trouvent."
+                  : isZh
+                  ? "总部位于布罗萨德，Metanova服务于魁北克全境——从大蒙特利尔和蒙特雷吉到魁北克城及更远地区。我们在项目所在地提供支持。"
                   : "Based in Brossard, Metanova serves all of Quebec — from Greater Montreal and the Montérégie to Quebec City and beyond. We support projects wherever they are."}
               </p>
 
@@ -203,7 +208,7 @@ export function ServiceAreas() {
                     transition={{ delay: 0.3 + i * 0.07, duration: 0.4 }}
                     className="inline-block rounded-full border border-[#F5F0E6]/15 px-4 py-1.5 text-xs font-medium text-[#F5F0E6]/70 transition-colors duration-200 hover:border-[#0A5592] hover:text-[#0A5592]"
                   >
-                    {isFr ? region.fr : region.en}
+                    {isFr ? region.fr : isZh ? region.zh : region.en}
                   </motion.span>
                 ))}
               </div>

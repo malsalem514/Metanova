@@ -64,18 +64,46 @@ const valuesFr: ValueItem[] = [
   },
 ];
 
+const valuesZh: ValueItem[] = [
+  {
+    number: "01",
+    title: "成本优化",
+    description:
+      "我们从设计阶段介入，消除低效环节，简化结构方案，降低施工成本。这一方法在不牺牲质量与可建造性的前提下，交付性能更优、管控更严、财务更优化的项目。",
+  },
+  {
+    number: "02",
+    title: "以开发为导向的愿景",
+    description:
+      "每个项目都被视为创造价值的机会。我们优化场地潜力，验证财务可行性，并根据市场现实与投资者预期构建项目方案。",
+  },
+  {
+    number: "03",
+    title: "精细化执行",
+    description:
+      "我们对项目实施主动、严格的工程项目管理，持续管控工期、成本与施工现场挑战。这种执行纪律确保项目高效交付，具备高度可预测性与高水准表现。",
+  },
+  {
+    number: "04",
+    title: "战略适应性",
+    description:
+      "我们随每个项目特有的技术、法规和经济约束不断调整。这种适应能力使我们能够保障项目安全推进、降低风险，并在复杂环境中维持项目绩效。",
+  },
+];
+
 interface StatItem {
   target: number;
   suffix: string;
   labelEn: string;
   labelFr: string;
+  labelZh: string;
   prefix: string;
 }
 
 const stats: StatItem[] = [
-  { target: 2022, suffix: "", labelEn: "Founded", labelFr: "Fond\u00e9e", prefix: "" },
-  { target: 20, suffix: "+", labelEn: "Years Combined Experience", labelFr: "Ann\u00e9es d\u2019exp\u00e9rience combin\u00e9e", prefix: "" },
-  { target: 250, suffix: "+", labelEn: "Projects Delivered", labelFr: "Projets livr\u00e9s", prefix: "" },
+  { target: 2022, suffix: "", labelEn: "Founded", labelFr: "Fond\u00e9e", labelZh: "成立年份", prefix: "" },
+  { target: 20, suffix: "+", labelEn: "Years Combined Experience", labelFr: "Ann\u00e9es d\u2019exp\u00e9rience combin\u00e9e", labelZh: "年综合经验", prefix: "" },
+  { target: 250, suffix: "+", labelEn: "Projects Delivered", labelFr: "Projets livr\u00e9s", labelZh: "已交付项目", prefix: "" },
 ];
 
 interface ApproachSectionProps {
@@ -86,7 +114,8 @@ interface ApproachSectionProps {
 export function ApproachSection({ overline, heading }: ApproachSectionProps) {
   const locale = useLocale();
   const isFr = locale === "fr";
-  const values = isFr ? valuesFr : valuesEn;
+  const isZh = locale === "zh";
+  const values = isFr ? valuesFr : isZh ? valuesZh : valuesEn;
 
   return (
     <section className="bg-white/60 py-14">
@@ -94,13 +123,15 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
         <FadeIn>
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
-              {overline ?? (isFr ? "Notre approche" : "Our Approach")}
+              {overline ?? (isFr ? "Notre approche" : isZh ? "我们的方法" : "Our Approach")}
             </p>
             <h2
               className="mt-3 mb-4 text-2xl font-medium leading-tight text-[#121212]"
             >
               {heading ?? (isFr
                 ? "Metanova intègre le génie en structure, le développement immobilier et la gestion de projets dans une approche unifiée, permettant d'intervenir en amont, de maîtriser les coûts et de maximiser la valeur des projets à chaque étape."
+                : isZh
+                ? "Metanova将结构工程、房地产开发与工程项目管理整合为统一方法，实现前期介入、成本管控，并在项目各阶段最大化价值。"
                 : "Metanova integrates structural engineering, real estate development and project management into a unified approach, enabling early-stage involvement, cost control and value maximization at every project stage.")}
             </h2>
           </div>
@@ -131,6 +162,8 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
           <p className="mt-10 max-w-3xl text-sm italic leading-relaxed text-[#121212]/60">
             {isFr
               ? "Une approche intégrée axée sur la maîtrise des coûts, la réduction des risques et la création de valeur durable."
+              : isZh
+              ? "以成本管控、风险降低与持续价值创造为核心的一体化方法。"
               : "An integrated approach focused on cost control, risk reduction and lasting value creation."}
           </p>
         </FadeIn>
@@ -149,7 +182,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
                   />
                 </div>
                 <p className="mt-1 text-sm font-medium text-[#121212]/70">
-                  {isFr ? stat.labelFr : stat.labelEn}
+                  {isFr ? stat.labelFr : isZh ? stat.labelZh : stat.labelEn}
                 </p>
               </div>
             ))}

@@ -21,6 +21,7 @@ export function InlineContactForm({
   const tCta = useTranslations("cta");
   const locale = useLocale();
   const isFr = locale === "fr";
+  const isZh = locale === "zh";
 
   return (
     <section className="bg-white/60 py-24">
@@ -53,11 +54,13 @@ export function InlineContactForm({
                   </svg>
                 </div>
                 <h3 className="mt-6 text-xl font-semibold text-[#121212]">
-                  {isFr ? "Message envoy\u00e9" : "Message Sent"}
+                  {isFr ? "Message envoy\u00e9" : isZh ? "消息已发送" : "Message Sent"}
                 </h3>
                 <p className="mt-2 text-sm text-[#121212]/80">
                   {isFr
                     ? "Merci de nous avoir contact\u00e9s. Nous vous r\u00e9pondrons sous peu."
+                    : isZh
+                    ? "感谢您的联系，我们将尽快回复您。"
                     : "Thank you for reaching out. We'll be in touch shortly."}
                 </p>
               </div>
@@ -72,7 +75,7 @@ export function InlineContactForm({
                     await fetch("/api/contact", { method: "POST", body: formData });
                     setSubmitted(true);
                   } catch {
-                    alert(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : "Failed to send. Please try again.");
+                    alert(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : isZh ? "发送失败，请重试。" : "Failed to send. Please try again.");
                   } finally {
                     setSending(false);
                   }
@@ -141,7 +144,7 @@ export function InlineContactForm({
                     className="block text-sm font-medium text-[#121212]"
                   >
                     {t("phone")}{" "}
-                    <span className="text-[#121212]/40">({isFr ? "optionnel" : "optional"})</span>
+                    <span className="text-[#121212]/40">({isFr ? "optionnel" : isZh ? "选填" : "optional"})</span>
                   </label>
                   <input
                     type="tel"
@@ -157,8 +160,8 @@ export function InlineContactForm({
                     htmlFor="inline-resume"
                     className="block text-sm font-medium text-[#121212]"
                   >
-                    {isFr ? "CV / Résumé" : "Resume / CV"}{" "}
-                    <span className="text-[#121212]/40">({isFr ? "optionnel" : "optional"})</span>
+                    {isFr ? "CV / Résumé" : isZh ? "简历 / CV" : "Resume / CV"}{" "}
+                    <span className="text-[#121212]/40">({isFr ? "optionnel" : isZh ? "选填" : "optional"})</span>
                   </label>
                   <div className="mt-2">
                     <label
@@ -168,7 +171,7 @@ export function InlineContactForm({
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
                       </svg>
-                      {isFr ? "Téléverser un fichier (PDF, DOC)" : "Upload a file (PDF, DOC)"}
+                      {isFr ? "Téléverser un fichier (PDF, DOC)" : isZh ? "上传文件（PDF、DOC）" : "Upload a file (PDF, DOC)"}
                     </label>
                     <input
                       type="file"
@@ -199,11 +202,11 @@ export function InlineContactForm({
                     aria-required="true"
                     rows={5}
                     className="mt-2 w-full resize-none rounded-lg border border-[#E8E0D0] bg-white px-4 py-3 text-sm text-[#121212] placeholder-[#30454C]/40 outline-none transition-all duration-300 focus:border-[#0A5592] focus:ring-2 focus:ring-[#0A5592]/20 focus:shadow-sm focus:shadow-[#0A5592]/10"
-                    placeholder={isFr ? "Parlez-nous de votre projet..." : "Tell us about your project..."}
+                    placeholder={isFr ? "Parlez-nous de votre projet..." : isZh ? "请介绍您的项目..." : "Tell us about your project..."}
                   />
                 </div>
                 <ShimmerButton type="submit" className="w-full" disabled={sending}>
-                  {sending ? (isFr ? "Envoi en cours..." : "Sending...") : tCta("submit")}
+                  {sending ? (isFr ? "Envoi en cours..." : isZh ? "发送中..." : "Sending...") : tCta("submit")}
                 </ShimmerButton>
               </form>
             )}

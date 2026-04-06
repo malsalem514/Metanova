@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "structuralEngineering": "结构工程",
+    "realEstateDevelopment": "房地产开发",
+    "projectManagement": "项目管理",
+    "contact": "联系我们",
+    "careers": "招贤纳士"
+  },
+  "footer": {
+    "company": "公司",
+    "services": "服务",
+    "tagline": "设计未来，筑就每一个空间",
+    "copyright": "版权所有",
+    "legalName": "Metanova 工程顾问",
+    "hours": "办公时间",
+    "hoursValue": "周一至周五 上午9:00 – 下午5:00",
+    "address1": "7005, boulevard Taschereau, Suite 305",
+    "address2": "Brossard, Quebec J4Z 1A7",
+    "structuralEngineering": "结构工程",
+    "realEstateDevelopment": "房地产开发",
+    "projectManagement": "项目管理",
+    "location": "加拿大魁北克省布罗萨德",
+    "privacyPolicy": "隐私政策"
+  },
+  "cta": {
+    "bookCall": "预约咨询",
+    "ourServices": "我们的服务",
+    "contactUs": "联系我们",
+    "learnMore": "了解更多",
+    "buildWithUs": "开启您的项目",
+    "submit": "提交",
+    "sendMessage": "发送信息"
+  },
+  "contact": {
+    "firstName": "名",
+    "lastName": "姓",
+    "email": "电子邮件",
+    "phone": "电话",
+    "message": "留言",
+    "location": "我们的位置",
+    "messageUs": "在线留言",
+    "replyTime": "我们通常在24小时内回复。",
+    "callUs": "立即致电"
+  },
+  "lang": {
+    "switch": "FR"
+  }
+}

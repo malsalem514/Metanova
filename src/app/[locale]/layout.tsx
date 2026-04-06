@@ -49,7 +49,7 @@ export default async function LocaleLayout({
 }: LocaleLayoutProps) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "fr" | "en")) {
+  if (!routing.locales.includes(locale as "fr" | "en" | "zh")) {
     notFound();
   }
 
@@ -63,7 +63,7 @@ export default async function LocaleLayout({
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-[#121212] focus:shadow-lg"
       >
-        {locale === "fr" ? "Aller au contenu principal" : "Skip to main content"}
+        {locale === "fr" ? "Aller au contenu principal" : locale === "zh" ? "跳到主要内容" : "Skip to main content"}
       </a>
       <JsonLd data={organizationJsonLd} />
       <JsonLd data={webSiteJsonLd} />

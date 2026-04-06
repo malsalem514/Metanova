@@ -33,9 +33,24 @@ const pillarsFr = [
   },
 ];
 
+const pillarsZh = [
+  {
+    label: "我们的愿景",
+    text: "成为结构工程与房地产开发领域的领先合作伙伴，助力打造遍布魁北克的大规模、高影响力项目。",
+  },
+  {
+    label: "我们的使命",
+    text: "提供以价值工程为基础的优化解决方案，提升项目可行性、降低成本，并从前期规划到施工全程支持高效执行。",
+  },
+  {
+    label: "核心价值",
+    text: "我们以清晰、高效和结果导向为优先，提供将结构性能与财务目标及实际施工约束相匹配的解决方案。",
+  },
+];
+
 export function VisionMissionSection() {
   const locale = useLocale();
-  const pillars = locale === "fr" ? pillarsFr : pillarsEn;
+  const pillars = locale === "fr" ? pillarsFr : locale === "zh" ? pillarsZh : pillarsEn;
 
   return (
     <section className="py-24">

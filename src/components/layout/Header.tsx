@@ -62,10 +62,10 @@ export function Header() {
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const t = useTranslations("nav");
-  const tLang = useTranslations("lang");
+
   const locale = useLocale();
   const pathname = usePathname();
-  const otherLocale = locale === "en" ? "fr" : "en";
+  const otherLocales = (["fr", "en", "zh"] as const).filter((l) => l !== locale);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -218,17 +218,22 @@ export function Header() {
               ),
             )}
 
-            <Link
-              href={pathname as NavHref}
-              locale={otherLocale}
-              className={`text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 border-l pl-4 ${
-                useDarkNav
-                  ? "text-[#0A5592] hover:text-[#121212] border-[#121212]/20"
-                  : "text-white hover:text-white/70 border-white/30"
-              }`}
-            >
-              {tLang("switch")}
-            </Link>
+            <div className="flex items-center gap-3 border-l pl-4 border-[#121212]/20">
+              {otherLocales.map((l) => (
+                <Link
+                  key={l}
+                  href={pathname as NavHref}
+                  locale={l}
+                  className={`text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 ${
+                    useDarkNav
+                      ? "text-[#0A5592] hover:text-[#121212]"
+                      : "text-white hover:text-white/70"
+                  }`}
+                >
+                  {l === "fr" ? "FR" : l === "en" ? "EN" : "中文"}
+                </Link>
+              ))}
+            </div>
           </nav>
 
           <button
@@ -382,14 +387,19 @@ export function Header() {
               transition={{ delay: 0.5, duration: 0.4 }}
               className="flex items-center justify-between border-t border-[#E8E0D0] pt-5"
             >
-              <Link
-                href={pathname as NavHref}
-                locale={otherLocale}
-                onClick={closeDrawer}
-                className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#0A5592] transition-colors hover:text-[#121212]"
-              >
-                {tLang("switch")}
-              </Link>
+              <div className="flex items-center gap-4">
+                {otherLocales.map((l) => (
+                  <Link
+                    key={l}
+                    href={pathname as NavHref}
+                    locale={l}
+                    onClick={closeDrawer}
+                    className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#0A5592] transition-colors hover:text-[#121212]"
+                  >
+                    {l === "fr" ? "FR" : l === "en" ? "EN" : "中文"}
+                  </Link>
+                ))}
+              </div>
               <span className="text-xs text-[#121212]/40">info@metanova.ca</span>
             </motion.div>
 
