@@ -113,12 +113,28 @@ body {
   color: white;
 }
 
+/* Mobile drawer push effect */
+html.drawer-open #page-push-container {
+  transform: translateX(-15%) scale(0.92);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+html.drawer-open body {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  html.drawer-open #page-push-container {
+    transform: none;
+    border-radius: 0;
   }
 }
 

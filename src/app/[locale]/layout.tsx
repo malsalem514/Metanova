@@ -68,8 +68,10 @@ export default async function LocaleLayout({
       <JsonLd data={organizationJsonLd} />
       <JsonLd data={webSiteJsonLd} />
       <Header />
-      <main id="main-content" className="flex-1">{children}</main>
-      <Footer />
+      <div id="page-push-container" className="transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left">
+        <main id="main-content" className="flex-1">{children}</main>
+        <Footer />
+      </div>
       <Analytics />
       <SpeedInsights />
     </NextIntlClientProvider>
