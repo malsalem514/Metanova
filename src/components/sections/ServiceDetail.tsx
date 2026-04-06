@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { useVideoAutoplay } from "@/hooks/useVideoAutoplay";
 
 interface ServicePoint {
   title: string;
@@ -30,27 +30,7 @@ export function ServiceDetail({
   ctaText = "Discuss Your Project",
   videoSrc,
 }: ServiceDetailProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    const attemptPlay = () => {
-      video.play().catch(() => {});
-    };
-    attemptPlay();
-    const handleInteraction = () => {
-      attemptPlay();
-      document.removeEventListener("touchstart", handleInteraction);
-      document.removeEventListener("click", handleInteraction);
-    };
-    document.addEventListener("touchstart", handleInteraction, { once: true });
-    document.addEventListener("click", handleInteraction, { once: true });
-    return () => {
-      document.removeEventListener("touchstart", handleInteraction);
-      document.removeEventListener("click", handleInteraction);
-    };
-  }, []);
+  const videoRef = useVideoAutoplay();
 
   return (
     <>
@@ -71,7 +51,7 @@ export function ServiceDetail({
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={videoSrc.replace('.mp4', '-poster.jpg')}
             className="absolute inset-0 z-[1] h-full w-full object-cover"
             aria-label={`${title} video`}

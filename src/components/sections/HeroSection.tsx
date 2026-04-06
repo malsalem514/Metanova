@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { Link } from "@/i18n/navigation";
+import { useVideoAutoplay } from "@/hooks/useVideoAutoplay";
 import type { routing } from "@/i18n/routing";
 
 type Pathname = keyof typeof routing.pathnames;
@@ -49,36 +49,7 @@ export function HeroSection({
   testimonial,
 }: HeroSectionProps) {
   const hasRightColumn = (stats && stats.length > 0) || testimonial;
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Force play — some browsers (Safari iOS, Low Power Mode) block autoplay silently
-    const attemptPlay = () => {
-      video.play().catch(() => {
-        // Autoplay blocked — show poster image (already visible as fallback)
-      });
-    };
-
-    // Try immediately
-    attemptPlay();
-
-    // Also try on user interaction (iOS may need a touch event first)
-    const handleInteraction = () => {
-      attemptPlay();
-      document.removeEventListener("touchstart", handleInteraction);
-      document.removeEventListener("click", handleInteraction);
-    };
-    document.addEventListener("touchstart", handleInteraction, { once: true });
-    document.addEventListener("click", handleInteraction, { once: true });
-
-    return () => {
-      document.removeEventListener("touchstart", handleInteraction);
-      document.removeEventListener("click", handleInteraction);
-    };
-  }, []);
+  const videoRef = useVideoAutoplay();
 
   return (
     <section data-hero className="relative flex h-dvh items-end overflow-hidden">
@@ -99,10 +70,10 @@ export function HeroSection({
           muted
           loop
           playsInline
-          preload="auto"
-          poster={videoSrc?.replace('.mp4', '-poster.jpg')}
+          preload="metadata"
+          poster={videoSrc.replace('.mp4', '-poster.jpg')}
           className="absolute inset-0 z-[1] h-full w-full object-cover"
-          aria-label="Construction site timelapse video"
+          aria-label={`${title} video`}
         >
           <source src={videoSrc.replace('.mp4', '.webm')} type="video/webm" />
           <source src={videoSrc} type="video/mp4" />
