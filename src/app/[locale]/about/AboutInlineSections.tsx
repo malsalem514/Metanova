@@ -57,29 +57,39 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
         </div>
       </section>
 
-      {/* Beginnings story */}
+      {/* Our Story */}
       <section className="bg-white/60 py-24">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
-                  {content?.["beginnings_overline"] ?? "Our Beginnings"}
+                  {content?.["story_overline"] ?? "OUR STORY"}
                 </p>
                 <h2
                   className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
                 >
-                  {content?.["beginnings_heading"] ?? "Two brothers, one shared vision"}
+                  {content?.["story_heading"] ?? "Engineering Expertise Driving Real Estate Development"}
                 </h2>
                 <p className="text-base leading-relaxed text-[#121212]/70">
-                  {content?.["beginnings_p1"] ?? "Metanova was founded by Suddam and Muhannad Al-Salem — a structural engineer and a real estate developer — who saw an opportunity to create a firm that truly understands both sides of the construction equation."}
+                  {content?.["story_p1"] ?? ""}
                 </p>
                 <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
-                  {content?.["beginnings_p2"] ?? "Where traditional engineering firms focus purely on technical compliance, and developers often lack deep structural expertise, Metanova bridges both worlds. The result is smarter designs, faster approvals, and projects that make financial and structural sense from day one."}
+                  {content?.["story_p2"] ?? ""}
                 </p>
-                {(content?.["beginnings_p3"]) && (
+                {content?.["story_p3"] && (
                   <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
-                    {content["beginnings_p3"]}
+                    {content["story_p3"]}
+                  </p>
+                )}
+                {content?.["story_p4"] && (
+                  <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
+                    {content["story_p4"]}
+                  </p>
+                )}
+                {content?.["story_p5"] && (
+                  <p className="mt-6 text-base leading-relaxed text-[#121212]/70">
+                    {content["story_p5"]}
                   </p>
                 )}
               </div>
@@ -87,8 +97,8 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
             <FadeIn delay={0.15} direction="right">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm">
                 <Image
-                  src="/metanova-assets/people/founders-portrait-new.jpg"
-                  alt="Metanova founders"
+                  src="/metanova-assets/hero/about-our-story.jpeg"
+                  alt="Metanova — Our Story"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"

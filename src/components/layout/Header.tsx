@@ -17,7 +17,6 @@ type ServiceHref =
 const LOCALE_LABELS: Record<string, string> = { fr: "FR", en: "EN", zh: "中文" };
 
 const navLinks: { href: NavHref; labelKey: NavLabelKey }[] = [
-  { href: "/", labelKey: "home" },
   { href: "/about", labelKey: "about" },
   { href: "/services", labelKey: "services" },
   { href: "/careers", labelKey: "careers" },
@@ -143,7 +142,7 @@ export function Header() {
             maxWidth: "1440px",
           }}
         >
-          <Link href="/" className="flex items-center transition-all duration-500">
+          <Link href="/about" className="flex items-center transition-all duration-500">
             <Image
               src={
                 useDarkNav

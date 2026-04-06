@@ -13,27 +13,27 @@ interface ValueItem {
 const valuesEn: ValueItem[] = [
   {
     number: "01",
-    title: "Cost Optimization",
+    title: "Value Engineering",
     description:
-      "We engage from the design phase to eliminate inefficiencies, simplify structural solutions and reduce construction costs. This approach delivers higher-performing, better-controlled and financially optimized projects without compromising quality or constructability.",
+      "We engage from the earliest design stages to eliminate inefficiencies, simplify structural systems and reduce construction costs. This results in more efficient, financially optimized projects without compromising quality or constructability.",
   },
   {
     number: "02",
     title: "Development-Driven Vision",
     description:
-      "Every project is analyzed as a value-creation opportunity. We optimize site potential, validate financial viability and structure projects based on market realities and investor expectations.",
+      "Each project is approached as a value-creation opportunity. We assess site potential, validate financial viability and structure projects in alignment with market conditions and investor objectives.",
   },
   {
     number: "03",
     title: "Controlled Execution",
     description:
-      "We ensure proactive and rigorous project management with constant control over timelines, costs and site challenges. This execution discipline guarantees efficient delivery with a high level of predictability and performance.",
+      "We ensure rigorous and proactive project management, maintaining continuous control over timelines, costs and site conditions. This disciplined execution delivers predictable outcomes and consistent performance.",
   },
   {
     number: "04",
     title: "Strategic Adaptability",
     description:
-      "We evolve with the technical, regulatory and economic constraints specific to each project. This adaptability allows us to secure projects, mitigate risks and maintain performance in complex environments.",
+      "We adapt to the technical, regulatory and economic realities of each project. This flexibility allows us to mitigate risks, secure project viability and maintain performance in complex environments.",
   },
 ];
 
@@ -42,52 +42,52 @@ const valuesFr: ValueItem[] = [
     number: "01",
     title: "Optimisation des coûts",
     description:
-      "Nous intervenons dès la conception afin d'éliminer les inefficiences, simplifier les solutions structurales et réduire les coûts de construction. Cette approche permet de livrer des projets plus performants, mieux contrôlés et financièrement optimisés, sans compromis sur la qualité ni la constructibilité.",
+      "Nous intervenons dès les premières étapes de conception afin d'éliminer les inefficiences, simplifier les systèmes et réduire les coûts de réalisation. Cette approche permet d'obtenir des projets plus performants et financièrement optimisés, sans compromis sur la qualité ni la constructibilité.",
   },
   {
     number: "02",
     title: "Vision orientée développement",
     description:
-      "Chaque projet est analysé comme une opportunité de création de valeur. Nous optimisons le potentiel des sites, validons la viabilité financière et structurons les projets en fonction des réalités du marché et des attentes des investisseurs.",
+      "Chaque projet est analysé comme une opportunité de création de valeur. Nous évaluons le potentiel du site, validons la viabilité financière et structurons les projets en fonction des réalités du marché et des objectifs des investisseurs.",
   },
   {
     number: "03",
     title: "Exécution maîtrisée",
     description:
-      "Nous assurons une gestion proactive et rigoureuse des projets, avec un contrôle constant des échéanciers, des coûts et des enjeux de chantier. Cette discipline d'exécution garantit des projets livrés efficacement, avec un haut niveau de prévisibilité et de performance.",
+      "Nous assurons une gestion de projets rigoureuse et proactive, avec un contrôle constant des échéanciers, des coûts et des enjeux de chantier. Cette discipline d'exécution permet d'assurer des livrables efficaces, prévisibles et performants.",
   },
   {
     number: "04",
     title: "Adaptabilité stratégique",
     description:
-      "Nous évoluons avec les contraintes techniques, réglementaires et économiques propres à chaque projet. Cette capacité d'adaptation nous permet de sécuriser les projets, de limiter les risques et de maintenir leur performance dans des contextes complexes.",
+      "Nous nous adaptons aux contraintes techniques, réglementaires et économiques propres à chaque projet. Cette flexibilité permet de réduire les risques, sécuriser les projets et maintenir leur performance dans des environnements complexes.",
   },
 ];
 
 const valuesZh: ValueItem[] = [
   {
     number: "01",
-    title: "成本优化",
+    title: "价值工程",
     description:
-      "我们从设计阶段介入，消除低效环节，简化结构方案，降低施工成本。这一方法在不牺牲质量与可建造性的前提下，交付性能更优、管控更严、财务更优化的项目。",
+      "我们从设计最早期阶段介入，消除低效环节，简化结构系统，降低施工成本。在不牺牲质量与可建造性的前提下，交付更高效、财务更优化的项目。",
   },
   {
     number: "02",
     title: "以开发为导向的愿景",
     description:
-      "每个项目都被视为创造价值的机会。我们优化场地潜力，验证财务可行性，并根据市场现实与投资者预期构建项目方案。",
+      "每个项目都被视为创造价值的机会。我们评估场地潜力，验证财务可行性，并根据市场条件与投资者目标构建项目方案。",
   },
   {
     number: "03",
     title: "精细化执行",
     description:
-      "我们对项目实施主动、严格的工程项目管理，持续管控工期、成本与施工现场挑战。这种执行纪律确保项目高效交付，具备高度可预测性与高水准表现。",
+      "我们确保严格、主动的项目管理，持续管控工期、成本与施工现场条件。这种纪律化执行交付可预测的成果和稳定的绩效表现。",
   },
   {
     number: "04",
     title: "战略适应性",
     description:
-      "我们随每个项目特有的技术、法规和经济约束不断调整。这种适应能力使我们能够保障项目安全推进、降低风险，并在复杂环境中维持项目绩效。",
+      "我们适应每个项目特有的技术、法规和经济现实。这种灵活性使我们能够降低风险、保障项目可行性，并在复杂环境中维持绩效。",
   },
 ];
 
@@ -129,10 +129,10 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
               className="mt-3 mb-4 text-2xl font-medium leading-tight text-[#121212]"
             >
               {heading ?? (isFr
-                ? "Metanova intègre le génie en structure, le développement immobilier et la gestion de projets dans une approche unifiée, permettant d'intervenir en amont, de maîtriser les coûts et de maximiser la valeur des projets à chaque étape."
+                ? "Metanova intègre l'ingénierie en structure, le développement immobilier et la gestion de projets dans une approche unifiée, permettant une intervention dès les premières phases, une maîtrise rigoureuse des coûts et une création de valeur à chaque étape du développement."
                 : isZh
-                ? "Metanova将结构工程、房地产开发与工程项目管理整合为统一方法，实现前期介入、成本管控，并在项目各阶段最大化价值。"
-                : "Metanova integrates structural engineering, real estate development and project management into a unified approach, enabling early-stage involvement, cost control and value maximization at every project stage.")}
+                ? "Metanova将结构工程、房地产开发与工程项目管理整合为统一方法，实现早期介入、严格成本管控，并在整个开发过程中持续创造价值。"
+                : "Metanova integrates structural engineering, real estate development and project management into a unified approach, enabling early-stage involvement, disciplined cost control and value creation throughout the entire development process.")}
             </h2>
           </div>
         </FadeIn>
@@ -161,10 +161,10 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
         <FadeIn>
           <p className="mt-10 max-w-3xl text-sm italic leading-relaxed text-[#121212]/60">
             {isFr
-              ? "Une approche intégrée axée sur la maîtrise des coûts, la réduction des risques et la création de valeur durable."
+              ? "Une approche intégrée axée sur la maîtrise des coûts, la réduction des risques et la création de valeur à long terme."
               : isZh
-              ? "以成本管控、风险降低与持续价值创造为核心的一体化方法。"
-              : "An integrated approach focused on cost control, risk reduction and lasting value creation."}
+              ? "以成本管控、风险降低与长期价值创造为核心的一体化方法。"
+              : "An integrated approach focused on cost control, risk mitigation and long-term value creation."}
           </p>
         </FadeIn>
 

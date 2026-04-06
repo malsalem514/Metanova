@@ -4,8 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://metanova.ca";
 
   const pages = [
-    { en: "/en", fr: "/fr", zh: "/zh", priority: 1, changeFrequency: "monthly" as const },
-    { en: "/en/about", fr: "/fr/a-propos", zh: "/zh/about", priority: 0.8, changeFrequency: "monthly" as const },
+    { en: "/en/about", fr: "/fr/a-propos", zh: "/zh/about", priority: 1, changeFrequency: "monthly" as const },
     { en: "/en/services", fr: "/fr/services", zh: "/zh/services", priority: 0.8, changeFrequency: "monthly" as const },
     { en: "/en/services/structural-engineering", fr: "/fr/services/ingenierie-structurale", zh: "/zh/services/structural-engineering", priority: 0.7, changeFrequency: "monthly" as const },
     { en: "/en/services/real-estate-development", fr: "/fr/services/developpement-immobilier", zh: "/zh/services/real-estate-development", priority: 0.7, changeFrequency: "monthly" as const },

@@ -75,6 +75,7 @@ export default async function ContactPage({ params }: Props) {
         title={fm?.["heading"] ?? "Contact us"}
         subtitle={fm?.["intro"]}
         backgroundImage="/metanova-assets/hero/office-montreal.webp"
+        videoSrc="/metanova-assets/hero/contact-hero.mp4"
       />
       <ContactForm content={fm} />
       <CTABanner
