@@ -12,16 +12,19 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: locale === "fr" ? "Contact" : "Contact",
+    title: locale === "zh" ? "联系我们" : "Contact",
     description:
       locale === "fr"
         ? "Contactez Metanova pour vos demandes en ingénierie en structure, gestion de projets ou consultation en développement."
+        : locale === "zh"
+        ? "联系Metanova，咨询结构工程、项目管理或开发顾问服务。"
         : "Get in touch with Metanova for structural engineering, project management, or development consulting inquiries.",
     alternates: {
-      canonical: locale === "fr" ? "/fr/contact" : "/en/contact",
+      canonical: locale === "fr" ? "/fr/contact" : locale === "zh" ? "/zh/contact" : "/en/contact",
       languages: {
         en: "/en/contact",
         fr: "/fr/contact",
+        zh: "/zh/contact",
       },
     },
   };

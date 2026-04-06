@@ -14,17 +14,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
     title:
-      locale === "fr" ? "Politique de confidentialité" : "Privacy Policy",
+      locale === "fr"
+        ? "Politique de confidentialité"
+        : locale === "zh"
+        ? "隐私政策"
+        : "Privacy Policy",
     description:
       locale === "fr"
         ? "Politique de confidentialité de Metanova — comment nous collectons, utilisons et protégeons vos renseignements."
         : "Metanova's Privacy Policy — how we collect, use, and protect your information.",
     alternates: {
       canonical:
-        locale === "fr" ? "/fr/confidentialite" : "/en/privacy",
+        locale === "fr" ? "/fr/confidentialite" : locale === "zh" ? "/zh/privacy" : "/en/privacy",
       languages: {
         en: "/en/privacy",
         fr: "/fr/confidentialite",
+        zh: "/zh/privacy",
       },
     },
   };

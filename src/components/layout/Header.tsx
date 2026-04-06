@@ -14,6 +14,8 @@ type ServiceHref =
   | "/services/real-estate-development"
   | "/services/project-management-consulting";
 
+const LOCALE_LABELS: Record<string, string> = { fr: "FR", en: "EN", zh: "中文" };
+
 const navLinks: { href: NavHref; labelKey: NavLabelKey }[] = [
   { href: "/", labelKey: "home" },
   { href: "/about", labelKey: "about" },
@@ -230,7 +232,7 @@ export function Header() {
                       : "text-white hover:text-white/70"
                   }`}
                 >
-                  {l === "fr" ? "FR" : l === "en" ? "EN" : "中文"}
+                  {LOCALE_LABELS[l]}
                 </Link>
               ))}
             </div>
@@ -396,7 +398,7 @@ export function Header() {
                     onClick={closeDrawer}
                     className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#0A5592] transition-colors hover:text-[#121212]"
                   >
-                    {l === "fr" ? "FR" : l === "en" ? "EN" : "中文"}
+                    {LOCALE_LABELS[l]}
                   </Link>
                 ))}
               </div>
