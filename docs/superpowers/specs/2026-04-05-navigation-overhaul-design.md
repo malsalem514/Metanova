@@ -91,6 +91,7 @@ Replace the basic white mobile menu with a premium sliding drawer with parallax 
 ### Trigger
 
 - Hovering over the "Services" nav link reveals a dropdown panel
+- Clicking "Services" still navigates to `/services` (the link remains functional)
 - Dropdown appears below the nav link, aligned to its left edge
 
 ### Dropdown Layout
@@ -103,7 +104,7 @@ Replace the basic white mobile menu with a premium sliding drawer with parallax 
 └──────────────────────────────────┘
 ```
 
-- Background: `#F5F0E6` (cream) or `white`
+- Background: `white`
 - Border: `1px solid #E8E0D0`
 - Shadow: `0 4px 20px rgba(0,0,0,0.08)`
 - Border-radius: `8px`
@@ -125,6 +126,7 @@ Replace the basic white mobile menu with a premium sliding drawer with parallax 
 ## Files to Modify
 
 - `src/components/layout/Header.tsx` — main changes (mobile drawer, desktop dropdown, all animations)
+- `src/app/[locale]/layout.tsx` — wrap `{children}` in a div that can receive the parallax push transform when the drawer is open
 
 ## Dependencies
 
