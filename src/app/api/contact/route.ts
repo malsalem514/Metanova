@@ -26,6 +26,7 @@ export async function POST(request: Request) {
     }
     entry.count++;
   } else {
+    if (entry) rateLimitMap.delete(ip);
     rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
   }
 

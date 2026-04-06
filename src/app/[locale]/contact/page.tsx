@@ -93,8 +93,9 @@ export default async function ContactPage({ params }: Props) {
             : "Our team is available Monday to Friday, 9 AM to 5 PM. Call us at +1 (514) 222-3444."
         }
         ctaText={
-          locale === "fr" ? "APPELER MAINTENANT" : locale === "zh" ? "立即致电" : "CALL NOW"
+          locale === "fr" ? "NOS SERVICES" : locale === "zh" ? "我们的服务" : "OUR SERVICES"
         }
+        ctaHref="/services"
       />
     </>
   );
