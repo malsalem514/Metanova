@@ -56,8 +56,8 @@ export function ServiceDetail({
             className="absolute inset-0 z-[1] h-full w-full object-cover"
             aria-label={`${title} video`}
           >
-            <source src={videoSrc.replace('.mp4', '.webm')} type="video/webm" />
             <source src={videoSrc} type="video/mp4" />
+            <source src={videoSrc.replace('.mp4', '.webm')} type="video/webm" />
           </video>
         )}
         <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />

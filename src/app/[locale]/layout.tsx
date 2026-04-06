@@ -7,6 +7,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
+import { PageTransition } from "@/components/layout/PageTransition";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -69,9 +71,12 @@ export default async function LocaleLayout({
       <JsonLd data={webSiteJsonLd} />
       <Header />
       <div id="page-push-container" className="transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left">
-        <main id="main-content" className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
         <Footer />
       </div>
+      <BackToTop />
       <Analytics />
       <SpeedInsights />
     </NextIntlClientProvider>

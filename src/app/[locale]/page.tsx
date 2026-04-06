@@ -54,6 +54,10 @@ export default async function Home({ params }: Props) {
         ctaHref={fm?.["cta_primary_href"] ?? "/contact"}
         secondaryCtaText={fm?.["cta_secondary"] ?? "OUR SERVICES"}
         secondaryCtaHref={fm?.["cta_secondary_href"] ?? "/services"}
+        stats={[
+          { value: "20+", label: locale === "fr" ? "ans d'expérience" : locale === "zh" ? "年经验" : "years experience" },
+          { value: "250+", label: locale === "fr" ? "projets" : locale === "zh" ? "个项目" : "projects" },
+        ]}
       />
       <VisionMissionSection />
       <EditorialSection />

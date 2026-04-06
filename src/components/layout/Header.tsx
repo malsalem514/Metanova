@@ -168,16 +168,21 @@ export function Header() {
                   onMouseEnter={openDropdown}
                   onMouseLeave={closeDropdown}
                 >
-                  <Link
-                    href={link.href}
-                    className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
-                      useDarkNav
-                        ? "text-[#121212] hover:text-[#0A5592]"
-                        : "text-white/90 hover:text-white"
-                    }`}
-                  >
-                    {t(link.labelKey)}
-                  </Link>
+                  {(() => {
+                    const isActive = pathname.startsWith("/services");
+                    return (
+                      <Link
+                        href={link.href}
+                        className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
+                          useDarkNav
+                            ? isActive ? "text-[#0A5592]" : "text-[#121212] hover:text-[#0A5592]"
+                            : isActive ? "text-white" : "text-white/90 hover:text-white"
+                        }`}
+                      >
+                        {t(link.labelKey)}
+                      </Link>
+                    );
+                  })()}
 
                   {desktopDropdownOpen && (
                     <div className="absolute left-0 top-full h-2 w-full" />
@@ -206,17 +211,22 @@ export function Header() {
                   </AnimatePresence>
                 </div>
               ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
-                    useDarkNav
-                      ? "text-[#121212] hover:text-[#0A5592]"
-                      : "text-white/90 hover:text-white"
-                  }`}
-                >
-                  {t(link.labelKey)}
-                </Link>
+                (() => {
+                  const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
+                        useDarkNav
+                          ? isActive ? "text-[#0A5592]" : "text-[#121212] hover:text-[#0A5592]"
+                          : isActive ? "text-white" : "text-white/90 hover:text-white"
+                      }`}
+                    >
+                      {t(link.labelKey)}
+                    </Link>
+                  );
+                })()
               ),
             )}
 

@@ -12,6 +12,7 @@ interface ContactFormProps {
 export function ContactForm({ content }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [fileName, setFileName] = useState<string | null>(null);
   const t = useTranslations("contact");
   const tCta = useTranslations("cta");
@@ -111,6 +112,7 @@ export function ContactForm({ content }: ContactFormProps) {
                 <form
                   onSubmit={async (e) => {
                     e.preventDefault();
+                    setError("");
                     setSending(true);
                     try {
                       const formData = new FormData(e.currentTarget);
@@ -118,7 +120,7 @@ export function ContactForm({ content }: ContactFormProps) {
                       await fetch("/api/contact", { method: "POST", body: formData });
                       setSubmitted(true);
                     } catch {
-                      alert(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : isZh ? "发送失败，请重试。" : "Failed to send. Please try again.");
+                      setError(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : isZh ? "发送失败，请重试。" : "Failed to send. Please try again.");
                     } finally {
                       setSending(false);
                     }
@@ -251,6 +253,11 @@ export function ContactForm({ content }: ContactFormProps) {
                   <ShimmerButton type="submit" className="w-full" disabled={sending}>
                     {sending ? (isFr ? "Envoi en cours..." : isZh ? "发送中..." : "Sending...") : tCta("sendMessage")}
                   </ShimmerButton>
+                  {error && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                      {error}
+                    </div>
+                  )}
                 </form>
               )}
             </div>
