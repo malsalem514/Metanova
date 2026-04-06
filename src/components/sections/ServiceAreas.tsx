@@ -32,7 +32,7 @@ function QuebecMap() {
       viewBox="620 420 370 420"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-auto max-w-[520px]"
+      className="w-full h-auto max-w-[320px] md:max-w-[520px]"
       aria-hidden="true"
     >
       <defs>
@@ -211,7 +211,7 @@ export function ServiceAreas() {
           </FadeIn>
 
           {/* Right: animated Quebec map */}
-          <FadeIn delay={0.2} direction="right">
+          <FadeIn delay={0.2}>
             <div className="flex justify-center lg:justify-end">
               <QuebecMap />
             </div>
