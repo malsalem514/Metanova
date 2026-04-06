@@ -42,6 +42,7 @@ export default async function AboutPage({ params }: Props) {
         title={fm?.["hero_headline"] ?? "About us"}
         subtitle={fm?.["hero_subline"]}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/montreal-cranes-sunset.jpeg"}
+        videoSrc="/metanova-assets/hero/about-hero.mp4"
       />
       <AboutInlineSections content={fm} />
       <ApproachSection />

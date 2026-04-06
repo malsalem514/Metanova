@@ -25,7 +25,7 @@ const services: ServiceItem[] = [
       "At Metanova, structural engineering is about more than calculations — it is about delivering clarity, reducing risk, and ensuring every project is built on a solid foundation. We work closely with developers, contractors, and property owners to design safe, efficient, and code-compliant structures that align with real-world construction demands.",
     descriptionFr:
       "Chez Metanova, l'ingénierie en structure va au-delà des calculs — il s'agit de livrer de la clarté, de réduire les risques et de s'assurer que chaque projet repose sur des fondations solides. Nous travaillons étroitement avec les promoteurs, les entrepreneurs et les propriétaires pour concevoir des structures sécuritaires, efficaces et conformes aux codes, alignées avec les réalités de la construction.",
-    image: "/metanova-assets/services/structural/site-inspection.jpg",
+    image: "/metanova-assets/services/structural/construction-cranes.jpg",
     href: "/services/structural-engineering",
     capabilitiesEn: [
       "Structural feasibility & assessment",
@@ -51,7 +51,7 @@ const services: ServiceItem[] = [
       "We support the strategic development of sites by unlocking their full potential and structuring viable, high-performing projects. From site analysis and feasibility studies to zoning coordination and project positioning.",
     descriptionFr:
       "Nous accompagnons le développement stratégique des sites en exploitant leur plein potentiel et en structurant des projets viables et performants. De l'analyse de site et des études de faisabilité à la coordination du zonage et au positionnement du projet.",
-    image: "/metanova-assets/services/development/model-review.png",
+    image: "/metanova-assets/services/development/aerial-masterplan.jpg",
     href: "/services/real-estate-development",
     capabilitiesEn: [
       "Site analysis & development potential",

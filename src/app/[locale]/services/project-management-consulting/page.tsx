@@ -115,6 +115,7 @@ export default async function ProjectManagementPage({ params }: Props) {
             : "We provide end-to-end project management and development consulting for residential and mixed-use projects across Quebec. From strategic planning and zoning coordination to construction oversight, we guide projects from concept to completion with clarity, structure, and accountability."
         }
         heroImage="/metanova-assets/services/project-management/city-overlay-hardhat.png"
+        videoSrc="/metanova-assets/hero/project-mgmt-hero.mp4"
         points={isFr ? pointsFr : pointsEn}
       />
       <CTABanner

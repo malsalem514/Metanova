@@ -125,6 +125,7 @@ export default async function StructuralEngineeringPage({ params }: Props) {
             : "At Metanova, structural engineering is about more than calculations — it is about delivering clarity, reducing risk, and ensuring every project is built on a solid foundation. We work closely with developers, contractors, and property owners to design safe, efficient, and code-compliant structures that align with real-world construction demands. Our approach combines technical rigor with practical coordination to keep projects moving forward confidently."
         }
         heroImage="/metanova-assets/services/structural/site-inspection.jpg"
+        videoSrc="/metanova-assets/hero/structural-hero.mp4"
         points={isFr ? pointsFr : pointsEn}
       />
       <InlineContactForm

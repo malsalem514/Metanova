@@ -100,7 +100,7 @@ export function HeroSection({
           loop
           playsInline
           preload="auto"
-          poster="/metanova-assets/hero/home-hero-poster.jpg"
+          poster={videoSrc?.replace('.mp4', '-poster.jpg')}
           className="absolute inset-0 z-[1] h-full w-full object-cover"
           aria-label="Construction site timelapse video"
         >

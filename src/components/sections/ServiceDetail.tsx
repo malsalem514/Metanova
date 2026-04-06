@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ interface ServiceDetailProps {
   heroImage: string;
   points: ServicePoint[];
   ctaText?: string;
+  videoSrc?: string;
 }
 
 export function ServiceDetail({
@@ -26,7 +28,30 @@ export function ServiceDetail({
   heroImage,
   points,
   ctaText = "Discuss Your Project",
+  videoSrc,
 }: ServiceDetailProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const attemptPlay = () => {
+      video.play().catch(() => {});
+    };
+    attemptPlay();
+    const handleInteraction = () => {
+      attemptPlay();
+      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("click", handleInteraction);
+    };
+    document.addEventListener("touchstart", handleInteraction, { once: true });
+    document.addEventListener("click", handleInteraction, { once: true });
+    return () => {
+      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("click", handleInteraction);
+    };
+  }, []);
+
   return (
     <>
       {/* Hero */}
@@ -39,8 +64,24 @@ export function ServiceDetail({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
-        <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
+        {videoSrc && (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={videoSrc.replace('.mp4', '-poster.jpg')}
+            className="absolute inset-0 z-[1] h-full w-full object-cover"
+            aria-label={`${title} video`}
+          >
+            <source src={videoSrc.replace('.mp4', '.webm')} type="video/webm" />
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )}
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#1B2E37]/50 via-[#1B2E37]/30 to-[#1B2E37]/70" />
+        <div className="relative z-[3] mx-auto w-full max-w-[1240px] px-6 pb-16 pt-32">
           <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
             {subtitle}
           </p>

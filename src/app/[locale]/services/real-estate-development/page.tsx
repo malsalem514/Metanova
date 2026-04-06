@@ -125,6 +125,7 @@ export default async function RealEstateDevelopmentPage({ params }: Props) {
             : "We support the strategic development of sites by unlocking their full potential and structuring viable, high-performing projects. Our team combines deep market knowledge with hands-on development experience to guide projects from initial concept through approvals and execution."
         }
         heroImage="/metanova-assets/services/development/model-review.png"
+        videoSrc="/metanova-assets/hero/realestate-hero.mp4"
         points={isFr ? pointsFr : pointsEn}
       />
       <InlineContactForm

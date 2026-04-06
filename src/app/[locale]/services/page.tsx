@@ -40,6 +40,7 @@ export default async function ServicesPage({ params }: Props) {
         title={fm?.["hero_headline"] ?? "Our Services"}
         subtitle={fm?.["hero_subline"]}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.png"}
+        videoSrc={fm?.["hero_video"]}
       />
       <ServicesListSection />
       <CTABanner

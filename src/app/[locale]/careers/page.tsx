@@ -51,6 +51,7 @@ export default async function CareersPage({ params }: Props) {
         title={fm?.["hero_headline"] ?? "Join our team"}
         subtitle={fm?.["hero_subline"]}
         backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.png"}
+        videoSrc="/metanova-assets/hero/careers-hero.mp4"
       />
 
       <section className="bg-[#F5F0E6] py-24">

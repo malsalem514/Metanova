@@ -13,54 +13,54 @@ interface ValueItem {
 const valuesEn: ValueItem[] = [
   {
     number: "01",
-    title: "Value Engineering",
+    title: "Cost Optimization",
     description:
-      "We integrate value engineering from the earliest stages to optimize design, reduce costs and improve overall project performance\u2014without compromising quality or constructability.",
+      "We engage from the design phase to eliminate inefficiencies, simplify structural solutions and reduce construction costs. This approach delivers higher-performing, better-controlled and financially optimized projects without compromising quality or constructability.",
   },
   {
     number: "02",
-    title: "Development-Driven Thinking",
+    title: "Development-Driven Vision",
     description:
-      "We approach each project with a development perspective, focusing on site optimization, project viability and alignment with market and investment objectives.",
+      "Every project is analyzed as a value-creation opportunity. We optimize site potential, validate financial viability and structure projects based on market realities and investor expectations.",
   },
   {
     number: "03",
-    title: "Efficient Execution",
+    title: "Controlled Execution",
     description:
-      "We prioritize coordination and clarity to ensure smooth project delivery, maintaining control over timelines, costs and construction realities.",
+      "We ensure proactive and rigorous project management with constant control over timelines, costs and site challenges. This execution discipline guarantees efficient delivery with a high level of predictability and performance.",
   },
   {
     number: "04",
-    title: "Adaptability",
+    title: "Strategic Adaptability",
     description:
-      "Our solutions evolve with project constraints, regulatory requirements and market conditions\u2014ensuring flexibility and long-term success.",
+      "We evolve with the technical, regulatory and economic constraints specific to each project. This adaptability allows us to secure projects, mitigate risks and maintain performance in complex environments.",
   },
 ];
 
 const valuesFr: ValueItem[] = [
   {
     number: "01",
-    title: "Optimisation des co\u00fbts",
+    title: "Optimisation des coûts",
     description:
-      "Nous int\u00e9grons l\u2019optimisation des co\u00fbts d\u00e8s les premi\u00e8res \u00e9tapes afin d\u2019am\u00e9liorer la conception, r\u00e9duire les d\u00e9penses et maximiser la performance globale du projet \u2014 sans compromettre la qualit\u00e9 ni la constructibilit\u00e9.",
+      "Nous intervenons dès la conception afin d'éliminer les inefficiences, simplifier les solutions structurales et réduire les coûts de construction. Cette approche permet de livrer des projets plus performants, mieux contrôlés et financièrement optimisés, sans compromis sur la qualité ni la constructibilité.",
   },
   {
     number: "02",
-    title: "Vision orient\u00e9e d\u00e9veloppement",
+    title: "Vision orientée développement",
     description:
-      "Nous abordons chaque projet avec une perspective de d\u00e9veloppement, en mettant l\u2019accent sur l\u2019optimisation des sites, la viabilit\u00e9 des projets et l\u2019alignement avec les objectifs du march\u00e9 et des investisseurs.",
+      "Chaque projet est analysé comme une opportunité de création de valeur. Nous optimisons le potentiel des sites, validons la viabilité financière et structurons les projets en fonction des réalités du marché et des attentes des investisseurs.",
   },
   {
     number: "03",
-    title: "Ex\u00e9cution efficace",
+    title: "Exécution maîtrisée",
     description:
-      "Nous privil\u00e9gions la coordination et la clart\u00e9 pour assurer une livraison fluide des projets, en maintenant le contr\u00f4le sur les \u00e9ch\u00e9anciers, les co\u00fbts et les r\u00e9alit\u00e9s de construction.",
+      "Nous assurons une gestion proactive et rigoureuse des projets, avec un contrôle constant des échéanciers, des coûts et des enjeux de chantier. Cette discipline d'exécution garantit des projets livrés efficacement, avec un haut niveau de prévisibilité et de performance.",
   },
   {
     number: "04",
-    title: "Adaptabilit\u00e9",
+    title: "Adaptabilité stratégique",
     description:
-      "Nos solutions \u00e9voluent en fonction des contraintes du projet, des exigences r\u00e9glementaires et des conditions du march\u00e9 \u2014 assurant flexibilit\u00e9 et succ\u00e8s \u00e0 long terme.",
+      "Nous évoluons avec les contraintes techniques, réglementaires et économiques propres à chaque projet. Cette capacité d'adaptation nous permet de sécuriser les projets, de limiter les risques et de maintenir leur performance dans des contextes complexes.",
   },
 ];
 
@@ -100,8 +100,8 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
               className="mt-3 mb-4 text-2xl font-medium leading-tight text-[#121212]"
             >
               {heading ?? (isFr
-                ? "Metanova combine la rigueur de l\u2019ing\u00e9nierie \u00e0 une vision de d\u00e9veloppement afin de livrer des projets non seulement r\u00e9alisables, mais \u00e9galement viables financi\u00e8rement et optimis\u00e9s \u00e0 chaque \u00e9tape."
-                : "Metanova combines engineering precision with development strategy to deliver projects that are not only buildable, but financially viable and optimized at every stage.")}
+                ? "Metanova intègre le génie en structure, le développement immobilier et la gestion de projets dans une approche unifiée, permettant d'intervenir en amont, de maîtriser les coûts et de maximiser la valeur des projets à chaque étape."
+                : "Metanova integrates structural engineering, real estate development and project management into a unified approach, enabling early-stage involvement, cost control and value maximization at every project stage.")}
             </h2>
           </div>
         </FadeIn>
@@ -130,8 +130,8 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
         <FadeIn>
           <p className="mt-10 max-w-3xl text-sm italic leading-relaxed text-[#121212]/60">
             {isFr
-              ? "Assurer l\u2019excellence, la satisfaction du client et le succ\u00e8s du projet gr\u00e2ce \u00e0 un contr\u00f4le qualit\u00e9 rigoureux, une communication transparente et un engagement \u00e0 livrer des r\u00e9sultats qui d\u00e9passent les attentes."
-              : "Ensuring excellence, client satisfaction, and project success through rigorous quality control, transparent communication, and a commitment to delivering results that exceed expectations."}
+              ? "Une approche intégrée axée sur la maîtrise des coûts, la réduction des risques et la création de valeur durable."
+              : "An integrated approach focused on cost control, risk reduction and lasting value creation."}
           </p>
         </FadeIn>
 
