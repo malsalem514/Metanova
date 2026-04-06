@@ -7,12 +7,14 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "motion/react";
 
 type NavHref = "/" | "/about" | "/services" | "/contact" | "/careers";
+type NavLabelKey = "home" | "about" | "services" | "careers" | "contact";
+type ServiceLabelKey = "structuralEngineering" | "realEstateDevelopment" | "projectManagement";
 type ServiceHref =
   | "/services/structural-engineering"
   | "/services/real-estate-development"
   | "/services/project-management-consulting";
 
-const navLinks: { href: NavHref; labelKey: string }[] = [
+const navLinks: { href: NavHref; labelKey: NavLabelKey }[] = [
   { href: "/", labelKey: "home" },
   { href: "/about", labelKey: "about" },
   { href: "/services", labelKey: "services" },
@@ -20,7 +22,7 @@ const navLinks: { href: NavHref; labelKey: string }[] = [
   { href: "/contact", labelKey: "contact" },
 ];
 
-const serviceSubLinks: { href: ServiceHref; labelKey: string; index: string }[] = [
+const serviceSubLinks: { href: ServiceHref; labelKey: ServiceLabelKey; index: string }[] = [
   { href: "/services/structural-engineering", labelKey: "structuralEngineering", index: "01" },
   { href: "/services/real-estate-development", labelKey: "realEstateDevelopment", index: "02" },
   { href: "/services/project-management-consulting", labelKey: "projectManagement", index: "03" },
@@ -66,7 +68,10 @@ export function Header() {
   const otherLocale = locale === "en" ? "fr" : "en";
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 100);
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      setScrolled((prev) => (prev === isScrolled ? prev : isScrolled));
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -81,6 +86,14 @@ export function Header() {
     setServicesExpanded(false);
     document.documentElement.classList.remove("drawer-open");
   }, []);
+
+  // Cleanup drawer-open class on unmount (e.g. hard navigation while drawer is open)
+  useEffect(() => {
+    if (mobileOpen) {
+      document.documentElement.classList.add("drawer-open");
+      return () => document.documentElement.classList.remove("drawer-open");
+    }
+  }, [mobileOpen]);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -105,8 +118,12 @@ export function Header() {
     }, 150);
   }, []);
 
+  // Clear pending dropdown timeout on unmount
+  useEffect(() => () => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+  }, []);
+
   const useDarkNav = scrolled || mobileOpen;
-  const isCompact = scrolled;
 
   return (
     <>
@@ -120,7 +137,7 @@ export function Header() {
         <div
           className="mx-auto flex items-center justify-between transition-all duration-500"
           style={{
-            padding: isCompact ? "12px 50px" : "24px 50px",
+            padding: scrolled ? "12px 50px" : "24px 50px",
             maxWidth: "1440px",
           }}
         >
@@ -136,7 +153,7 @@ export function Header() {
               height={73}
               priority
               className="transition-all duration-500"
-              style={{ width: isCompact ? 150 : 180, height: "auto" }}
+              style={{ width: scrolled ? 150 : 180, height: "auto" }}
             />
           </Link>
 
@@ -176,7 +193,7 @@ export function Header() {
                         {serviceSubLinks.map((sub) => (
                           <Link
                             key={sub.href}
-                            href={sub.href as NavHref}
+                            href={sub.href}
                             className="block rounded-md px-4 py-2.5 text-[11px] font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
                           >
                             {t(sub.labelKey)}
@@ -325,7 +342,7 @@ export function Header() {
                             {serviceSubLinks.map((sub) => (
                               <Link
                                 key={sub.href}
-                                href={sub.href as NavHref}
+                                href={sub.href}
                                 onClick={closeDrawer}
                                 className="flex items-center gap-2.5 rounded-lg bg-[rgba(10,85,146,0.04)] px-4 py-3 text-sm text-[#121212]/70 transition-colors hover:text-[#0A5592]"
                               >
