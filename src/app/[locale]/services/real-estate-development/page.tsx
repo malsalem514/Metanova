@@ -18,6 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "战略性房地产开发服务 — 场地分析、可行性研究、土地优化及魁北克全省项目定位。"
         : "Strategic real estate development services — site analysis, feasibility studies, land optimization, and project positioning across Quebec.",
+    openGraph: {
+      title: locale === "fr" ? "Développement immobilier" : locale === "zh" ? "房地产开发" : "Real Estate Development",
+      description:
+        locale === "fr"
+          ? "Services stratégiques de développement immobilier — analyse de site, études de faisabilité, optimisation foncière et positionnement de projets à travers le Québec."
+          : locale === "zh"
+          ? "战略性房地产开发服务 — 场地分析、可行性研究、土地优化及魁北克全省项目定位。"
+          : "Strategic real estate development services — site analysis, feasibility studies, land optimization, and project positioning across Quebec.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/services/developpement-immobilier" : locale === "zh" ? "/zh/services/real-estate-development" : "/en/services/real-estate-development",
       languages: {

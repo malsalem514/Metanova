@@ -18,6 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "为住宅、商业及酒店项目提供专业结构工程服务。钢结构、混凝土及木结构。"
         : "Expert structural engineering services for residential, commercial, and hospitality projects. Steel, concrete, and wood structures.",
+    openGraph: {
+      title: locale === "fr" ? "Ingénierie en structure" : locale === "zh" ? "结构工程" : "Structural Engineering",
+      description:
+        locale === "fr"
+          ? "Services d'ingénierie en structure pour projets résidentiels, commerciaux et hôteliers. Structures en acier, béton et bois."
+          : locale === "zh"
+          ? "为住宅、商业及酒店项目提供专业结构工程服务。钢结构、混凝土及木结构。"
+          : "Expert structural engineering services for residential, commercial, and hospitality projects. Steel, concrete, and wood structures.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/services/ingenierie-structurale" : locale === "zh" ? "/zh/services/structural-engineering" : "/en/services/structural-engineering",
       languages: {

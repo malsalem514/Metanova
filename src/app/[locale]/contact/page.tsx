@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { CTABanner } from "@/components/sections/CTABanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { loadContent } from "@/lib/content/loader";
 
@@ -19,6 +20,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "联系Metanova，咨询结构工程、项目管理或开发顾问服务。"
         : "Get in touch with Metanova for structural engineering, project management, or development consulting inquiries.",
+    openGraph: {
+      title: locale === "zh" ? "联系我们" : "Contact",
+      description:
+        locale === "fr"
+          ? "Contactez Metanova pour vos demandes en ingénierie en structure, gestion de projets ou consultation en développement."
+          : locale === "zh"
+          ? "联系Metanova，咨询结构工程、项目管理或开发顾问服务。"
+          : "Get in touch with Metanova for structural engineering, project management, or development consulting inquiries.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/contact" : locale === "zh" ? "/zh/contact" : "/en/contact",
       languages: {
@@ -67,6 +77,25 @@ export default async function ContactPage({ params }: Props) {
         backgroundImage="/metanova-assets/hero/office-montreal.webp"
       />
       <ContactForm content={fm} />
+      <CTABanner
+        title={
+          locale === "fr"
+            ? "Vous préférez nous appeler?"
+            : locale === "zh"
+            ? "更喜欢电话沟通？"
+            : "Prefer to call?"
+        }
+        subtitle={
+          locale === "fr"
+            ? "Notre équipe est disponible du lundi au vendredi, de 9h à 17h. Appelez-nous au +1 (514) 222-3444."
+            : locale === "zh"
+            ? "我们的团队周一至周五上午9点至下午5点为您服务。请致电 +1 (514) 222-3444。"
+            : "Our team is available Monday to Friday, 9 AM to 5 PM. Call us at +1 (514) 222-3444."
+        }
+        ctaText={
+          locale === "fr" ? "APPELER MAINTENANT" : locale === "zh" ? "立即致电" : "CALL NOW"
+        }
+      />
     </>
   );
 }

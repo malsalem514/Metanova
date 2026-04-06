@@ -7,6 +7,7 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ApproachSection } from "@/components/sections/ApproachSection";
 import { ServiceAreas } from "@/components/sections/ServiceAreas";
 import { loadContent } from "@/lib/content/loader";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,6 +30,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "结构工程、房地产开发与工程项目管理服务，覆盖魁北克全省。"
         : "Structural engineering, real estate development and project management across Quebec.",
+    openGraph: {
+      title:
+        locale === "fr"
+          ? "Metanova — Ingénierie en structure & Développement"
+          : locale === "zh"
+          ? "Metanova — 结构工程与开发"
+          : "Metanova — Structural Engineering & Development",
+      description:
+        locale === "fr"
+          ? "Metanova offre des services en ingénierie en structure, développement immobilier et gestion de projets à travers le Québec."
+          : locale === "zh"
+          ? "结构工程、房地产开发与工程项目管理服务，覆盖魁北克全省。"
+          : "Structural engineering, real estate development and project management across Quebec.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr" : locale === "zh" ? "/zh" : "/en",
       languages: { en: "/en", fr: "/fr", zh: "/zh" },
@@ -43,8 +58,28 @@ export default async function Home({ params }: Props) {
   const page = loadContent("pages/home", locale);
   const fm = page?.frontmatter as Record<string, string> | undefined;
 
+  const professionalServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Metanova Experts-Conseils",
+    url: "https://metanova.ca",
+    telephone: "+15142223444",
+    email: "info@metanova.ca",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "7005 Taschereau Blvd #305",
+      addressLocality: "Brossard",
+      addressRegion: "QC",
+      postalCode: "J4Z 1A7",
+      addressCountry: "CA",
+    },
+    areaServed: { "@type": "State", name: "Quebec" },
+    serviceType: ["Structural Engineering", "Real Estate Development", "Project Management"],
+  };
+
   return (
     <>
+      <JsonLd data={professionalServiceJsonLd} />
       <HeroSection
         title={fm?.["hero_headline"] ?? "Designing the future, one structure at a time"}
         subtitle={fm?.["hero_subline"] ?? ""}

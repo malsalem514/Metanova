@@ -24,6 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "加入Metanova团队 — 我们正在寻找优秀的结构工程师、项目经理及开发专业人士。"
         : "Join the Metanova team — we're looking for passionate structural engineers, project managers, and development professionals.",
+    openGraph: {
+      title: locale === "fr" ? "Carrières" : locale === "zh" ? "招贤纳士" : "Careers",
+      description:
+        locale === "fr"
+          ? "Joignez l'équipe Metanova — nous recherchons des ingénieurs en structure, gestionnaires de projets et professionnels du développement passionnés."
+          : locale === "zh"
+          ? "加入Metanova团队 — 我们正在寻找优秀的结构工程师、项目经理及开发专业人士。"
+          : "Join the Metanova team — we're looking for passionate structural engineers, project managers, and development professionals.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/carrieres" : locale === "zh" ? "/zh/careers" : "/en/careers",
       languages: {

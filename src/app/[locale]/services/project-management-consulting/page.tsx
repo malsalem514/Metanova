@@ -18,6 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "全程工程项目管理与开发咨询服务。从可行性研究到项目收尾。"
         : "End-to-end project management and development consulting services. From feasibility studies to project closeout.",
+    openGraph: {
+      title: locale === "fr" ? "Gestion de projets et consultation" : locale === "zh" ? "工程项目管理与咨询" : "Project Management & Consulting",
+      description:
+        locale === "fr"
+          ? "Services de gestion de projets et de consultation en développement de bout en bout. Des études de faisabilité à la clôture du projet."
+          : locale === "zh"
+          ? "全程工程项目管理与开发咨询服务。从可行性研究到项目收尾。"
+          : "End-to-end project management and development consulting services. From feasibility studies to project closeout.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/services/gestion-de-projet" : locale === "zh" ? "/zh/services/project-management-consulting" : "/en/services/project-management-consulting",
       languages: {

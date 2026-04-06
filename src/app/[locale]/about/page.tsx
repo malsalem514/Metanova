@@ -6,6 +6,7 @@ import { TeamSection } from "@/components/sections/TeamSection";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { AboutInlineSections } from "./AboutInlineSections";
 import { loadContent } from "@/lib/content/loader";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,6 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "zh"
         ? "了解Metanova — 我们的愿景、使命，以及结构工程与开发专业团队。"
         : "Learn about Metanova — our vision, mission, and the team behind our structural engineering and development expertise.",
+    openGraph: {
+      title: locale === "fr" ? "Notre firme" : locale === "zh" ? "关于我们" : "About",
+      description:
+        locale === "fr"
+          ? "Découvrez Metanova — notre vision, notre mission et l'équipe derrière notre expertise en ingénierie en structure et en développement."
+          : locale === "zh"
+          ? "了解Metanova — 我们的愿景、使命，以及结构工程与开发专业团队。"
+          : "Learn about Metanova — our vision, mission, and the team behind our structural engineering and development expertise.",
+    },
     alternates: {
       canonical: locale === "fr" ? "/fr/a-propos" : locale === "zh" ? "/zh/about" : "/en/about",
       languages: {
@@ -39,8 +49,20 @@ export default async function AboutPage({ params }: Props) {
   const page = loadContent("pages/about", locale);
   const fm = page?.frontmatter as Record<string, string> | undefined;
 
+  const foundersJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Metanova Experts-Conseils",
+    foundingDate: "2022",
+    founder: [
+      { "@type": "Person", name: "Suddam Al-Salem", jobTitle: "Managing Partner, Engineering" },
+      { "@type": "Person", name: "Muhannad Al-Salem", jobTitle: "Managing Partner, Development" },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={foundersJsonLd} />
       <HeroSection
         title={fm?.["hero_headline"] ?? "About us"}
         subtitle={fm?.["hero_subline"]}
