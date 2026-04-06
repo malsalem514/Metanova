@@ -173,7 +173,7 @@ export function Header() {
                     return (
                       <Link
                         href={link.href}
-                        className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
+                        className={`text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
                           useDarkNav
                             ? isActive ? "text-[#0A5592]" : "text-[#121212] hover:text-[#0A5592]"
                             : isActive ? "text-white" : "text-white/90 hover:text-white"
@@ -201,7 +201,7 @@ export function Header() {
                           <Link
                             key={sub.href}
                             href={sub.href}
-                            className="block rounded-md px-4 py-2.5 text-[11px] font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
+                            className="block rounded-md px-4 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
                           >
                             {t(sub.labelKey)}
                           </Link>
@@ -217,7 +217,7 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`text-[11px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
+                      className={`text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${
                         useDarkNav
                           ? isActive ? "text-[#0A5592]" : "text-[#121212] hover:text-[#0A5592]"
                           : isActive ? "text-white" : "text-white/90 hover:text-white"
@@ -236,7 +236,7 @@ export function Header() {
                   key={l}
                   href={pathname as NavHref}
                   locale={l}
-                  className={`text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 ${
+                  className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors duration-300 ${
                     useDarkNav
                       ? "text-[#0A5592] hover:text-[#121212]"
                       : "text-white hover:text-white/70"
@@ -363,7 +363,7 @@ export function Header() {
                                 onClick={closeDrawer}
                                 className="flex items-center gap-2.5 rounded-lg bg-[rgba(10,85,146,0.04)] px-4 py-3 text-sm text-[#121212]/70 transition-colors hover:text-[#0A5592]"
                               >
-                                <span className="text-[11px] font-semibold text-[#0A5592]/50">
+                                <span className="text-xs font-semibold text-[#0A5592]/50">
                                   {sub.index}
                                 </span>
                                 {t(sub.labelKey)}
