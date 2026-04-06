@@ -39,7 +39,7 @@ export default async function ServicesPage({ params }: Props) {
       <HeroSection
         title={fm?.["hero_headline"] ?? "Our Services"}
         subtitle={fm?.["hero_subline"]}
-        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.png"}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.webp"}
         videoSrc={fm?.["hero_video"]}
       />
       <ServicesListSection />

@@ -25,7 +25,7 @@ const services: ServiceCardData[] = [
       "Expert structural design and analysis for residential, commercial, and hospitality projects. Steel, concrete, and wood structures engineered to the highest standards.",
     descriptionFr:
       "Conception et analyse structurale experte pour projets résidentiels, commerciaux et hôteliers. Structures en acier, béton et bois conçues selon les normes les plus élevées.",
-    image: "/metanova-assets/hero/construction-leadership.png",
+    image: "/metanova-assets/hero/construction-leadership.webp",
     href: "/services/structural-engineering",
   },
   {
@@ -35,7 +35,7 @@ const services: ServiceCardData[] = [
       "From feasibility studies to project delivery, we bring a developer's perspective to every stage. Strategic site analysis, financial modeling, and execution.",
     descriptionFr:
       "Des études de faisabilité à la livraison du projet, nous apportons une perspective de développement à chaque étape. Analyse stratégique de site, modélisation financière et exécution.",
-    image: "/metanova-assets/services/development/site-model-overview.png",
+    image: "/metanova-assets/services/development/site-model-overview.webp",
     href: "/services/real-estate-development",
   },
   {

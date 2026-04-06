@@ -50,7 +50,7 @@ export default async function CareersPage({ params }: Props) {
       <HeroSection
         title={fm?.["hero_headline"] ?? "Join our team"}
         subtitle={fm?.["hero_subline"]}
-        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.png"}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/services/structural/field-team-sunset.webp"}
         videoSrc="/metanova-assets/hero/careers-hero.mp4"
       />
 

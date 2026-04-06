@@ -61,7 +61,7 @@ export default async function ContactPage({ params }: Props) {
       <HeroSection
         title={fm?.["heading"] ?? "Contact us"}
         subtitle={fm?.["intro"]}
-        backgroundImage="/metanova-assets/hero/office-montreal.png"
+        backgroundImage="/metanova-assets/hero/office-montreal.webp"
       />
       <ContactForm content={fm} />
     </>

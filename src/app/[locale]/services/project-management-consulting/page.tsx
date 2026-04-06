@@ -114,7 +114,7 @@ export default async function ProjectManagementPage({ params }: Props) {
             ? "Nous offrons une gestion de projets et une consultation en développement de bout en bout pour les projets résidentiels et à usage mixte à travers le Québec. De la planification stratégique et la coordination du zonage à la surveillance de la construction, nous guidons les projets du concept à la réalisation avec clarté, structure et responsabilité."
             : "We provide end-to-end project management and development consulting for residential and mixed-use projects across Quebec. From strategic planning and zoning coordination to construction oversight, we guide projects from concept to completion with clarity, structure, and accountability."
         }
-        heroImage="/metanova-assets/services/project-management/city-overlay-hardhat.png"
+        heroImage="/metanova-assets/services/project-management/city-overlay-hardhat.webp"
         videoSrc="/metanova-assets/hero/project-mgmt-hero.mp4"
         points={isFr ? pointsFr : pointsEn}
       />

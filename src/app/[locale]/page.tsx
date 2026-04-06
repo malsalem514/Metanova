@@ -43,7 +43,7 @@ export default async function Home({ params }: Props) {
       <HeroSection
         title={fm?.["hero_headline"] ?? "Designing the future, one structure at a time"}
         subtitle={fm?.["hero_subline"] ?? ""}
-        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/construction-leadership.png"}
+        backgroundImage={fm?.["hero_image"] ?? "/metanova-assets/hero/construction-leadership.webp"}
         videoSrc={fm?.["hero_video"] ?? "/metanova-assets/hero/home-hero-web.mp4"}
         ctaText={fm?.["cta_primary"] ?? "BOOK A CALL"}
         ctaHref={fm?.["cta_primary_href"] ?? "/contact"}
