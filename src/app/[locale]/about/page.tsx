@@ -85,8 +85,8 @@ export default async function AboutPage({ params }: Props) {
         heading={fm?.["approach_heading"]}
       />
       <WhyUsSection content={fm} />
-      <ServiceAreas />
       <TeamSection />
+      <ServiceAreas />
       <CTABanner
         title={fm?.["cta_banner_heading"] ?? "Let's Talk!"}
         subtitle={fm?.["cta_banner_body"] ?? "Ready to take the first step toward realizing your dream project? Contact us today for a consultation and let's turn your vision into a reality."}

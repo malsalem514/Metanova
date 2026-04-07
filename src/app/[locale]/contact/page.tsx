@@ -73,7 +73,6 @@ export default async function ContactPage({ params }: Props) {
       <JsonLd data={localBusinessJsonLd} />
       <HeroSection
         title={fm?.["heading"] ?? "Contact us"}
-        subtitle={fm?.["intro"]}
         backgroundImage="/metanova-assets/hero/office-montreal.webp"
         videoSrc="/metanova-assets/hero/contact-hero.mp4"
       />
