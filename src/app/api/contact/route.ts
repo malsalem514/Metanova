@@ -69,7 +69,7 @@ export async function POST(request: Request) {
       attachments.push({ filename: attachment.name, content: buffer });
     }
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "Metanova Website <onboarding@resend.dev>",
       to: ["info@metanova.ca"],
       replyTo: email,
@@ -91,7 +91,16 @@ export async function POST(request: Request) {
       attachments,
     });
 
-    return NextResponse.json({ success: true });
+    if (result.error) {
+      console.error("Resend API error:", JSON.stringify(result.error));
+      return NextResponse.json(
+        { error: "Email delivery failed", details: result.error },
+        { status: 502 },
+      );
+    }
+
+    console.log("Email sent successfully, id:", result.data?.id);
+    return NextResponse.json({ success: true, id: result.data?.id });
   } catch (error) {
     console.error("Email send error:", error);
     return NextResponse.json(

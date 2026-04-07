@@ -117,7 +117,12 @@ export function ContactForm({ content }: ContactFormProps) {
                     try {
                       const formData = new FormData(e.currentTarget);
                       formData.append("source", "contact");
-                      await fetch("/api/contact", { method: "POST", body: formData });
+                      const res = await fetch("/api/contact", { method: "POST", body: formData });
+                      const data = await res.json();
+                      if (!res.ok) {
+                        console.error("Contact form error:", data);
+                        throw new Error(data.details?.message ?? data.error ?? "Failed to send");
+                      }
                       setSubmitted(true);
                     } catch {
                       setError(isFr ? "Erreur lors de l'envoi. Veuillez réessayer." : isZh ? "发送失败，请重试。" : "Failed to send. Please try again.");
