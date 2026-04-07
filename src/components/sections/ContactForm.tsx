@@ -27,14 +27,6 @@ export function ContactForm({ content }: ContactFormProps) {
           {/* Contact info */}
           <FadeIn>
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#121212]/50">
-                {content?.["overline"] ?? (isFr ? "CONTACTEZ-NOUS" : isZh ? "联系我们" : "Get in Touch")}
-              </p>
-              <h2
-                className="mt-4 mb-8 font-medium text-[clamp(2rem,4vw,3rem)] leading-tight text-[#121212]"
-              >
-                {content?.["heading"] ?? (isFr ? "Contactez-nous" : isZh ? "洽谈您的项目" : "Let\u2019s discuss your next project")}
-              </h2>
               <p className="text-lg leading-relaxed text-[#121212]/80">
                 {content?.["intro"] ?? (isFr
                   ? "Nous serions ravis de vous entendre! Que vous ayez un nouveau projet en t\u00eate, que vous ayez besoin d\u2019une consultation d\u2019expert ou que vous souhaitiez simplement en savoir plus sur notre travail, notre \u00e9quipe est pr\u00eate \u00e0 vous aider."
