@@ -118,7 +118,7 @@ export function ApproachSection({ overline, heading }: ApproachSectionProps) {
   const values = isFr ? valuesFr : isZh ? valuesZh : valuesEn;
 
   return (
-    <section className="bg-white/60 py-14">
+    <section id="our-approach" className="bg-white/60 py-14 scroll-mt-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-10 max-w-2xl">

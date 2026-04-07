@@ -58,7 +58,7 @@ export function AboutInlineSections({ content }: AboutInlineSectionsProps) {
       </section>
 
       {/* Our Story */}
-      <section className="bg-white/60 py-24">
+      <section id="our-story" className="bg-white/60 py-24 scroll-mt-20">
         <div className="mx-auto max-w-[1240px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>

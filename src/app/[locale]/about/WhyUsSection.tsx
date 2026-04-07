@@ -17,7 +17,7 @@ export function WhyUsSection({ content }: WhyUsSectionProps) {
   ];
 
   return (
-    <section className="py-24">
+    <section id="why-us" className="py-24 scroll-mt-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-12 max-w-2xl">

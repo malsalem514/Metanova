@@ -47,7 +47,7 @@ export function TeamSection() {
   const isZh = locale === "zh";
 
   return (
-    <section className="bg-white/60 py-24">
+    <section id="leadership" className="bg-white/60 py-24 scroll-mt-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <FadeIn>
           <div className="mb-16 max-w-2xl">

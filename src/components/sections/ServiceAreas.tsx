@@ -173,7 +173,7 @@ export function ServiceAreas() {
   const isZh = locale === "zh";
 
   return (
-    <section className="bg-[#1B2E37] py-24 overflow-hidden">
+    <section id="where-we-work" className="bg-[#1B2E37] py-24 overflow-hidden scroll-mt-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Left: text content */}

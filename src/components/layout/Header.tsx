@@ -9,12 +9,19 @@ import { motion, AnimatePresence } from "motion/react";
 type NavHref = "/" | "/about" | "/services" | "/contact" | "/careers";
 type NavLabelKey = "home" | "about" | "services" | "careers" | "contact";
 type ServiceLabelKey = "structuralEngineering" | "realEstateDevelopment" | "projectManagement";
+type AboutSectionKey = "ourStory" | "ourApproach" | "whyMetanova" | "leadership" | "whereWeWork";
 type ServiceHref =
   | "/services/structural-engineering"
   | "/services/real-estate-development"
   | "/services/project-management-consulting";
 
 const LOCALE_LABELS: Record<string, string> = { fr: "FR", en: "EN", zh: "中文" };
+
+const ABOUT_PATHS: Record<string, string> = {
+  fr: "/fr/a-propos",
+  en: "/en/about",
+  zh: "/zh/about",
+};
 
 const navLinks: { href: NavHref; labelKey: NavLabelKey }[] = [
   { href: "/about", labelKey: "about" },
@@ -27,6 +34,14 @@ const serviceSubLinks: { href: ServiceHref; labelKey: ServiceLabelKey; index: st
   { href: "/services/structural-engineering", labelKey: "structuralEngineering", index: "01" },
   { href: "/services/real-estate-development", labelKey: "realEstateDevelopment", index: "02" },
   { href: "/services/project-management-consulting", labelKey: "projectManagement", index: "03" },
+];
+
+const aboutSubLinks: { hash: string; labelKey: AboutSectionKey }[] = [
+  { hash: "#our-story", labelKey: "ourStory" },
+  { hash: "#our-approach", labelKey: "ourApproach" },
+  { hash: "#why-us", labelKey: "whyMetanova" },
+  { hash: "#leadership", labelKey: "leadership" },
+  { hash: "#where-we-work", labelKey: "whereWeWork" },
 ];
 
 function TrussWatermark() {
@@ -59,14 +74,16 @@ function TrussWatermark() {
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesExpanded, setServicesExpanded] = useState(false);
+  const [aboutExpanded, setAboutExpanded] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<"about" | "services" | null>(null);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const t = useTranslations("nav");
 
   const locale = useLocale();
   const pathname = usePathname();
   const otherLocales = (["fr", "en", "zh"] as const).filter((l) => l !== locale);
+  const aboutBasePath = ABOUT_PATHS[locale] ?? ABOUT_PATHS["fr"]!;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,10 +102,10 @@ export function Header() {
   const closeDrawer = useCallback(() => {
     setMobileOpen(false);
     setServicesExpanded(false);
+    setAboutExpanded(false);
     document.documentElement.classList.remove("drawer-open");
   }, []);
 
-  // Cleanup drawer-open class on unmount (e.g. hard navigation while drawer is open)
   useEffect(() => {
     if (mobileOpen) {
       document.documentElement.classList.add("drawer-open");
@@ -105,26 +122,64 @@ export function Header() {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [mobileOpen, closeDrawer]);
 
-  const openDropdown = useCallback(() => {
+  const openDropdown = useCallback((which: "about" | "services") => {
     if (dropdownTimeout.current) {
       clearTimeout(dropdownTimeout.current);
       dropdownTimeout.current = null;
     }
-    setDesktopDropdownOpen(true);
+    setActiveDropdown(which);
   }, []);
 
   const closeDropdown = useCallback(() => {
     dropdownTimeout.current = setTimeout(() => {
-      setDesktopDropdownOpen(false);
+      setActiveDropdown(null);
     }, 150);
   }, []);
 
-  // Clear pending dropdown timeout on unmount
   useEffect(() => () => {
     if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
   }, []);
 
   const useDarkNav = scrolled || mobileOpen;
+
+  const renderDesktopDropdown = (which: "about" | "services") => (
+    <>
+      {activeDropdown === which && (
+        <div className="absolute left-0 top-full h-2 w-full" />
+      )}
+      <AnimatePresence>
+        {activeDropdown === which && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute left-0 top-[calc(100%+8px)] w-[260px] rounded-lg border border-[#E8E0D0] bg-white p-2 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+          >
+            {which === "services"
+              ? serviceSubLinks.map((sub) => (
+                  <Link
+                    key={sub.href}
+                    href={sub.href}
+                    className="block rounded-md px-4 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
+                  >
+                    {t(sub.labelKey)}
+                  </Link>
+                ))
+              : aboutSubLinks.map((sub) => (
+                  <a
+                    key={sub.hash}
+                    href={`${aboutBasePath}${sub.hash}`}
+                    className="block rounded-md px-4 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
+                  >
+                    {t(sub.labelKey)}
+                  </a>
+                ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 
   return (
     <>
@@ -160,15 +215,17 @@ export function Header() {
 
           <nav className="hidden items-center gap-10 md:flex">
             {navLinks.map((link) =>
-              link.labelKey === "services" ? (
+              link.labelKey === "services" || link.labelKey === "about" ? (
                 <div
                   key={link.href}
                   className="relative"
-                  onMouseEnter={openDropdown}
+                  onMouseEnter={() => openDropdown(link.labelKey as "about" | "services")}
                   onMouseLeave={closeDropdown}
                 >
                   {(() => {
-                    const isActive = pathname.startsWith("/services");
+                    const isActive = link.labelKey === "about"
+                      ? pathname.startsWith("/about")
+                      : pathname.startsWith("/services");
                     return (
                       <Link
                         href={link.href}
@@ -182,32 +239,7 @@ export function Header() {
                       </Link>
                     );
                   })()}
-
-                  {desktopDropdownOpen && (
-                    <div className="absolute left-0 top-full h-2 w-full" />
-                  )}
-
-                  <AnimatePresence>
-                    {desktopDropdownOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute left-0 top-[calc(100%+8px)] w-[260px] rounded-lg border border-[#E8E0D0] bg-white p-2 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
-                      >
-                        {serviceSubLinks.map((sub) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            className="block rounded-md px-4 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-[#121212] transition-colors duration-200 hover:bg-[rgba(10,85,146,0.05)] hover:text-[#0A5592]"
-                          >
-                            {t(sub.labelKey)}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {renderDesktopDropdown(link.labelKey as "about" | "services")}
                 </div>
               ) : (
                 (() => {
@@ -307,73 +339,94 @@ export function Header() {
             </div>
 
             <div className="flex-1">
-              {navLinks.map((link, i) =>
-                link.labelKey === "services" ? (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 + i * 0.06, duration: 0.4, ease: "easeOut" }}
-                    className="mb-2"
-                  >
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href={link.href}
-                        onClick={closeDrawer}
-                        className="block py-3 text-xl font-medium text-[#121212] transition-colors hover:text-[#0A5592]"
-                      >
-                        {t(link.labelKey)}
-                      </Link>
-                      <button
-                        onClick={() => setServicesExpanded(!servicesExpanded)}
-                        className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-[#0A5592]/5"
-                        aria-label={servicesExpanded ? "Collapse services" : "Expand services"}
-                        aria-expanded={servicesExpanded}
-                      >
-                        <motion.svg
-                          animate={{ rotate: servicesExpanded ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#0A5592"
-                          strokeWidth="2.5"
-                        >
-                          <path d="M6 9l6 6 6-6" />
-                        </motion.svg>
-                      </button>
-                    </div>
+              {navLinks.map((link, i) => {
+                const hasSubmenu = link.labelKey === "services" || link.labelKey === "about";
+                const isExpanded = link.labelKey === "services" ? servicesExpanded : aboutExpanded;
+                const toggleExpand = link.labelKey === "services"
+                  ? () => setServicesExpanded(!servicesExpanded)
+                  : () => setAboutExpanded(!aboutExpanded);
 
-                    <AnimatePresence>
-                      {servicesExpanded && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeOut" }}
-                          className="overflow-hidden"
+                if (hasSubmenu) {
+                  return (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 + i * 0.06, duration: 0.4, ease: "easeOut" }}
+                      className="mb-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <Link
+                          href={link.href}
+                          onClick={closeDrawer}
+                          className="block py-3 text-xl font-medium text-[#121212] transition-colors hover:text-[#0A5592]"
                         >
-                          <div className="flex flex-col gap-1 pb-2">
-                            {serviceSubLinks.map((sub) => (
-                              <Link
-                                key={sub.href}
-                                href={sub.href}
-                                onClick={closeDrawer}
-                                className="flex items-center gap-2.5 rounded-lg bg-[rgba(10,85,146,0.04)] px-4 py-3 text-sm text-[#121212]/70 transition-colors hover:text-[#0A5592]"
-                              >
-                                <span className="text-xs font-semibold text-[#0A5592]/50">
-                                  {sub.index}
-                                </span>
-                                {t(sub.labelKey)}
-                              </Link>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ) : (
+                          {t(link.labelKey)}
+                        </Link>
+                        <button
+                          onClick={toggleExpand}
+                          className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-[#0A5592]/5"
+                          aria-label={isExpanded ? "Collapse" : "Expand"}
+                          aria-expanded={isExpanded}
+                        >
+                          <motion.svg
+                            animate={{ rotate: isExpanded ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#0A5592"
+                            strokeWidth="2.5"
+                          >
+                            <path d="M6 9l6 6 6-6" />
+                          </motion.svg>
+                        </button>
+                      </div>
+
+                      <AnimatePresence>
+                        {isExpanded && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
+                            className="overflow-hidden"
+                          >
+                            <div className="flex flex-col gap-1 pb-2">
+                              {link.labelKey === "services"
+                                ? serviceSubLinks.map((sub) => (
+                                    <Link
+                                      key={sub.href}
+                                      href={sub.href}
+                                      onClick={closeDrawer}
+                                      className="flex items-center gap-2.5 rounded-lg bg-[rgba(10,85,146,0.04)] px-4 py-3 text-sm text-[#121212]/70 transition-colors hover:text-[#0A5592]"
+                                    >
+                                      <span className="text-xs font-semibold text-[#0A5592]/50">
+                                        {sub.index}
+                                      </span>
+                                      {t(sub.labelKey)}
+                                    </Link>
+                                  ))
+                                : aboutSubLinks.map((sub) => (
+                                    <a
+                                      key={sub.hash}
+                                      href={`${aboutBasePath}${sub.hash}`}
+                                      onClick={closeDrawer}
+                                      className="flex items-center gap-2.5 rounded-lg bg-[rgba(10,85,146,0.04)] px-4 py-3 text-sm text-[#121212]/70 transition-colors hover:text-[#0A5592]"
+                                    >
+                                      {t(sub.labelKey)}
+                                    </a>
+                                  ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
+                  );
+                }
+
+                return (
                   <motion.div
                     key={link.href}
                     initial={{ opacity: 0, x: 20 }}
@@ -388,8 +441,8 @@ export function Header() {
                       {t(link.labelKey)}
                     </Link>
                   </motion.div>
-                ),
-              )}
+                );
+              })}
             </div>
 
             <motion.div
